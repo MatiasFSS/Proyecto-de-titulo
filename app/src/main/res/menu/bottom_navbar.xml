@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/profileFragment"
+        android:title="@string/profile_bottom_navbar"
+        android:icon="@drawable/profile"
+        />
+    <item
+        android:id="@+id/tutorialsFragment"
+        android:title="@string/tutorials_bottom_navbar"
+        android:icon="@drawable/tutorials"
+        />
+    <item
+        android:id="@+id/scanFragment"
+        android:title="@string/scan_bottom_navbar"
+        android:icon="@drawable/scan"
+        />
+    <item
+        android:id="@+id/encyclopediaFragment"
+        android:title="@string/encyclopedia_bottom_navbar"
+        android:icon="@drawable/encyclopedia"
+        />
+    <item
+        android:id="@+id/quizFragment"
+        android:title="@string/quiz_bottom_navbar"
+        android:icon="@drawable/quiz"
+        />
+</menu>

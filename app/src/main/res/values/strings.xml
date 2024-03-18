@@ -1,0 +1,38 @@
+<resources>
+    <string name="app_name">Proyecto</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+
+    <!-- bottom_navbar -->
+    <string name="profile_bottom_navbar">Perfil</string>
+    <string name="tutorials_bottom_navbar">Tutoriales</string>
+    <string name="scan_bottom_navbar">Reciclar</string>
+    <string name="encyclopedia_bottom_navbar">Enciclopedia</string>
+    <string name="quiz_bottom_navbar">Trivia</string>
+
+    <!--btn editar usuario -->
+    <string name="btn_edit_user">Editar Usuario</string>
+
+    <!-- textos encyclopedia -->
+    <string name="encyclopedia_Aluminio">Aluminio</string>
+    <string name="encyclopedia_Bolsa">Bolsas</string>
+    <string name="encyclopedia_Cables">Cables</string>
+    <string name="encyclopedia_Vidrio">Vidrio</string>
+    <string name="encyclopedia_Carton">Carton</string>
+    <string name="encyclopedia_Papel">Papel</string>
+    <string name="encyclopedia_Lata">Lata</string>
+    <string name="encyclopedia_Empaques_AM">Empaques Alimentos Mascotas</string>
+    <string name="encyclopedia_Chatarra">Chatarra</string>
+    <string name="encyclopedia_PET">PET</string>
+    <string name="encyclopedia_Revistas">Revistas</string>
+    <string name="encyclopedia_Aceite_Vegetal">Aceite Vegetal Usado</string>
+    <string name="encyclopedia_Celulares">Celulares y Accesorios</string>
+    <string name="encyclopedia_Pilas">Pilas</string>
+    <string name="encyclopedia_Sanitarios">Sanitarios</string>
+    <string name="encyclopedia_Plastico_N7">Plastico No.7</string>
+    <string name="encyclopedia_Madera">Madera</string>
+
+    <!-- Titulo y descripcion de Vista enciclopedia-->
+    <string name="encyclopedia_Title">Materiales</string>
+    <string name="encyclopedia_Description">En este apartado encontraras información de como manejar diversos materiales, se responderan preguntas como, ¿El material se puede reciclar?, ¿Como llevo el material al centro de reciclaje?, entre otras preguntas</string>
+</resources>

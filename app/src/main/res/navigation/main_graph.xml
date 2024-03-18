@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main_graph"
+    app:startDestination="@id/profileFragment">
+
+    <fragment
+        android:id="@+id/profileFragment"
+        android:name="com.copetiny.proyecto.ui.profile.ProfileFragment"
+        android:label="fragment_profile"
+        tools:layout="@layout/fragment_profile" >
+        <action
+            android:id="@+id/action_profileFragment_to_tutorialsFragment"
+            app:destination="@id/tutorialsFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/encyclopediaFragment"
+        android:name="com.copetiny.proyecto.ui.encyclopedia.EncyclopediaFragment"
+        android:label="fragment_encyclopedia"
+        tools:layout="@layout/fragment_encyclopedia" >
+        <action
+            android:id="@+id/action_encyclopediaFragment_to_quizFragment"
+            app:destination="@id/quizFragment" />
+        <action
+            android:id="@+id/action_encyclopediaFragment_to_encyclopediaDetailActivity"
+            app:destination="@id/encyclopediaDetailActivity" />
+    </fragment>
+    <fragment
+        android:id="@+id/quizFragment"
+        android:name="com.copetiny.proyecto.ui.quiz.QuizFragment"
+        android:label="fragment_quiz"
+        tools:layout="@layout/fragment_quiz" />
+    <fragment
+        android:id="@+id/scanFragment"
+        android:name="com.copetiny.proyecto.ui.scan.ScanFragment"
+        android:label="fragment_scan"
+        tools:layout="@layout/fragment_scan" >
+        <action
+            android:id="@+id/action_scanFragment_to_encyclopediaFragment"
+            app:destination="@id/encyclopediaFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/tutorialsFragment"
+        android:name="com.copetiny.proyecto.ui.tutorials.TutorialsFragment"
+        android:label="fragment_tutorials"
+        tools:layout="@layout/fragment_tutorials" >
+        <action
+            android:id="@+id/action_tutorialsFragment_to_scanFragment"
+            app:destination="@id/scanFragment" />
+    </fragment>
+    <activity
+        android:id="@+id/encyclopediaDetailActivity"
+        android:name="com.copetiny.proyecto.ui.detailencyclopedia.EncyclopediaDetailActivity"
+        android:label="activity_encyclopedia_detail"
+        tools:layout="@layout/activity_encyclopedia_detail" >
+        <argument
+            android:name="type"
+            app:argType="com.copetiny.proyecto.domain.model.EncyclopediaModel" />
+    </activity>
+</navigation>

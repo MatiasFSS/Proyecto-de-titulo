@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFFFFFF</color>
+
+    <color name="purple">#673AB7</color>
+    <color name="blue">#3F51B5</color>
+    <color name="green">#009688</color>
+    <color name="orange">#FF5722</color>
+    <color name="red">#FF1100</color>
+    <color name="yellow">#FFEB3B</color>
+
+    <!--Color navBar -->
+    <color name="color_navBar">#66c30b</color>
+    <!--Color CardView-->
+    <color name="color_cardView">#AFAFAF</color>
+
+    <!--Paleta de Color-->
+    <color name="color_1">#1a936f</color>
+    <color name="color_2">#00a85a</color>
+    <color name="color_3">#f0e247</color>
+    <color name="color_4">#f68e2c</color>
+    <color name="color_5">#e45a3f</color>
+    <color name="color_6">#7fc7b3</color>
+
+</resources>

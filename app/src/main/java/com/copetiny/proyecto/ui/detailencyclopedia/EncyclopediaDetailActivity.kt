@@ -10,7 +10,7 @@ import androidx.lifecycle.repeatOnLifecycle
 import androidx.navigation.navArgs
 import com.copetiny.proyecto.R
 import com.copetiny.proyecto.databinding.ActivityEncyclopediaDetailBinding
-import com.copetiny.proyecto.domain.model.EncyclopediaModel
+import com.copetiny.proyecto.domain.model.encyclopedia.EncyclopediaModel
 import dagger.hilt.android.AndroidEntryPoint
 import kotlinx.coroutines.launch
 
@@ -82,6 +82,5 @@ class EncyclopediaDetailActivity : AppCompatActivity() {
             EncyclopediaModel.PlasticoN7 -> R.drawable.detail_aries
         }
         binding.ivEncyclopediaDetail.setImageResource(image)
-
     }
 }

@@ -4,10 +4,10 @@ import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
 import com.copetiny.proyecto.R
-import com.copetiny.proyecto.domain.model.EncyclopediaInfo
+import com.copetiny.proyecto.domain.model.encyclopedia.EncyclopediaInfo
 
 class EncyclopediaAdapter(private var encyclopediaList:List<EncyclopediaInfo> = emptyList(),
-    private val onItemSelected:(EncyclopediaInfo) -> Unit):RecyclerView.Adapter<EncyclopediaViewHolder>(){
+                          private val onItemSelected:(EncyclopediaInfo) -> Unit):RecyclerView.Adapter<EncyclopediaViewHolder>(){
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): EncyclopediaViewHolder {
         return EncyclopediaViewHolder(

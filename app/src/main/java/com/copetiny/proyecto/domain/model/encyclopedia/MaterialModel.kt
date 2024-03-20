@@ -1,4 +1,4 @@
-package com.copetiny.proyecto.domain.model
+package com.copetiny.proyecto.domain.model.encyclopedia
 
 
 data class MaterialModel(

@@ -5,7 +5,6 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.widget.Toast
 import androidx.fragment.app.viewModels
 import androidx.lifecycle.Lifecycle
 import androidx.lifecycle.lifecycleScope
@@ -13,8 +12,8 @@ import androidx.lifecycle.repeatOnLifecycle
 import androidx.navigation.fragment.findNavController
 import androidx.recyclerview.widget.GridLayoutManager
 import com.copetiny.proyecto.databinding.FragmentEncyclopediaBinding
-import com.copetiny.proyecto.domain.model.EncyclopediaInfo
-import com.copetiny.proyecto.domain.model.EncyclopediaModel
+import com.copetiny.proyecto.domain.model.encyclopedia.EncyclopediaInfo
+import com.copetiny.proyecto.domain.model.encyclopedia.EncyclopediaModel
 import com.copetiny.proyecto.ui.encyclopedia.adapter.EncyclopediaAdapter
 import dagger.hilt.android.AndroidEntryPoint
 import kotlinx.coroutines.launch

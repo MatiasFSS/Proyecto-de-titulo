@@ -15,7 +15,7 @@
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        android:layout_margin="16dp"
+        android:layout_margin="8dp"
         app:cardCornerRadius="16dp"
         android:backgroundTint="@color/color_1"
         >

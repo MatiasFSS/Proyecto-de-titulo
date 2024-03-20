@@ -1,4 +1,4 @@
-package com.copetiny.proyecto.domain.model
+package com.copetiny.proyecto.domain.model.encyclopedia
 
 enum class EncyclopediaModel {
     Papel,
@@ -15,6 +15,7 @@ enum class EncyclopediaModel {
     Cables,
     Celulares,
     Pilas,
+    PlasticoN7,
     Sanitarios,
-    PlasticoN7
+
 }

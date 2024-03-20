@@ -4,12 +4,12 @@ import android.view.View
 import android.view.animation.LinearInterpolator
 import androidx.recyclerview.widget.RecyclerView
 import com.copetiny.proyecto.databinding.ItemEncyclopediaBinding
-import com.copetiny.proyecto.domain.model.EncyclopediaInfo
+import com.copetiny.proyecto.domain.model.encyclopedia.EncyclopediaInfo
 
 class EncyclopediaViewHolder(view:View):RecyclerView.ViewHolder(view) {
     private val binding = ItemEncyclopediaBinding.bind(view)
 
-    fun render(encyclopediaInfo:EncyclopediaInfo, onItemSelected:(EncyclopediaInfo) -> Unit){
+    fun render(encyclopediaInfo: EncyclopediaInfo, onItemSelected:(EncyclopediaInfo) -> Unit){
         val context = binding.tvTitle.context
         binding.ivEncyclopedia.setImageResource(encyclopediaInfo.img)
         binding.tvTitle.text = context.getString(encyclopediaInfo.name)

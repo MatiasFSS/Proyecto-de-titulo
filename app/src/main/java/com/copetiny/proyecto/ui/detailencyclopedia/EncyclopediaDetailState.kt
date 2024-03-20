@@ -1,6 +1,6 @@
 package com.copetiny.proyecto.ui.detailencyclopedia
 
-import com.copetiny.proyecto.domain.model.EncyclopediaModel
+import com.copetiny.proyecto.domain.model.encyclopedia.EncyclopediaModel
 
 sealed class EncyclopediaDetailState {
     data object Loading:EncyclopediaDetailState()

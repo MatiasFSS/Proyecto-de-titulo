@@ -56,6 +56,6 @@
         tools:layout="@layout/activity_encyclopedia_detail" >
         <argument
             android:name="type"
-            app:argType="com.copetiny.proyecto.domain.model.EncyclopediaModel" />
+            app:argType="com.copetiny.proyecto.domain.model.encyclopedia.EncyclopediaModel" />
     </activity>
 </navigation>

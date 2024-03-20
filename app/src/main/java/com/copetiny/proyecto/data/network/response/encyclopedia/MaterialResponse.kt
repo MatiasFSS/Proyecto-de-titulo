@@ -1,6 +1,6 @@
-package com.copetiny.proyecto.data.network.response
+package com.copetiny.proyecto.data.network.response.encyclopedia
 
-import com.copetiny.proyecto.domain.model.MaterialModel
+import com.copetiny.proyecto.domain.model.encyclopedia.MaterialModel
 import com.google.gson.annotations.SerializedName
 
 data class MaterialResponse(
@@ -8,7 +8,7 @@ data class MaterialResponse(
     @SerializedName("descripcion") val descripcion:String,
     @SerializedName("informacion") val informacion:String
 ){
-    fun toDomain():MaterialModel{
+    fun toDomain(): MaterialModel {
         return MaterialModel(
             nombre_material = nombre_material,
             descripcion = descripcion,

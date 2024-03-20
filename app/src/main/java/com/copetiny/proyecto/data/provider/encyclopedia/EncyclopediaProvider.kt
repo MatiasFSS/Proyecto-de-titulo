@@ -1,7 +1,7 @@
-package com.copetiny.proyecto.data.provider
+package com.copetiny.proyecto.data.provider.encyclopedia
 
-import com.copetiny.proyecto.domain.model.EncyclopediaInfo
-import com.copetiny.proyecto.domain.model.EncyclopediaInfo.*
+import com.copetiny.proyecto.domain.model.encyclopedia.EncyclopediaInfo
+import com.copetiny.proyecto.domain.model.encyclopedia.EncyclopediaInfo.*
 import javax.inject.Inject
 
 class EncyclopediaProvider @Inject constructor() {

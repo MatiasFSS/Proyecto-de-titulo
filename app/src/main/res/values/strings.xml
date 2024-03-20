@@ -35,4 +35,18 @@
     <!-- Titulo y descripcion de Vista enciclopedia-->
     <string name="encyclopedia_Title">Materiales</string>
     <string name="encyclopedia_Description">En este apartado encontraras información de como manejar diversos materiales, se responderan preguntas como, ¿El material se puede reciclar?, ¿Como llevo el material al centro de reciclaje?, entre otras preguntas</string>
+
+    <!-- textos tutoriales -->
+    <string name="tutorial_1">¿Como reciclar?</string>
+    <string name="tutorial_2">Sr. cabeza de pasto</string>
+    <string name="tutorial_3">Titeres con material reciclable</string>
+    <string name="tutorial_4">Planta por primera vez</string>
+    <string name="tutorial_5">Lapicero de lata</string>
+    <string name="tutorial_6">Macetero de material reciclable</string>
+    <!-- Titulo y descripcion de Vista enciclopedia-->
+    <string name="tutorials_Title">Tutoriales</string>
+    <string name="tutorials_Description">Aqui encontraras muchos tutoriales para realizar diversas actividades con material reciclable.</string>
+    <string name="tutorials_Description2">¡RECUERDA! : "Reutiliza - Reduce - Recicla"</string>
+
+
 </resources>

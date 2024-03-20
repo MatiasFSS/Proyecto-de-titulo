@@ -2,7 +2,7 @@ package com.copetiny.proyecto.ui.detailencyclopedia
 
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
-import com.copetiny.proyecto.domain.model.EncyclopediaModel
+import com.copetiny.proyecto.domain.model.encyclopedia.EncyclopediaModel
 import com.copetiny.proyecto.domain.usecase.GetEncyclopediaUseCase
 import dagger.hilt.android.lifecycle.HiltViewModel
 import kotlinx.coroutines.Dispatchers
@@ -18,14 +18,15 @@ class EncyclopediaDetailViewModel @Inject constructor(private val getEncyclopedi
     private var _state = MutableStateFlow<EncyclopediaDetailState>(EncyclopediaDetailState.Loading)
     val state : StateFlow<EncyclopediaDetailState> = _state
 
-    lateinit var encyclopedia:EncyclopediaModel
+    lateinit var encyclopedia: EncyclopediaModel
 
-    fun getEncyclopedia(id:EncyclopediaModel){
+    fun getEncyclopedia(id: EncyclopediaModel){
         encyclopedia = id
         viewModelScope.launch {
             _state.value = EncyclopediaDetailState.Loading
            val result = withContext(Dispatchers.IO){
                    getEncyclopediaUseCase(id.name)
+
 
            }
 

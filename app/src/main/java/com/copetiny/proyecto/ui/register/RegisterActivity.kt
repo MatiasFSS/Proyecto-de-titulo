@@ -18,7 +18,6 @@ class RegisterActivity : AppCompatActivity() {
         setContentView(binding.root)
         initUI()
         checkUser()
-
     }
 
     private fun checkUser(){
@@ -42,7 +41,9 @@ class RegisterActivity : AppCompatActivity() {
     }
 
     private fun goToProfile(){
+        finish()
         startActivity(Intent(this, MainActivity::class.java))
+
     }
 
 

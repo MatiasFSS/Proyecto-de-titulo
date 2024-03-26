@@ -71,8 +71,10 @@ dependencies {
     implementation("com.google.dagger:hilt-android:2.48")
     kapt("com.google.dagger:hilt-compiler:2.48")
 
-    //Datastore
-    implementation("androidx.datastore:datastore-preferences:1.0.0")
+    //splash
+    //implementation("androidx.core:core-splashscreen:1.0.1")
 
-    implementation("androidx.lifecycle:lifecycle-runtime-ktx:2.7.0")
+    //zxing
+    implementation("com.google.zxing:core:3.3.0")
+    implementation("com.journeyapps:zxing-android-embedded:4.1.0")
 }

@@ -9,6 +9,7 @@ import androidx.fragment.app.viewModels
 import androidx.lifecycle.Lifecycle
 import androidx.lifecycle.lifecycleScope
 import androidx.lifecycle.repeatOnLifecycle
+import androidx.navigation.fragment.findNavController
 import androidx.recyclerview.widget.GridLayoutManager
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.copetiny.proyecto.R
@@ -48,6 +49,9 @@ class TutorialsFragment : Fragment() {
                 TutorialsInfo.Tutorial5 -> TutorialsModel.Tutorial5
                 TutorialsInfo.Tutorial6 -> TutorialsModel.Tutorial6
             }
+            findNavController().navigate(
+                TutorialsFragmentDirections.actionTutorialsFragmentToTutorialsDetailActivity(type)
+            )
         })
 
         binding.rvTutorials.apply {

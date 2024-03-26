@@ -2,6 +2,7 @@ package com.copetiny.proyecto.ui.tutorials.adapter
 
 import android.health.connect.datatypes.units.Length
 import android.view.View
+import android.view.animation.LinearInterpolator
 import android.widget.Toast
 import androidx.recyclerview.widget.RecyclerView
 import com.copetiny.proyecto.databinding.ItemTutorialsBinding
@@ -18,6 +19,7 @@ class TutorialsViewHolder(view:View):RecyclerView.ViewHolder(view) {
 
         binding.parentTutorial.setOnClickListener {
             onItemSelected(tutorialsInfo)
+            //Animation(binding.ivTutorials, newLambda = {onItemSelected(tutorialsInfo)})
         }
     }
 

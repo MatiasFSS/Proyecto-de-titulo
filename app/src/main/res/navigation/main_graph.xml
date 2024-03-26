@@ -13,6 +13,9 @@
         <action
             android:id="@+id/action_profileFragment_to_tutorialsFragment"
             app:destination="@id/tutorialsFragment" />
+        <action
+            android:id="@+id/action_profileFragment_to_registerActivity"
+            app:destination="@id/registerActivity" />
     </fragment>
     <fragment
         android:id="@+id/encyclopediaFragment"
@@ -48,6 +51,9 @@
         <action
             android:id="@+id/action_tutorialsFragment_to_scanFragment"
             app:destination="@id/scanFragment" />
+        <action
+            android:id="@+id/action_tutorialsFragment_to_tutorialsDetailActivity"
+            app:destination="@id/tutorialsDetailActivity" />
     </fragment>
     <activity
         android:id="@+id/encyclopediaDetailActivity"
@@ -58,4 +64,19 @@
             android:name="type"
             app:argType="com.copetiny.proyecto.domain.model.encyclopedia.EncyclopediaModel" />
     </activity>
+    <activity
+        android:id="@+id/tutorialsDetailActivity"
+        android:name="com.copetiny.proyecto.ui.detailtutorials.TutorialsDetailActivity"
+        android:label="activity_tutorials_detail"
+        tools:layout="@layout/activity_tutorials_detail" >
+        <argument
+            android:name="type"
+            app:argType="com.copetiny.proyecto.domain.model.tutorials.TutorialsModel" />
+    </activity>
+    <activity
+        android:id="@+id/registerActivity"
+        android:name="com.copetiny.proyecto.ui.register.RegisterActivity"
+        android:label="activity_register"
+        tools:layout="@layout/activity_register" />
+
 </navigation>

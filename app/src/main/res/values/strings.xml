@@ -48,5 +48,9 @@
     <string name="tutorials_Description">Aqui encontraras muchos tutoriales para realizar diversas actividades con material reciclable.</string>
     <string name="tutorials_Description2">¡RECUERDA! : "Reutiliza - Reduce - Recicla"</string>
 
-
+    <!--registro-->
+    <string name="register_Name">Ingrese su nombre</string>
+    <string name="register_Age">¿Cual es su edad?</string>
+    <string name="register_bt">Confirmar datos</string>
+    <string name="register_welcome">Bienvenido Antes de comenzar nos gustaria saber más sobre ti, porfavor indica como te gustaria llamarte en la app</string>
 </resources>

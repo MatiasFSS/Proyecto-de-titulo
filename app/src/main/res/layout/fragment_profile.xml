@@ -5,78 +5,126 @@
     android:layout_height="match_parent"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     tools:context=".ui.profile.ProfileFragment"
+    android:background="@color/background"
     >
 
-    <TextView
+    <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintBottom_toTopOf="@+id/cvProfile"
-        android:text="BIENVENIDO"
-        android:gravity="center"
-        android:layout_margin="16dp"
-        android:textSize="24dp"
-        />
 
-   <androidx.cardview.widget.CardView
-       android:id="@+id/cvProfile"
-       android:layout_width="match_parent"
-       android:layout_height="wrap_content"
-       android:orientation="vertical"
-       app:layout_constraintTop_toTopOf="parent"
-       app:layout_constraintEnd_toEndOf="parent"
-       app:layout_constraintStart_toStartOf="parent"
-       app:layout_constraintBottom_toBottomOf="parent"
-       android:layout_margin="16dp"
-       app:cardCornerRadius="16dp"
-       android:backgroundTint="@color/color_1"
-       >
-       <LinearLayout
-           android:layout_width="match_parent"
-           android:layout_height="match_parent"
-           android:orientation="vertical"
-           android:padding="16dp"
-           >
+        android:layout_margin="16dp"
+        android:gravity="center"
+        >
+
+        <ImageView
+            android:id="@+id/ivProfile"
+            android:layout_width="150dp"
+            android:layout_height="150dp"
+            android:src="@drawable/profile"
+            android:layout_gravity="center"
+            android:scaleType="centerCrop"
+            >
+        </ImageView>
+
+        <TextView
+            android:id="@+id/tvWelcomeProfile"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/profile_WelcomeProfie"
+            android:gravity="center"
+            android:layout_margin="8dp"
+            android:textSize="24dp"
+            android:textColor="@color/black"
+            android:fontFamily="@font/ebgaramond_variablefont_wght"
+            android:textStyle="bold"
+            />
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/cvProfile"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="16dp"
+            app:cardCornerRadius="16dp"
+            android:backgroundTint="@color/background_card"
+            >
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                android:padding="16dp"
+                >
                 <TextView
                     android:id="@+id/tvName"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_margin="8dp"
-                    android:textColor="@color/white"
+                    android:textColor="@color/text_color"
                     android:textSize="16dp"
+                    android:fontFamily="@font/garamond_italic_variablefont_wght"
 
                     />
-           <com.google.android.material.divider.MaterialDivider
-               android:layout_width="match_parent"
-               android:layout_height="1dp"
-               android:layout_margin="8dp"
-               >
-           </com.google.android.material.divider.MaterialDivider>
+                <com.google.android.material.divider.MaterialDivider
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_margin="8dp"
+                    >
+                </com.google.android.material.divider.MaterialDivider>
 
-               <TextView
-                   android:id="@+id/tvAge"
-                   android:layout_width="match_parent"
-                   android:layout_height="wrap_content"
-                   android:layout_margin="8dp"
-                   android:textColor="@color/white"
-                   android:textSize="16dp"
-                   />
-       </LinearLayout>
+                <TextView
+                    android:id="@+id/tvAge"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="8dp"
+                    android:textColor="@color/text_color"
+                    android:textSize="16dp"
+                    android:fontFamily="@font/garamond_italic_variablefont_wght"
+                    />
+                <com.google.android.material.divider.MaterialDivider
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_margin="8dp"
+                    >
+                </com.google.android.material.divider.MaterialDivider>
 
-   </androidx.cardview.widget.CardView>
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/profile_Level"
+                    android:textColor="@color/text_color"
+                    android:layout_margin="8dp"
+                    android:textSize="16dp"
+                    android:fontFamily="@font/garamond_italic_variablefont_wght"
+                    />
 
-    <Button
-        android:id="@+id/btEdit"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/cvProfile"
-        android:text="Editar Datos"
-        android:backgroundTint="@color/color_navBar"/>
+                <com.google.android.material.slider.RangeSlider
+                    android:id="@+id/rsLevel"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    >
+
+                </com.google.android.material.slider.RangeSlider>
+            </LinearLayout>
+
+
+        </androidx.cardview.widget.CardView>
+
+        <Button
+            android:id="@+id/btEdit"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:text="@string/profile_BtnEdit"
+            android:backgroundTint="@color/color_navBar"
+            />
+    </LinearLayout>
+
+
+
 
 
 

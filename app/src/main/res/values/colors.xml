@@ -22,5 +22,9 @@
     <color name="color_4">#f68e2c</color>
     <color name="color_5">#e45a3f</color>
     <color name="color_6">#7fc7b3</color>
+    <color name="background">#f2f0f4</color>
+    <color name="background_card">#ffff</color>
+    <color name="text_color">#1b1b1b</color>
+    <color name="text_secundary">#44464e</color>
 
 </resources>

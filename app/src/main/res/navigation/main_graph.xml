@@ -42,6 +42,9 @@
         <action
             android:id="@+id/action_scanFragment_to_encyclopediaFragment"
             app:destination="@id/encyclopediaFragment" />
+        <action
+            android:id="@+id/action_scanFragment_to_scanDetailActivity"
+            app:destination="@id/scanDetailActivity" />
     </fragment>
     <fragment
         android:id="@+id/tutorialsFragment"
@@ -78,5 +81,14 @@
         android:name="com.copetiny.proyecto.ui.register.RegisterActivity"
         android:label="activity_register"
         tools:layout="@layout/activity_register" />
+    <activity
+        android:id="@+id/scanDetailActivity"
+        android:name="com.copetiny.proyecto.ui.detailscan.ScanDetailActivity"
+        android:label="activity_scan_detail"
+        tools:layout="@layout/activity_scan_detail" >
+        <argument
+            android:name="type"
+            app:argType="string" />
+    </activity>
 
 </navigation>

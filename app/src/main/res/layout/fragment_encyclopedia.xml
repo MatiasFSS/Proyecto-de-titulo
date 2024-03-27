@@ -6,6 +6,7 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     tools:context=".ui.encyclopedia.EncyclopediaFragment"
     android:orientation="vertical"
+    android:background="@color/background"
     >
 
     <androidx.cardview.widget.CardView
@@ -17,7 +18,7 @@
         app:layout_constraintStart_toStartOf="parent"
         android:layout_margin="8dp"
         app:cardCornerRadius="16dp"
-        android:backgroundTint="@color/color_1"
+        android:backgroundTint="@color/background_card"
         >
 
         <LinearLayout
@@ -36,7 +37,7 @@
             android:text="@string/encyclopedia_Title"
             android:gravity="center"
             android:layout_margin="10dp"
-            android:textColor="@color/white"
+            android:textColor="@color/text_color"
             android:fontFamily="@font/ebgaramond_variablefont_wght"
             android:textSize="26dp"
             android:textStyle="bold"
@@ -52,7 +53,7 @@
             app:layout_constraintTop_toBottomOf="@+id/tvTitleRV"
             android:text="@string/encyclopedia_Description"
             android:justificationMode="inter_word"
-            android:textColor="@color/white"
+            android:textColor="@color/text_color"
             android:fontFamily="@font/garamond_italic_variablefont_wght"
             android:textSize="16dp"
 

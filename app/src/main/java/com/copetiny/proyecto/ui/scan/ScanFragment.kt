@@ -1,5 +1,6 @@
 package com.copetiny.proyecto.ui.scan
 
+import android.app.Dialog
 import android.content.Intent
 import android.os.Bundle
 import android.util.Log
@@ -8,10 +9,9 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.Toast
-import androidx.activity.result.ActivityResultLauncher
+import androidx.navigation.fragment.findNavController
 import com.copetiny.proyecto.R
 import com.copetiny.proyecto.databinding.FragmentScanBinding
-import com.google.zxing.integration.android.IntentIntegrator
 import com.journeyapps.barcodescanner.ScanContract
 import com.journeyapps.barcodescanner.ScanOptions
 import dagger.hilt.android.AndroidEntryPoint
@@ -21,6 +21,7 @@ class ScanFragment : Fragment() {
 
     private var _binding:FragmentScanBinding? = null
     private val binding get() = _binding!!
+
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
@@ -42,11 +43,16 @@ class ScanFragment : Fragment() {
     private val barcodeLauncher = registerForActivityResult(ScanContract()){ result ->
         if(result.contents == null){
             Toast.makeText(requireContext(), "Error al Leer el codigo QR", Toast.LENGTH_SHORT).show()
+
         }else{
             Toast.makeText(requireContext(), "el valor escaneado es: ${result.contents}", Toast.LENGTH_SHORT).show()
-            Log.i("Matias","${result.contents}")
+            val type = result.contents
+            findNavController().navigate(
+                ScanFragmentDirections.actionScanFragmentToScanDetailActivity(type)
+            )
         }
     }
+
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,

@@ -5,7 +5,9 @@
     android:layout_height="match_parent"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     tools:context=".ui.tutorials.TutorialsFragment"
-    android:orientation="vertical">
+    android:orientation="vertical"
+    android:background="@color/background"
+    >
 
       <androidx.cardview.widget.CardView
           android:id="@+id/cvStringTutorials"
@@ -14,9 +16,10 @@
           app:layout_constraintTop_toTopOf="parent"
           app:layout_constraintEnd_toEndOf="parent"
           app:layout_constraintStart_toStartOf="parent"
-          android:layout_margin="8dp"
+          android:backgroundTint="@color/background_card"
           app:cardCornerRadius="16dp"
-          android:backgroundTint="@color/color_1"
+          android:layout_margin="8dp"
+          android:elevation="8dp"
           >
 
          <LinearLayout
@@ -36,7 +39,7 @@
                 android:text="@string/tutorials_Title"
                 android:gravity="center"
                 android:layout_margin="10dp"
-                android:textColor="@color/white"
+                android:textColor="@color/text_color"
                 android:fontFamily="@font/ebgaramond_variablefont_wght"
                 android:textSize="26dp"
                 android:textStyle="bold"
@@ -51,7 +54,7 @@
                 app:layout_constraintStart_toStartOf="parent"
                 android:text="@string/tutorials_Description"
                 android:justificationMode="inter_word"
-                android:textColor="@color/white"
+                android:textColor="@color/text_color"
                 android:fontFamily="@font/garamond_italic_variablefont_wght"
                 android:textSize="16dp"
                 />
@@ -64,7 +67,7 @@
                 app:layout_constraintStart_toStartOf="parent"
                 android:text="@string/tutorials_Description2"
                 android:justificationMode="inter_word"
-                android:textColor="@color/white"
+                android:textColor="@color/text_color"
                 android:fontFamily="@font/garamond_italic_variablefont_wght"
                 android:textSize="16dp"
                 android:gravity="center"

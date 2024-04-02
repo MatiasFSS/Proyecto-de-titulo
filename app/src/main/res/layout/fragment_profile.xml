@@ -25,24 +25,33 @@
             android:id="@+id/ivProfile"
             android:layout_width="150dp"
             android:layout_height="150dp"
-            android:src="@drawable/profile"
+            android:src="@drawable/reciclar_color"
             android:layout_gravity="center"
             android:scaleType="centerCrop"
             >
         </ImageView>
-
-        <TextView
-            android:id="@+id/tvWelcomeProfile"
-            android:layout_width="match_parent"
+        <androidx.cardview.widget.CardView
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="@string/profile_WelcomeProfie"
-            android:gravity="center"
-            android:layout_margin="8dp"
-            android:textSize="24dp"
-            android:textColor="@color/black"
-            android:fontFamily="@font/ebgaramond_variablefont_wght"
-            android:textStyle="bold"
-            />
+            app:cardCornerRadius="16dp"
+            android:elevation="8dp"
+            android:layout_margin="16dp"
+            android:backgroundTint="@color/background_card"
+            >
+            <TextView
+                android:id="@+id/tvWelcomeProfile"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/profile_WelcomeProfie"
+                android:gravity="center"
+                android:layout_margin="8dp"
+                android:textSize="26dp"
+                android:textColor="@color/black"
+                android:fontFamily="@font/ebgaramond_variablefont_wght"
+                android:textStyle="bold"
+                android:paddingHorizontal="26dp"
+                />
+        </androidx.cardview.widget.CardView>
 
         <androidx.cardview.widget.CardView
             android:id="@+id/cvProfile"
@@ -120,6 +129,10 @@
             android:layout_gravity="center"
             android:text="@string/profile_BtnEdit"
             android:backgroundTint="@color/color_navBar"
+            android:drawableRight="@drawable/editar"
+            android:drawableTint="@color/white"
+
+
             />
     </LinearLayout>
 

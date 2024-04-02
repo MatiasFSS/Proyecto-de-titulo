@@ -77,11 +77,6 @@
             app:argType="com.copetiny.proyecto.domain.model.tutorials.TutorialsModel" />
     </activity>
     <activity
-        android:id="@+id/registerActivity"
-        android:name="com.copetiny.proyecto.ui.register.RegisterActivity"
-        android:label="activity_register"
-        tools:layout="@layout/activity_register" />
-    <activity
         android:id="@+id/scanDetailActivity"
         android:name="com.copetiny.proyecto.ui.detailscan.ScanDetailActivity"
         android:label="activity_scan_detail"
@@ -90,5 +85,10 @@
             android:name="type"
             app:argType="string" />
     </activity>
+    <activity
+        android:id="@+id/registerActivity"
+        android:name="com.copetiny.proyecto.ui.register.RegisterActivity"
+        android:label="activity_register"
+        tools:layout="@layout/activity_register" />
 
 </navigation>

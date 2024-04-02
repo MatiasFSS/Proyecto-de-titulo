@@ -24,7 +24,7 @@
         <ImageView
             android:layout_width="150dp"
             android:layout_height="150dp"
-            android:src="@drawable/profile">
+            android:src="@drawable/reciclar_color">
 
         </ImageView>
         <LinearLayout
@@ -95,6 +95,8 @@
                         android:layout_marginTop="16dp"
                         android:text="@string/register_bt"
                         android:backgroundTint="@color/color_navBar"
+                        android:drawableRight="@drawable/confirmar"
+                        android:drawableTint="@color/white"
                         />
 
                 </LinearLayout>

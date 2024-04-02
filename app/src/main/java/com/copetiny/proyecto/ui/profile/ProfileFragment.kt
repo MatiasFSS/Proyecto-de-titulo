@@ -1,20 +1,19 @@
 package com.copetiny.proyecto.ui.profile
 
-import android.content.Intent
+import android.app.Dialog
 import android.os.Bundle
-import android.util.Log
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.Button
+import android.widget.EditText
+import android.widget.ImageView
 import android.widget.Toast
-import androidx.activity.result.PickVisualMediaRequest
-import androidx.activity.result.contract.ActivityResultContracts
-import androidx.navigation.fragment.findNavController
 import com.copetiny.proyecto.ProyectoApp.Companion.prefs
+import com.copetiny.proyecto.R
 import com.copetiny.proyecto.databinding.FragmentProfileBinding
-import com.copetiny.proyecto.ui.register.Prefs
-import com.copetiny.proyecto.ui.register.RegisterActivity
+
 import dagger.hilt.android.AndroidEntryPoint
 
 
@@ -25,19 +24,9 @@ class ProfileFragment : Fragment() {
     private var _binding:FragmentProfileBinding? = null
     private val binding get() = _binding!!
 
-    private val pickMedia = registerForActivityResult(ActivityResultContracts.PickVisualMedia()){uri ->
-        if(uri != null){
-            binding.ivProfile.setImageURI(uri)
-        }else{
-            Log.i("matias", "Noseleccionado")
-        }
-
-    }
-
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
         initUI()
-        btnImage()
     }
 
     override fun onCreateView(
@@ -52,25 +41,61 @@ class ProfileFragment : Fragment() {
 
     private fun initUI(){
         binding.btEdit.setOnClickListener {
-            prefs.wipe()
+           /* prefs.wipe()
             findNavController().navigate(
                 ProfileFragmentDirections.actionProfileFragmentToRegisterActivity()
-            )
+            )*/
+            showDialog()
+
 
         }
         val userName= prefs.getName()
         val age = prefs.getAge()
-        binding.tvName.text = "Nombre $userName"
+        binding.tvName.text = "Nombre: $userName"
         binding.tvAge.text = "Edad: $age"
     }
 
-    private fun btnImage(){
-        binding.ivProfile.setOnClickListener {
+    private fun showDialog(){
+        val dialog = Dialog(requireContext())
+        dialog.setContentView(R.layout.item_dialog_edit_user)
 
-            pickMedia.launch(PickVisualMediaRequest(ActivityResultContracts.PickVisualMedia.ImageOnly))
+        val btn = dialog.findViewById<Button>(R.id.btnConfirm)
+        val btnBack = dialog.findViewById<ImageView>(R.id.ivBackDialog)
+        val name = dialog.findViewById<EditText>(R.id.edit_name)
+        val age = dialog.findViewById<EditText>(R.id.edit_age)
+
+        btn.setOnClickListener {
+            if(name.text.toString().isNotEmpty() && age.text.toString().isNotEmpty()){
+                prefs.wipe()
+                prefs.saveName(name.text.toString())
+                prefs.saveAge(age.text.toString())
+
+                val userName= prefs.getName()
+                val age = prefs.getAge()
+
+                binding.tvName.text = "Nombre: $userName"
+                binding.tvAge.text = "Edad: $age"
+                dialog.hide()
+            }else{
+                if(name.text.toString().isEmpty()){
+                    name.error ="Este campo es obligatorio"
+                    if(age.text.toString().isEmpty()){
+                        age.error = "Este campo es obligatorio"
+                        Toast.makeText(requireContext(),"Los campos son obligatorios, porfavor Ingrese su nombre y edad", Toast.LENGTH_SHORT).show()
+                    }else{
+                        Toast.makeText(requireContext(),"El campo es obligatorio, porfavor Ingrese su nombre", Toast.LENGTH_SHORT).show()
+                    }
+                }else{
+                    if(age.text.toString().isEmpty()){
+                        age.error = "Este campo es obligatorio"
+                        Toast.makeText(requireContext(),"El campo es obligatorio, porfavor Ingrese su edad", Toast.LENGTH_SHORT).show()
+                    }
+            }
         }
+        }
+        btnBack.setOnClickListener {dialog.hide()}
+        dialog.show()
     }
-
 
 
 }

@@ -6,6 +6,59 @@
     tools:context=".ui.quiz.QuizFragment"
     android:background="@color/background"
     >
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cvString"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_margin="8dp"
+        app:cardCornerRadius="16dp"
+        android:backgroundTint="@color/background_card"
+        >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="16dp"
+            >
+            <TextView
+                android:id="@+id/tvTitleRV"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                android:text="@string/quiz_card_title"
+                android:gravity="center"
+                android:layout_margin="10dp"
+                android:textColor="@color/text_color"
+                android:fontFamily="@font/ebgaramond_variablefont_wght"
+                android:textSize="26dp"
+                android:textStyle="bold"
+
+                />
+
+            <TextView
+                android:id="@+id/tvDescriptionRV"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/tvTitleRV"
+                android:text="@string/quiz_card_description"
+                android:justificationMode="inter_word"
+                android:textColor="@color/text_color"
+                android:fontFamily="@font/garamond_italic_variablefont_wght"
+                android:textSize="16dp"
+
+
+                />
+        </LinearLayout>
+    </androidx.cardview.widget.CardView>
+
     <LinearLayout
         android:orientation="vertical"
         android:layout_width="match_parent"
@@ -32,15 +85,17 @@
                     android:textStyle="bold"
                     android:textColor="@color/text_color"
                     android:textSize="17sp"
-                    android:text="Trivia nivel principiante"
+                    android:text="@string/quiz_easy"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"/>
 
                 <Button
                     android:layout_width="120dp"
                     android:layout_height="40dp"
-                    android:text="Facil"
+                    android:text="@string/quiz_btn_easy"
                     android:backgroundTint="@color/color_navBar"
+                    android:drawableRight="@drawable/una_estrella"
+                    android:drawableTint="@color/white"
                     />
             </LinearLayout>
         </androidx.cardview.widget.CardView>
@@ -64,7 +119,7 @@
                     android:textStyle="bold"
                     android:textColor="@color/text_color"
                     android:textSize="17sp"
-                    android:text="Trivia nivel Intermedio"
+                    android:text="@string/quiz_medium"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
 
@@ -72,8 +127,10 @@
                 <Button
                     android:layout_width="120dp"
                     android:layout_height="40dp"
-                    android:text="Medio"
+                    android:text="@string/quiz_btn_medium"
                     android:backgroundTint="@color/color_navBar"
+                    android:drawableRight="@drawable/dos_estrellas"
+                    android:drawableTint="@color/white"
                     />
             </LinearLayout>
         </androidx.cardview.widget.CardView>
@@ -99,13 +156,13 @@
                     android:textStyle="bold"
                     android:textColor="@color/text_color"
                     android:textSize="17sp"
-                    android:text="Trivia nivel Dificil"
+                    android:text="@string/quiz_pro"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"/>
                 <Button
                     android:layout_width="120dp"
                     android:layout_height="40dp"
-                    android:text="Dificil"
+                    android:text="@string/quiz_btn_pro"
                     android:backgroundTint="@color/color_navBar"
                     />
             </LinearLayout>

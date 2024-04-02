@@ -86,6 +86,8 @@
                         android:text="RECICLAR"
                         android:backgroundTint="@color/color_navBar"
                         android:layout_gravity="center"
+                        android:drawableRight="@drawable/btn_reciclar"
+                        android:drawableTint="@color/white"
                         />
                 </LinearLayout>
             </androidx.constraintlayout.widget.ConstraintLayout>

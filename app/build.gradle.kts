@@ -72,7 +72,7 @@ dependencies {
     kapt("com.google.dagger:hilt-compiler:2.48")
 
     //splash
-    //implementation("androidx.core:core-splashscreen:1.0.1")
+    implementation("androidx.core:core-splashscreen:1.0.1")
 
     //zxing
     implementation("com.google.zxing:core:3.3.0")

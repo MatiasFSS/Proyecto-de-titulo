@@ -50,15 +50,28 @@
     <string name="register_Name">Ingrese su nombre</string>
     <string name="register_Age">¿Cual es su edad?</string>
     <string name="register_bt">Confirmar datos</string>
-    <string name="register_welcome">Bienvenido Antes de comenzar nos gustaria saber más sobre ti, porfavor indica como te gustaria llamarte en la app</string>
+    <string name="register_welcome">Bienvenido, antes de comenzar nos gustaria saber más sobre ti, porfavor indica como te gustaria llamarte en la app</string>
 
 
     <!--Scan-->
     <string name="scan_CarView">Vive la experiencia de reciclaje, pulsa el boton reciclar para poder escanear el codigo QR del producto a reciclar, veras la información relevante del producto</string>
-    <string name="scan_btnReciclar">Reciclar</string>
+    <string name="scan_btnReciclar">Escanear</string>
+    <string name="scan_title_reciclaje">¿Que es el reciclaje?</string>
+
 
     <!--Perfil-->
     <string name="profile_Level">Nivel de usuario</string>
     <string name="profile_BtnEdit">Editar Usuarios</string>
-    <string name="profile_WelcomeProfie">Bienvenido al mundo del reciclaje</string>
+    <string name="profile_WelcomeProfie">Bienvenido</string>
+
+    <!--Quiz-->
+    <string name="quiz_easy">Trivia nivel principiante</string>
+    <string name="quiz_medium">Trivia nivel Intermedio</string>
+    <string name="quiz_pro">Trivia nivel Dificil</string>
+    <string name="quiz_btn_easy">Facil</string>
+    <string name="quiz_btn_medium">Medio</string>
+    <string name="quiz_btn_pro">Dificil</string>
+    <string name="quiz_card_title">Trivias</string>
+    <string name="quiz_card_description">Aqui podras medir tus conocimientos, contesta una trivia y gana puntos de nivel.</string>
+
 </resources>

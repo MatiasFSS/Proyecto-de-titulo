@@ -26,5 +26,6 @@
     <color name="background_card">#ffff</color>
     <color name="text_color">#1b1b1b</color>
     <color name="text_secundary">#44464e</color>
+    <color name="disabled_btn">#C0C0C0</color>
 
 </resources>

@@ -22,7 +22,6 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="vertical"
-            android:padding="16dp"
             >
             <TextView
                 android:id="@+id/tvTitleRV"
@@ -53,6 +52,7 @@
                 android:textColor="@color/text_color"
                 android:fontFamily="@font/garamond_italic_variablefont_wght"
                 android:textSize="16dp"
+                android:padding="16dp"
 
 
                 />

@@ -1,12 +1,16 @@
 package com.copetiny.proyecto.ui.register
 
 import android.content.Context
+import java.text.SimpleDateFormat
+import java.util.Locale
 
-class Prefs (val context: Context) {
+class PrefsUsers (val context: Context) {
 
     val SHARE_NAME = "Mydtb"
     val USER_NAME = "username"
     val USER_AGE = "age"
+    val DATE_DAY= "date"
+
     //val USER_IMAGE = "img"
 
 

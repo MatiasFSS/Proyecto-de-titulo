@@ -43,40 +43,119 @@
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toBottomOf="@+id/ivBackScan"
                     app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintBottom_toBottomOf="parent"
                     android:padding="16dp"
                     android:gravity="center"
                     >
                     <ImageView
+                        android:id="@+id/ivScan"
                         android:layout_width="match_parent"
                         android:layout_height="150dp"
-                        android:src="@drawable/plantar"
+
                         />
                     <TextView
-                        android:id="@+id/tvDetailQR"
+                        android:id="@+id/tvTitleQR"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:padding="18dp"
-                        android:textColor="@color/black"
+                        android:fontFamily="@font/ebgaramond_variablefont_wght"
                         android:layout_gravity="center"
                         android:layout_marginTop="16dp"
+                        android:textSize="26dp"
+                        android:gravity="center"
                         />
 
                     <TextView
-                        android:id="@+id/etInformationScan"
+                        android:id="@+id/tvDesciptionScan"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:hint="AQUI IRA LA INFORMACION"
+                        android:justificationMode="inter_word"
+                        android:fontFamily="@font/garamond_italic_variablefont_wght"
+                        android:gravity="center"
+                        android:textSize="16dp"
                         android:layout_marginTop="16dp"
                         />
 
                     <TextView
-                        android:id="@+id/etAge"
+                        android:id="@+id/tvQuestionQR"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:hint="AQUI IRA Más INFORMACION"
+                        android:text="@string/scan_question"
                         android:layout_marginTop="16dp"
+                        android:justificationMode="inter_word"
+                        android:fontFamily="@font/ebgaramond_variablefont_wght"
+                        android:textStyle="bold"
+                        android:gravity="center"
+                        android:textSize="20dp"
                         />
+
+                    <androidx.cardview.widget.CardView
+                        android:id="@+id/scanAlternativeA"
+                        app:cardBackgroundColor="@color/background_card"
+                        app:strokeWidth="0dp"
+                        android:layout_width="200dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="16dp"
+                        app:cardCornerRadius="16dp"
+                        >
+                        <LinearLayout
+                            android:gravity="center"
+                            android:orientation="vertical"
+                            android:layout_width="match_parent"
+                            android:layout_height="50dp">
+                            <TextView
+                                android:textStyle="bold"
+                                android:textColor="@color/text_color"
+                                android:textSize="17sp"
+                                android:text="@string/scan_alternativeA"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"/>
+                        </LinearLayout>
+                    </androidx.cardview.widget.CardView>
+                    <androidx.cardview.widget.CardView
+                        android:id="@+id/scanAlternativeB"
+                        app:cardBackgroundColor="@color/background_card"
+                        app:strokeWidth="0dp"
+                        android:layout_width="200dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="16dp"
+                        app:cardCornerRadius="16dp"
+                        >
+                        <LinearLayout
+                            android:gravity="center"
+                            android:orientation="vertical"
+                            android:layout_width="match_parent"
+                            android:layout_height="50dp">
+                            <TextView
+                                android:textStyle="bold"
+                                android:textColor="@color/text_color"
+                                android:textSize="17sp"
+                                android:text="@string/scan_alternativeB"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"/>
+                        </LinearLayout>
+                    </androidx.cardview.widget.CardView>
+                    <androidx.cardview.widget.CardView
+                        android:id="@+id/scanAlternativeC"
+                        app:cardBackgroundColor="@color/background_card"
+                        app:strokeWidth="0dp"
+                        android:layout_width="200dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="16dp"
+                        app:cardCornerRadius="16dp"
+                        >
+                        <LinearLayout
+                            android:gravity="center"
+                            android:orientation="vertical"
+                            android:layout_width="match_parent"
+                            android:layout_height="50dp">
+                            <TextView
+                                android:textStyle="bold"
+                                android:textColor="@color/text_color"
+                                android:textSize="17sp"
+                                android:text="@string/scan_alternativeC"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"/>
+                        </LinearLayout>
+                    </androidx.cardview.widget.CardView>
 
                     <Button
                         android:id="@+id/btnReciclar"
@@ -84,11 +163,13 @@
                         android:layout_height="wrap_content"
                         android:layout_marginTop="16dp"
                         android:text="RECICLAR"
-                        android:backgroundTint="@color/color_navBar"
+                        android:backgroundTint="@color/disabled_btn"
                         android:layout_gravity="center"
                         android:drawableRight="@drawable/btn_reciclar"
                         android:drawableTint="@color/white"
+                        android:enabled="false"
                         />
+
                 </LinearLayout>
             </androidx.constraintlayout.widget.ConstraintLayout>
         </androidx.cardview.widget.CardView>

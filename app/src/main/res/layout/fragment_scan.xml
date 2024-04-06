@@ -31,18 +31,18 @@
                 android:text="@string/scan_title_reciclaje"
                 android:justificationMode="inter_word"
                 android:gravity="center"
-                android:padding="16dp"
                 android:textColor="@color/text_color"
                 android:fontFamily="@font/ebgaramond_variablefont_wght"
                 android:textSize="26dp"
                 android:textStyle="bold"
+                android:layout_margin="10dp"
 
                 >
             </TextView>
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="@string/scan_CarView"
+                android:text="@string/scan_description_reciclaje"
                 android:justificationMode="inter_word"
                 android:textColor="@color/text_color"
                 android:fontFamily="@font/garamond_italic_variablefont_wght"
@@ -54,7 +54,7 @@
             <ImageView
                 android:id="@+id/ivScan"
                 android:layout_width="match_parent"
-                android:layout_height="200dp"
+                android:layout_height="150dp"
                 android:scaleType="centerCrop"
                 android:src="@drawable/reciclaje"
                 />

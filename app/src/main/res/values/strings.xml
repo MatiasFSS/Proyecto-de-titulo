@@ -54,9 +54,14 @@
 
 
     <!--Scan-->
-    <string name="scan_CarView">Vive la experiencia de reciclaje, pulsa el boton reciclar para poder escanear el codigo QR del producto a reciclar, veras la información relevante del producto</string>
+    <string name="scan_CarView">Vive la experiencia de reciclaje, pulsa el boton reciclar para poder escanear el codigo QR del producto a reciclar, veras la información relevante del producto y podras ver el proceso del reciclaje a traves del brazo robotico.</string>
     <string name="scan_btnReciclar">Escanear</string>
     <string name="scan_title_reciclaje">¿Que es el reciclaje?</string>
+    <string name="scan_description_reciclaje">El reciclaje consiste en reutilizar los materiales con el objetivo de producir productos nuevos para lograr reducir la utilización de materias primas, conservando así los recursos naturales.</string>
+    <string name="scan_question">¿En basurero crees que se recicla este material?</string>
+    <string name="scan_alternativeA">A) Basurero 1</string>
+    <string name="scan_alternativeB">B) Basurero 2</string>
+    <string name="scan_alternativeC">C) Basurero 3</string>
 
 
     <!--Perfil-->

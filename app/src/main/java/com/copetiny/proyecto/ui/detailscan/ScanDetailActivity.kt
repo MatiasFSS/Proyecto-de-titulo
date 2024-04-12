@@ -8,13 +8,16 @@ import androidx.core.content.ContextCompat
 import androidx.navigation.navArgs
 import com.copetiny.proyecto.R
 import com.copetiny.proyecto.databinding.ActivityScanDetailBinding
+import com.copetiny.proyecto.ui.profile.ProfileFragment
 import org.json.JSONObject
 //import android.util.Base64
 //import android.graphics.Bitmap
 //import android.graphics.BitmapFactory
 import com.squareup.picasso.Picasso
+import dagger.hilt.android.AndroidEntryPoint
 
-class ScanDetailActivity : AppCompatActivity() {
+@AndroidEntryPoint
+class ScanDetailActivity : AppCompatActivity(){
     private lateinit var binding:ActivityScanDetailBinding
     val args:ScanDetailActivityArgs by navArgs()
 
@@ -31,7 +34,6 @@ class ScanDetailActivity : AppCompatActivity() {
         val json = JSONObject(args.type)
         val title = json.getString("nombre_material")
         val description = json.getString("descripcion")
-        val basurero = json.getString("basurero")
         val imagen = json.getString("imagen")
 
         binding.tvTitleQR.text = title
@@ -59,6 +61,10 @@ class ScanDetailActivity : AppCompatActivity() {
         binding.btnReciclar.setOnClickListener {
             Toast.makeText(this, "Comienza el proceso de reciclaje", Toast.LENGTH_SHORT).show()
         }
+
+        binding.scanAlternativeA.isEnabled = false
+        binding.scanAlternativeB.isEnabled = false
+        binding.scanAlternativeC.isEnabled = false
 
     }
     private fun scanQuestion(){

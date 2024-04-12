@@ -28,7 +28,7 @@ class TutorialsDetailViewModel @Inject constructor(private val getTutorialsUseCa
             }
 
             if(result!= null){
-                _state.value = TutorialsDetailState.Success(result.nombre_tutorial, result.descripcion_tutorial, result.informacion_tutorial, tutorials)
+                _state.value = TutorialsDetailState.Success(/*result.nombre_tutorial,*/ result.descripcion_tutorial, result.informacion_tutorial, tutorials)
             }else{
                 _state.value = TutorialsDetailState.Error("Ha ocurrido un error, intentelo más tarde")
             }

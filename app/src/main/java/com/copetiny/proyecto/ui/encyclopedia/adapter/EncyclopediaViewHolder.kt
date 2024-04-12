@@ -1,6 +1,7 @@
 package com.copetiny.proyecto.ui.encyclopedia.adapter
 
 import android.view.View
+import android.view.animation.AccelerateDecelerateInterpolator
 import android.view.animation.LinearInterpolator
 import androidx.recyclerview.widget.RecyclerView
 import com.copetiny.proyecto.databinding.ItemEncyclopediaBinding
@@ -22,10 +23,18 @@ class EncyclopediaViewHolder(view:View):RecyclerView.ViewHolder(view) {
 
     fun Animation(view: View, newLambda:() -> Unit){
         view.animate().apply {
-            duration = 500
+            /*duration = 500
             interpolator = LinearInterpolator()
             rotationBy(360f)
             withEndAction{newLambda()}
+            start()*/
+
+            scaleX(1.5f)
+            scaleY(1.5f)
+            duration = 500
+            interpolator = AccelerateDecelerateInterpolator()
+            withEndAction{newLambda()}
+            alpha(0f)
             start()
 
         }

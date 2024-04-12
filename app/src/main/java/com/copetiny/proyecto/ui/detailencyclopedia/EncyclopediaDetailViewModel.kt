@@ -31,7 +31,7 @@ class EncyclopediaDetailViewModel @Inject constructor(private val getEncyclopedi
            }
 
             if(result!= null){
-                _state.value = EncyclopediaDetailState.Success( result.nombre_material,  result.descripcion,result.informacion, encyclopedia)
+                _state.value = EncyclopediaDetailState.Success( /*result.nombre_material,*/  result.descripcion,result.informacion, encyclopedia)
             }else{
                 _state.value = EncyclopediaDetailState.Error("Ha ocurrido un error, intente más tarde")
             }

@@ -3,6 +3,9 @@
     <style name="Base.Theme.Proyecto" parent="Theme.Material3.DayNight.NoActionBar">
         <!-- Customize your light theme here. -->
         <!-- <item name="colorPrimary">@color/my_light_primary</item> -->
+        <item name="android:navigationBarColor">@color/verde_natural_oscuro</item>
+        <item name="android:statusBarColor">@color/verde_natural_oscuro</item>
+
     </style>
 
     <style name="Theme.Proyecto" parent="Base.Theme.Proyecto">

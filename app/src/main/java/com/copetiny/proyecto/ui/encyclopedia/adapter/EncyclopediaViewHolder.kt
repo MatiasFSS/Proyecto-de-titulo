@@ -23,19 +23,19 @@ class EncyclopediaViewHolder(view:View):RecyclerView.ViewHolder(view) {
 
     fun Animation(view: View, newLambda:() -> Unit){
         view.animate().apply {
-            /*duration = 500
+            duration = 500
             interpolator = LinearInterpolator()
             rotationBy(360f)
             withEndAction{newLambda()}
-            start()*/
+            start()
 
-            scaleX(1.5f)
+            /*scaleX(1.5f)
             scaleY(1.5f)
+            alpha(0f)
             duration = 500
             interpolator = AccelerateDecelerateInterpolator()
             withEndAction{newLambda()}
-            alpha(0f)
-            start()
+            start()*/
 
         }
     }

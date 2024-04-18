@@ -13,8 +13,8 @@ import android.widget.Toast
 import com.copetiny.proyecto.ProyectoApp.Companion.prefs
 import com.copetiny.proyecto.R
 import com.copetiny.proyecto.databinding.FragmentProfileBinding
-
 import dagger.hilt.android.AndroidEntryPoint
+import java.text.DecimalFormat
 
 
 @AndroidEntryPoint
@@ -24,9 +24,12 @@ class ProfileFragment : Fragment() {
     private var _binding:FragmentProfileBinding? = null
     private val binding get() = _binding!!
 
+    private var current: Int = 0
+
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
         initUI()
+
     }
 
     override fun onCreateView(
@@ -53,6 +56,19 @@ class ProfileFragment : Fragment() {
         val age = prefs.getAge()
         binding.tvName.text = "Nombre: $userName"
         binding.tvAge.text = "Edad: $age"
+        levelBar()
+
+
+    }
+
+    private fun levelBar(){
+        //binding.rsLevel.isEnabled = false
+
+        binding.rsLevel.addOnChangeListener { _, value, _ ->
+            val df = DecimalFormat("#.##")
+            this.current = df.format(value).toInt()
+            binding.tvLevel.text = "$current pts"
+        }
     }
 
     private fun showDialog(){
@@ -96,6 +112,5 @@ class ProfileFragment : Fragment() {
         btnBack.setOnClickListener {dialog.hide()}
         dialog.show()
     }
-
 
 }

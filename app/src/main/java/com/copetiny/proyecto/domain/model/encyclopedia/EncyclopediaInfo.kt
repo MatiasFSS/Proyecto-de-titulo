@@ -15,10 +15,10 @@ sealed class EncyclopediaInfo(val img:Int, val name:Int){
     data object PET: EncyclopediaInfo(R.drawable.pet, R.string.encyclopedia_PET)
     data object Revistas: EncyclopediaInfo(R.drawable.revistas, R.string.encyclopedia_Revistas)
     data object Aceite_Vegetal: EncyclopediaInfo(R.drawable.aceite, R.string.encyclopedia_Aceite_Vegetal)
-    data object Cables: EncyclopediaInfo(R.drawable.aries, R.string.encyclopedia_Cables)
-    data object Celulares: EncyclopediaInfo(R.drawable.aries, R.string.encyclopedia_Celulares)
+    data object Cables: EncyclopediaInfo(R.drawable.cables, R.string.encyclopedia_Cables)
+    data object Celulares: EncyclopediaInfo(R.drawable.celulares, R.string.encyclopedia_Celulares)
     data object Pilas: EncyclopediaInfo(R.drawable.pilas, R.string.encyclopedia_Pilas)
-    data object Sanitarios: EncyclopediaInfo(R.drawable.aries, R.string.encyclopedia_Sanitarios)
-    data object PlasticoN7: EncyclopediaInfo(R.drawable.aries, R.string.encyclopedia_Plastico_N7)
+    data object Sanitarios: EncyclopediaInfo(R.drawable.sanitario, R.string.encyclopedia_Sanitarios)
+    data object PlasticoN7: EncyclopediaInfo(R.drawable.plasticon7, R.string.encyclopedia_Plastico_N7)
 
 }

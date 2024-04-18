@@ -76,11 +76,11 @@ class EncyclopediaDetailActivity : AppCompatActivity() {
             EncyclopediaModel.PET -> R.drawable.pet
             EncyclopediaModel.Revistas -> R.drawable.revistas
             EncyclopediaModel.Aceite_Vegetal -> R.drawable.aceite
-            EncyclopediaModel.Cables -> R.drawable.detail_aries
-            EncyclopediaModel.Celulares -> R.drawable.detail_aries
+            EncyclopediaModel.Cables -> R.drawable.cables
+            EncyclopediaModel.Celulares -> R.drawable.celulares
             EncyclopediaModel.Pilas -> R.drawable.pilas
-            EncyclopediaModel.Sanitarios -> R.drawable.detail_aries
-            EncyclopediaModel.PlasticoN7 -> R.drawable.detail_aries
+            EncyclopediaModel.Sanitarios -> R.drawable.sanitario
+            EncyclopediaModel.PlasticoN7 -> R.drawable.plasticon7
         }
 
         val name = when(state.encyclopediaModel){

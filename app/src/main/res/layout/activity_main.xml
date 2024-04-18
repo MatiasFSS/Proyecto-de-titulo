@@ -29,7 +29,7 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintBottom_toBottomOf="parent"
         app:menu="@menu/bottom_navbar"
-        android:background="@color/color_navBar"
+        android:background="@color/verde_natural_oscuro"
         app:itemIconTint="@color/bottom_nav_selector"
         app:itemTextColor="@color/bottom_nav_selector"
         app:itemActiveIndicatorStyle="@null"

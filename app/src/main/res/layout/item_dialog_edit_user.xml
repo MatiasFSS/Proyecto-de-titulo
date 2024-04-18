@@ -40,6 +40,7 @@
                    android:textSize="16dp"
                    android:gravity="center"
                    android:textStyle="bold"
+                   android:fontFamily="@font/ubuntu_title"
 
                    />
                <EditText
@@ -48,6 +49,7 @@
                    android:layout_height="wrap_content"
                    android:hint="@string/register_Name"
                    android:layout_marginVertical="8dp"
+                   android:fontFamily="@font/ubuntu_desciption"
                    />
                <EditText
                    android:id="@+id/edit_age"
@@ -55,6 +57,7 @@
                    android:layout_height="wrap_content"
                    android:hint="@string/register_Age"
                    android:layout_marginVertical="8dp"
+                   android:fontFamily="@font/ubuntu_desciption"
                    />
 
                <Button
@@ -66,6 +69,7 @@
                    android:layout_marginVertical="8dp"
                    android:drawableRight="@drawable/confirmar"
                    android:drawableTint="@color/white"
+                   android:fontFamily="@font/ubuntu_light"
                    />
 
 

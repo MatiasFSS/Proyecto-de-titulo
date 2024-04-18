@@ -27,5 +27,16 @@
     <color name="text_color">#1b1b1b</color>
     <color name="text_secundary">#44464e</color>
     <color name="disabled_btn">#C0C0C0</color>
-    <color name="wsp">#25d366</color>
+    <color name="wsp">#009929</color>
+    <color name="verde_natural_claro">#7ED957</color>
+    <color name="verde_natural_oscuro">#2E7D32</color>
+    <color name="azul_claro">#4FC3F7</color>
+    <color name="marron_suave">#A1887F</color>
+    <color name="beige">#ECEFF1</color>
+    <color name="gris_claro">#E0E0E0</color>
+    <color name="amarillo_suave">#FFEB3B</color>
+    <color name="naranja">#FFA726</color>
+
+
+
 </resources>

@@ -5,7 +5,7 @@
     android:layout_height="match_parent"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     tools:context=".ui.profile.ProfileFragment"
-    android:background="@color/background"
+    android:background="@color/beige"
     >
 
     <LinearLayout
@@ -30,14 +30,6 @@
             android:scaleType="centerCrop"
             >
         </ImageView>
-        <androidx.cardview.widget.CardView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            app:cardCornerRadius="16dp"
-            android:elevation="8dp"
-            android:layout_margin="16dp"
-            android:backgroundTint="@color/background_card"
-            >
             <TextView
                 android:id="@+id/tvWelcomeProfile"
                 android:layout_width="match_parent"
@@ -47,11 +39,10 @@
                 android:layout_margin="8dp"
                 android:textSize="26dp"
                 android:textColor="@color/black"
-                android:fontFamily="@font/ebgaramond_variablefont_wght"
-                android:textStyle="bold"
+                android:fontFamily="@font/ubuntu_title"
                 android:paddingHorizontal="26dp"
                 />
-        </androidx.cardview.widget.CardView>
+
 
         <androidx.cardview.widget.CardView
             android:id="@+id/cvProfile"
@@ -74,7 +65,7 @@
                     android:layout_margin="8dp"
                     android:textColor="@color/text_color"
                     android:textSize="16dp"
-                    android:fontFamily="@font/garamond_italic_variablefont_wght"
+                    android:fontFamily="@font/ubuntu_desciption"
 
                     />
                 <com.google.android.material.divider.MaterialDivider
@@ -91,7 +82,7 @@
                     android:layout_margin="8dp"
                     android:textColor="@color/text_color"
                     android:textSize="16dp"
-                    android:fontFamily="@font/garamond_italic_variablefont_wght"
+                    android:fontFamily="@font/ubuntu_desciption"
                     />
                 <com.google.android.material.divider.MaterialDivider
                     android:layout_width="match_parent"
@@ -107,16 +98,33 @@
                     android:textColor="@color/text_color"
                     android:layout_margin="8dp"
                     android:textSize="16dp"
-                    android:fontFamily="@font/garamond_italic_variablefont_wght"
+                    android:fontFamily="@font/ubuntu_desciption"
                     />
+
+
 
                 <com.google.android.material.slider.RangeSlider
                     android:id="@+id/rsLevel"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
+                    android:valueFrom ="0"
+                    android:stepSize="1"
+                    android:valueTo="100"
                     >
 
                 </com.google.android.material.slider.RangeSlider>
+
+                <TextView
+                    android:id="@+id/tvLevel"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="25sp"
+                    android:textStyle="bold"
+                    android:text="0 pts"
+                    android:layout_gravity="center"
+                    android:fontFamily="@font/ubuntu_title"
+                    />
+
             </LinearLayout>
 
 
@@ -131,6 +139,7 @@
             android:backgroundTint="@color/color_navBar"
             android:drawableRight="@drawable/editar"
             android:drawableTint="@color/white"
+            android:fontFamily="@font/ubuntu_light"
 
 
             />

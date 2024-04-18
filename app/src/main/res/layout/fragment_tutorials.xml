@@ -6,7 +6,7 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     tools:context=".ui.tutorials.TutorialsFragment"
     android:orientation="vertical"
-    android:background="@color/background"
+    android:background="@color/beige"
     >
 
       <androidx.cardview.widget.CardView
@@ -38,10 +38,9 @@
                 android:text="@string/tutorials_Title"
                 android:gravity="center"
                 android:layout_margin="10dp"
-                android:textColor="@color/text_color"
-                android:fontFamily="@font/ebgaramond_variablefont_wght"
+                android:textColor="@color/black"
+                android:fontFamily="@font/ubuntu_title"
                 android:textSize="26dp"
-                android:textStyle="bold"
                 />
 
             <TextView
@@ -53,10 +52,10 @@
                 app:layout_constraintStart_toStartOf="parent"
                 android:text="@string/tutorials_Description"
                 android:justificationMode="inter_word"
-                android:textColor="@color/text_color"
-                android:fontFamily="@font/garamond_italic_variablefont_wght"
+                android:textColor="@color/black"
+                android:fontFamily="@font/ubuntu_desciption"
                 android:textSize="16dp"
-                android:padding="16dp"
+                android:padding="8dp"
                 />
             <TextView
                 android:id="@+id/tvDescriptionTutorials2"
@@ -67,11 +66,11 @@
                 app:layout_constraintStart_toStartOf="parent"
                 android:text="@string/tutorials_Description2"
                 android:justificationMode="inter_word"
-                android:textColor="@color/text_color"
-                android:fontFamily="@font/garamond_italic_variablefont_wght"
+                android:textColor="@color/black"
+                android:fontFamily="@font/ubuntu_desciption"
                 android:textSize="16dp"
                 android:gravity="center"
-                android:padding="16dp"
+                android:padding="8dp"
                 />
 
 

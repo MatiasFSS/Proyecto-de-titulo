@@ -1,5 +1,6 @@
 package com.copetiny.proyecto.ui.detailscan
 
+import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Toast
@@ -21,6 +22,8 @@ class ScanDetailActivity : AppCompatActivity(){
     private lateinit var binding:ActivityScanDetailBinding
     val args:ScanDetailActivityArgs by navArgs()
 
+
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         binding = ActivityScanDetailBinding.inflate(layoutInflater)
@@ -28,6 +31,7 @@ class ScanDetailActivity : AppCompatActivity(){
 
         initUI()
         initBack()
+
     }
 
     private fun initUI(){
@@ -78,6 +82,7 @@ class ScanDetailActivity : AppCompatActivity(){
             val isCorrect = basurero == optionA
             if (isCorrect) {
                 Toast.makeText(this, "Respuesta Correcta, Ganas 5 pts de experiencia", Toast.LENGTH_SHORT).show()
+
                 handleAnswer(binding.scanAlternativeA, true)
                 handleAnswer(binding.scanAlternativeB, false)
                 handleAnswer(binding.scanAlternativeC, false)
@@ -94,6 +99,7 @@ class ScanDetailActivity : AppCompatActivity(){
             val isCorrect = basurero == optionB
             if (isCorrect) {
                 Toast.makeText(this, "Respuesta Correcta, Ganas 5 pts de experiencia", Toast.LENGTH_SHORT).show()
+
                 handleAnswer(binding.scanAlternativeB, true)
                 handleAnswer(binding.scanAlternativeA, false)
                 handleAnswer(binding.scanAlternativeC, false)
@@ -111,6 +117,7 @@ class ScanDetailActivity : AppCompatActivity(){
             val isCorrect = basurero == optionC
             if (isCorrect) {
                 Toast.makeText(this, "Respuesta Correcta, Ganas 5 pts de experiencia", Toast.LENGTH_SHORT).show()
+
                 handleAnswer(binding.scanAlternativeC, true)
                 handleAnswer(binding.scanAlternativeA, false)
                 handleAnswer(binding.scanAlternativeB, false)
@@ -124,4 +131,6 @@ class ScanDetailActivity : AppCompatActivity(){
         }
 
     }
+
+
 }

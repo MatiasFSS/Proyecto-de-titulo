@@ -4,7 +4,7 @@
     android:layout_height="match_parent"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     tools:context=".ui.quiz.QuizFragment"
-    android:background="@color/background"
+    android:background="@color/beige"
     >
     <androidx.cardview.widget.CardView
         android:id="@+id/cvString"
@@ -33,10 +33,9 @@
                 android:text="@string/quiz_card_title"
                 android:gravity="center"
                 android:layout_margin="10dp"
-                android:textColor="@color/text_color"
-                android:fontFamily="@font/ebgaramond_variablefont_wght"
+                android:textColor="@color/text_secundary"
+                android:fontFamily="@font/ubuntu_title"
                 android:textSize="26dp"
-                android:textStyle="bold"
 
                 />
 
@@ -49,8 +48,8 @@
                 app:layout_constraintTop_toBottomOf="@+id/tvTitleRV"
                 android:text="@string/quiz_card_description"
                 android:justificationMode="inter_word"
-                android:textColor="@color/text_color"
-                android:fontFamily="@font/garamond_italic_variablefont_wght"
+                android:textColor="@color/text_secundary"
+                android:fontFamily="@font/ubuntu_desciption"
                 android:textSize="16dp"
                 android:padding="16dp"
 
@@ -87,7 +86,9 @@
                     android:textSize="17sp"
                     android:text="@string/quiz_easy"
                     android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"/>
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/ubuntu_title"
+                    />
 
                 <Button
                     android:layout_width="120dp"
@@ -96,6 +97,7 @@
                     android:backgroundTint="@color/color_navBar"
                     android:drawableRight="@drawable/una_estrella"
                     android:drawableTint="@color/white"
+                    android:fontFamily="@font/ubuntu_desciption"
                     />
             </LinearLayout>
         </androidx.cardview.widget.CardView>
@@ -122,6 +124,7 @@
                     android:text="@string/quiz_medium"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    android:fontFamily="@font/ubuntu_title"
 
                     />
                 <Button
@@ -131,6 +134,7 @@
                     android:backgroundTint="@color/color_navBar"
                     android:drawableRight="@drawable/dos_estrellas"
                     android:drawableTint="@color/white"
+                    android:fontFamily="@font/ubuntu_light"
                     />
             </LinearLayout>
         </androidx.cardview.widget.CardView>
@@ -158,12 +162,15 @@
                     android:textSize="17sp"
                     android:text="@string/quiz_pro"
                     android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"/>
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/ubuntu_title"
+                    />
                 <Button
                     android:layout_width="120dp"
                     android:layout_height="40dp"
                     android:text="@string/quiz_btn_pro"
                     android:backgroundTint="@color/color_navBar"
+                    android:fontFamily="@font/ubuntu_light"
                     />
             </LinearLayout>
         </androidx.cardview.widget.CardView>

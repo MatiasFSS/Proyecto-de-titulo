@@ -15,7 +15,6 @@ import com.copetiny.proyecto.R
 import com.copetiny.proyecto.databinding.ActivityTutorialsDetailBinding
 import com.copetiny.proyecto.domain.model.tutorials.TutorialsModel
 import dagger.hilt.android.AndroidEntryPoint
-import kotlinx.coroutines.flow.collect
 import kotlinx.coroutines.launch
 @AndroidEntryPoint
 class TutorialsDetailActivity : AppCompatActivity() {
@@ -87,12 +86,12 @@ class TutorialsDetailActivity : AppCompatActivity() {
         }
 
         val image2 = when(state.tutorialsModel){
-            TutorialsModel.Tutorial1 -> R.drawable.btn_reciclar
-            TutorialsModel.Tutorial2 -> R.drawable.btn_reciclar
-            TutorialsModel.Tutorial3 -> R.drawable.btn_reciclar
-            TutorialsModel.Tutorial4 -> R.drawable.btn_reciclar
-            TutorialsModel.Tutorial5 -> R.drawable.btn_reciclar
-            TutorialsModel.Tutorial6 -> R.drawable.btn_reciclar
+            TutorialsModel.Tutorial1 -> R.drawable.contenedoresreciclaje
+            TutorialsModel.Tutorial2 -> R.drawable.cabezadepastodetalle
+            TutorialsModel.Tutorial3 -> R.drawable.titeresdetalles
+            TutorialsModel.Tutorial4 -> R.drawable.plantardetalle
+            TutorialsModel.Tutorial5 -> R.drawable.lapicerodetalle
+            TutorialsModel.Tutorial6 -> R.drawable.maceterodetalle
         }
 
         val video = when(state.tutorialsModel){
@@ -100,8 +99,8 @@ class TutorialsDetailActivity : AppCompatActivity() {
             TutorialsModel.Tutorial2 -> "<iframe width=\"100%\" height=\"100%\" src=\"https://www.youtube.com/embed/H1TORSSlF_0?si=PPWeGJAjCvnfRpob\" title=\"YouTube video player\" frameborder=\"0\" allow=\"accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share\" referrerpolicy=\"strict-origin-when-cross-origin\" allowfullscreen></iframe>"
             TutorialsModel.Tutorial3 -> "<iframe width=\"100%\" height=\"100%\" src=\"https://www.youtube.com/embed/oleKD8xWDTU?si=9_6hrZobCuTUxanW\" title=\"YouTube video player\" frameborder=\"0\" allow=\"accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share\" referrerpolicy=\"strict-origin-when-cross-origin\" allowfullscreen></iframe>"
             TutorialsModel.Tutorial4 -> "<iframe width=\"100%\" height=\"100%\" src=\"https://www.youtube.com/embed/-ibcM5TwKao?si=0yR5PG7YxkeXrg3j\" title=\"YouTube video player\" frameborder=\"0\" allow=\"accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share\" referrerpolicy=\"strict-origin-when-cross-origin\" allowfullscreen></iframe>"
-            TutorialsModel.Tutorial5 -> "<iframe width=\"560\" height=\"315\" src=\"https://www.youtube.com/embed/Ik5Fb2MAhqE?si=KJ0q2I7OhJvBmQyy\" title=\"YouTube video player\" frameborder=\"0\" allow=\"accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share\" referrerpolicy=\"strict-origin-when-cross-origin\" allowfullscreen></iframe>"
-            TutorialsModel.Tutorial6 -> "<iframe width=\"560\" height=\"315\" src=\"https://www.youtube.com/embed/7N746C2mB4o?si=B_k6EaGVgG0s1ivw\" title=\"YouTube video player\" frameborder=\"0\" allow=\"accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share\" referrerpolicy=\"strict-origin-when-cross-origin\" allowfullscreen></iframe>"
+            TutorialsModel.Tutorial5 -> "<iframe width=\"100%\" height=\"100%\" src=\"https://www.youtube.com/embed/Ik5Fb2MAhqE?si=KJ0q2I7OhJvBmQyy\" title=\"YouTube video player\" frameborder=\"0\" allow=\"accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share\" referrerpolicy=\"strict-origin-when-cross-origin\" allowfullscreen></iframe>"
+            TutorialsModel.Tutorial6 -> "<iframe width=\"100%\" height=\"100%\" src=\"https://www.youtube.com/embed/7N746C2mB4o?si=B_k6EaGVgG0s1ivw\" title=\"YouTube video player\" frameborder=\"0\" allow=\"accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share\" referrerpolicy=\"strict-origin-when-cross-origin\" allowfullscreen></iframe>"
         }
 
         val nameString = this.getString(name)

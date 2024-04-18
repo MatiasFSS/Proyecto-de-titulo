@@ -5,14 +5,14 @@
     android:layout_height="match_parent"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     tools:context=".ui.scan.ScanFragment"
-    android:background="@color/background"
+    android:background="@color/beige"
     >
 
     <androidx.cardview.widget.CardView
         android:id="@+id/cvScan"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:backgroundTint="@color/background_card"
+        android:backgroundTint="@color/color_navBar"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -31,10 +31,9 @@
                 android:text="@string/scan_title_reciclaje"
                 android:justificationMode="inter_word"
                 android:gravity="center"
-                android:textColor="@color/text_color"
-                android:fontFamily="@font/ebgaramond_variablefont_wght"
+                android:textColor="@color/white"
+                android:fontFamily="@font/ubuntu_title"
                 android:textSize="26dp"
-                android:textStyle="bold"
                 android:layout_margin="10dp"
 
                 >
@@ -44,8 +43,8 @@
                 android:layout_height="wrap_content"
                 android:text="@string/scan_description_reciclaje"
                 android:justificationMode="inter_word"
-                android:textColor="@color/text_color"
-                android:fontFamily="@font/garamond_italic_variablefont_wght"
+                android:textColor="@color/white"
+                android:fontFamily="@font/ubuntu_desciption"
                 android:textSize="16dp"
                 android:padding="16dp"
                 >
@@ -92,7 +91,9 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:text="Escanea el Producto"
-                    android:gravity="center"/>
+                    android:gravity="center"
+                    android:fontFamily="@font/ubuntu_desciption"
+                    />
 
                 <Button
                     android:id="@+id/btnScan"
@@ -103,6 +104,7 @@
                     android:backgroundTint="@color/color_navBar"
                     android:drawableRight="@drawable/escanear"
                     android:drawableTint="@color/white"
+                    android:fontFamily="@font/ubuntu_light"
                     />
 
             <androidx.cardview.widget.CardView
@@ -119,7 +121,7 @@
                     android:text="@string/scan_CarView"
                     android:justificationMode="inter_word"
                     android:textColor="@color/text_color"
-                    android:fontFamily="@font/garamond_italic_variablefont_wght"
+                    android:fontFamily="@font/ubuntu_desciption"
                     android:textSize="16dp"
                     android:padding="16dp"
                     >

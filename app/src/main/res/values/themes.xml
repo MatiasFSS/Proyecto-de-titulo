@@ -6,13 +6,11 @@
         <item name="android:navigationBarColor">@color/verde_natural_oscuro</item>
         <item name="android:statusBarColor">@color/verde_natural_oscuro</item>
 
+
     </style>
 
-    <style name="Theme.Proyecto" parent="Base.Theme.Proyecto">
-        <item name="windowSplashScreenBackground">@color/color_navBar</item>
-        <item name="windowSplashScreenAnimatedIcon">@drawable/aries</item>
-        <item name="windowSplashScreenAnimationDuration">300</item>
-        <item name="postSplashScreenTheme">@style/Base.Theme.Proyecto</item>
+    <style name="splashScreen" parent="Base.Theme.Proyecto">
+        <item name="android:windowBackground">@drawable/splash_image</item>
     </style>
 
 </resources>

@@ -46,6 +46,7 @@
                     android:padding="16dp"
                     android:gravity="center"
                     >
+
                     <ImageView
                         android:id="@+id/ivScan"
                         android:layout_width="match_parent"
@@ -102,6 +103,7 @@
                             android:layout_width="match_parent"
                             android:layout_height="50dp">
                             <TextView
+                                android:id="@+id/tvA"
                                 android:textStyle="bold"
                                 android:textColor="@color/text_color"
                                 android:textSize="17sp"
@@ -127,6 +129,7 @@
                             android:layout_width="match_parent"
                             android:layout_height="50dp">
                             <TextView
+                                android:id="@+id/tvB"
                                 android:textStyle="bold"
                                 android:textColor="@color/text_color"
                                 android:textSize="17sp"
@@ -152,6 +155,7 @@
                             android:layout_width="match_parent"
                             android:layout_height="50dp">
                             <TextView
+                                android:id="@+id/tvC"
                                 android:textStyle="bold"
                                 android:textColor="@color/text_color"
                                 android:textSize="17sp"

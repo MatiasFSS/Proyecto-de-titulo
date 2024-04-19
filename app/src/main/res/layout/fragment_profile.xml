@@ -25,7 +25,7 @@
             android:id="@+id/ivProfile"
             android:layout_width="150dp"
             android:layout_height="150dp"
-            android:src="@drawable/reciclar_color"
+            android:src="@drawable/logosplash"
             android:layout_gravity="center"
             android:scaleType="centerCrop"
             >

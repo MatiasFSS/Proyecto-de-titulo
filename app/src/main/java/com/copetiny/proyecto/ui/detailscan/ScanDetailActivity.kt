@@ -55,8 +55,14 @@ class ScanDetailActivity : AppCompatActivity(){
     private fun handleAnswer(cardView:CardView, isCorrect: Boolean) {
         if (isCorrect) {
             cardView.setCardBackgroundColor(ContextCompat.getColor(this, R.color.color_navBar))
+            binding.tvA.setTextColor(ContextCompat.getColor(this, R.color.white))
+            binding.tvB.setTextColor(ContextCompat.getColor(this, R.color.white))
+            binding.tvC.setTextColor(ContextCompat.getColor(this, R.color.white))
         } else {
             cardView.setCardBackgroundColor(ContextCompat.getColor(this, R.color.red))
+            binding.tvA.setTextColor(ContextCompat.getColor(this, R.color.white))
+            binding.tvB.setTextColor(ContextCompat.getColor(this, R.color.white))
+            binding.tvC.setTextColor(ContextCompat.getColor(this, R.color.white))
         }
     }
     private fun btnEnable(){
@@ -73,7 +79,7 @@ class ScanDetailActivity : AppCompatActivity(){
     }
     private fun scanQuestion(){
         val json = JSONObject(args.type)
-        val basurero = json.getInt("basurero")
+        val basurero = json.getInt("contenedor")
         val optionA = 1
         val optionB = 2
         val optionC = 3

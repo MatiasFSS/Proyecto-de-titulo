@@ -9,7 +9,7 @@ class PrefsUsers (val context: Context) {
     val SHARE_NAME = "Mydtb"
     val USER_NAME = "username"
     val USER_AGE = "age"
-    val DATE_DAY= "date"
+    val BAR_LEVEL= "level"
 
     //val USER_IMAGE = "img"
 
@@ -20,8 +20,12 @@ class PrefsUsers (val context: Context) {
         storage.edit().putString(USER_NAME, name).apply()
     }
 
-    fun saveAge(age:String){
-        storage.edit().putString(USER_AGE,age).apply()
+    fun saveAge(age:Int){
+        storage.edit().putInt(USER_AGE,age).apply()
+    }
+
+    fun saveLevel(level:Int){
+        storage.edit().putInt(BAR_LEVEL,level).apply()
     }
 
     /*fun saveImg(img:String){
@@ -32,13 +36,17 @@ class PrefsUsers (val context: Context) {
         return storage.getString(USER_NAME, "")!!
     }
 
-    fun getAge():String{
-        return storage.getString(USER_AGE, "")!!
+    fun getAge():Int{
+        return storage.getInt(USER_AGE, 0)!!
     }
 
     /*fun getImg():String{
         return storage.getString(USER_IMAGE, "")!!
     }*/
+
+    fun getLevel():Int{
+        return storage.getInt(BAR_LEVEL, 0)!!
+    }
 
     fun wipe(){
         storage.edit().clear().apply()

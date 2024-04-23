@@ -91,6 +91,7 @@
                     />
 
                 <Button
+                    android:id="@+id/btnEasy"
                     android:layout_width="120dp"
                     android:layout_height="40dp"
                     android:text="@string/quiz_btn_easy"
@@ -101,6 +102,7 @@
                     />
             </LinearLayout>
         </androidx.cardview.widget.CardView>
+
         <androidx.cardview.widget.CardView
             android:id="@+id/difficultCard"
             app:cardBackgroundColor="@color/background_card"
@@ -128,6 +130,7 @@
 
                     />
                 <Button
+                    android:id="@+id/btnMedium"
                     android:layout_width="120dp"
                     android:layout_height="40dp"
                     android:text="@string/quiz_btn_medium"
@@ -166,6 +169,7 @@
                     android:fontFamily="@font/ubuntu_title"
                     />
                 <Button
+                    android:id="@+id/btnDifficult"
                     android:layout_width="120dp"
                     android:layout_height="40dp"
                     android:text="@string/quiz_btn_pro"

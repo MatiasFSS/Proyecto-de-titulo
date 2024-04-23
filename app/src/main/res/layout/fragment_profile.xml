@@ -108,7 +108,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:valueFrom ="0"
-                    android:stepSize="1"
+                    android:stepSize="5"
                     android:valueTo="100"
                     >
 

@@ -30,7 +30,7 @@
 
                     </ImageView>
             <androidx.cardview.widget.CardView
-                android:layout_width="wrap_content"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 app:cardCornerRadius="16dp"
                 android:elevation="8dp"
@@ -51,10 +51,11 @@
 
                     <androidx.cardview.widget.CardView
                         android:id="@+id/cvcontainerRegister"
-                        android:layout_width="wrap_content"
-                        android:layout_height="200dp"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
                         app:cardCornerRadius="16dp"
                         app:cardElevation="8dp"
+                        android:layout_margin="16dp"
 
                         >
                         <LinearLayout
@@ -66,7 +67,7 @@
                             >
                         <EditText
                             android:id="@+id/etName"
-                            android:layout_width="310dp"
+                            android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:hint="@string/register_Name"
                             android:layout_marginTop="5dp"
@@ -75,7 +76,7 @@
 
                         <EditText
                             android:id="@+id/etAge"
-                            android:layout_width="310dp"
+                            android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:hint="@string/register_Age"
                             android:layout_marginTop="5dp"

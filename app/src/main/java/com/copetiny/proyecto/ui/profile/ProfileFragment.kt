@@ -23,8 +23,7 @@ class ProfileFragment : Fragment() {
 
     private var _binding:FragmentProfileBinding? = null
     private val binding get() = _binding!!
-
-    private var current: Int = 0
+    private var current = 0
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
@@ -62,13 +61,22 @@ class ProfileFragment : Fragment() {
     }
 
     private fun levelBar(){
-        //binding.rsLevel.isEnabled = false
+        binding.rsLevel.isEnabled = false
 
-        binding.rsLevel.addOnChangeListener { _, value, _ ->
+       val level = prefs.getLevel()
+
+        binding.rsLevel.addOnChangeListener { _,value, _ ->
+
             val df = DecimalFormat("#.##")
-            this.current = df.format(value).toInt()
+            current = df.format(value).toInt()
+            prefs.saveLevel(current)
             binding.tvLevel.text = "$current pts"
+
         }
+
+        binding.rsLevel.values = listOf(level.toFloat())
+        binding.tvLevel.text = "$level pts"
+
     }
 
     private fun showDialog(){
@@ -81,23 +89,32 @@ class ProfileFragment : Fragment() {
         val age = dialog.findViewById<EditText>(R.id.edit_age)
 
         btn.setOnClickListener {
+
             if(name.text.toString().isNotEmpty() && age.text.toString().isNotEmpty()){
-                prefs.wipe()
-                prefs.saveName(name.text.toString())
-                prefs.saveAge(age.text.toString())
+                if(age.text.toString().toIntOrNull() != null && age.text.toString().toIntOrNull() in 1..99) {
+                    prefs.wipe()
+                    prefs.saveName(name.text.toString())
+                    prefs.saveAge(age.text.toString().toInt())
 
-                val userName= prefs.getName()
-                val age = prefs.getAge()
+                    val userName= prefs.getName()
+                    val age = prefs.getAge()
 
-                binding.tvName.text = "Nombre: $userName"
-                binding.tvAge.text = "Edad: $age"
-                dialog.hide()
+                    binding.tvName.text = "Nombre: $userName"
+                    binding.tvAge.text = "Edad: $age"
+                    dialog.hide()
+                }else{
+                    age.error = "Solo se aceptan valores numericos o la edad no es valida"
+                    Toast.makeText(requireContext(),"solo se aceptan valores numericos o la edad no es valida", Toast.LENGTH_SHORT).show()
+                }
+
+
             }else{
                 if(name.text.toString().isEmpty()){
                     name.error ="Este campo es obligatorio"
                     if(age.text.toString().isEmpty()){
                         age.error = "Este campo es obligatorio"
                         Toast.makeText(requireContext(),"Los campos son obligatorios, porfavor Ingrese su nombre y edad", Toast.LENGTH_SHORT).show()
+
                     }else{
                         Toast.makeText(requireContext(),"El campo es obligatorio, porfavor Ingrese su nombre", Toast.LENGTH_SHORT).show()
                     }

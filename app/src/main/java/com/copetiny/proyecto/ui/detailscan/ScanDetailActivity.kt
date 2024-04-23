@@ -1,19 +1,18 @@
 package com.copetiny.proyecto.ui.detailscan
 
-import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.util.Log
 import android.widget.Toast
 import androidx.cardview.widget.CardView
 import androidx.core.content.ContextCompat
 import androidx.navigation.navArgs
+import com.copetiny.proyecto.ProyectoApp.Companion.prefs
 import com.copetiny.proyecto.R
 import com.copetiny.proyecto.databinding.ActivityScanDetailBinding
-import com.copetiny.proyecto.ui.profile.ProfileFragment
+
 import org.json.JSONObject
-//import android.util.Base64
-//import android.graphics.Bitmap
-//import android.graphics.BitmapFactory
+
 import com.squareup.picasso.Picasso
 import dagger.hilt.android.AndroidEntryPoint
 
@@ -21,7 +20,6 @@ import dagger.hilt.android.AndroidEntryPoint
 class ScanDetailActivity : AppCompatActivity(){
     private lateinit var binding:ActivityScanDetailBinding
     val args:ScanDetailActivityArgs by navArgs()
-
 
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -33,6 +31,7 @@ class ScanDetailActivity : AppCompatActivity(){
         initBack()
 
     }
+
 
     private fun initUI(){
         val json = JSONObject(args.type)
@@ -77,6 +76,14 @@ class ScanDetailActivity : AppCompatActivity(){
         binding.scanAlternativeC.isEnabled = false
 
     }
+
+    private fun points(){
+        val nivel = prefs.getLevel()
+        val newLevel = nivel + 5
+        Log.i("mama", newLevel.toString())
+        prefs.saveLevel(newLevel)
+
+    }
     private fun scanQuestion(){
         val json = JSONObject(args.type)
         val basurero = json.getInt("contenedor")
@@ -92,6 +99,10 @@ class ScanDetailActivity : AppCompatActivity(){
                 handleAnswer(binding.scanAlternativeA, true)
                 handleAnswer(binding.scanAlternativeB, false)
                 handleAnswer(binding.scanAlternativeC, false)
+
+                points()
+
+
             } else {
                 Toast.makeText(this, "Respuesta Incorrecta", Toast.LENGTH_SHORT).show()
                 handleAnswer(binding.scanAlternativeA, false)
@@ -109,6 +120,10 @@ class ScanDetailActivity : AppCompatActivity(){
                 handleAnswer(binding.scanAlternativeB, true)
                 handleAnswer(binding.scanAlternativeA, false)
                 handleAnswer(binding.scanAlternativeC, false)
+                points()
+
+
+
             } else {
                 Toast.makeText(this, "Respuesta Incorrecta", Toast.LENGTH_SHORT).show()
                 handleAnswer(binding.scanAlternativeB, false)
@@ -127,6 +142,10 @@ class ScanDetailActivity : AppCompatActivity(){
                 handleAnswer(binding.scanAlternativeC, true)
                 handleAnswer(binding.scanAlternativeA, false)
                 handleAnswer(binding.scanAlternativeB, false)
+                points()
+
+
+
             } else {
                 Toast.makeText(this, "Respuesta Incorrecta", Toast.LENGTH_SHORT).show()
                 handleAnswer(binding.scanAlternativeC, false)

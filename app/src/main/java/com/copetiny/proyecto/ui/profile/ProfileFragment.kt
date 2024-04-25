@@ -2,6 +2,7 @@ package com.copetiny.proyecto.ui.profile
 
 import android.app.Dialog
 import android.os.Bundle
+import android.util.Log
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
@@ -10,10 +11,15 @@ import android.widget.Button
 import android.widget.EditText
 import android.widget.ImageView
 import android.widget.Toast
+import androidx.fragment.app.viewModels
+import androidx.lifecycle.Lifecycle
+import androidx.lifecycle.lifecycleScope
+import androidx.lifecycle.repeatOnLifecycle
 import com.copetiny.proyecto.ProyectoApp.Companion.prefs
 import com.copetiny.proyecto.R
 import com.copetiny.proyecto.databinding.FragmentProfileBinding
 import dagger.hilt.android.AndroidEntryPoint
+import kotlinx.coroutines.launch
 import java.text.DecimalFormat
 
 
@@ -24,6 +30,7 @@ class ProfileFragment : Fragment() {
     private var _binding:FragmentProfileBinding? = null
     private val binding get() = _binding!!
     private var current = 0
+    private val sharedViewModel: SharedViewModel by viewModels()
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
@@ -48,8 +55,6 @@ class ProfileFragment : Fragment() {
                 ProfileFragmentDirections.actionProfileFragmentToRegisterActivity()
             )*/
             showDialog()
-
-
         }
         val userName= prefs.getName()
         val age = prefs.getAge()
@@ -63,19 +68,33 @@ class ProfileFragment : Fragment() {
     private fun levelBar(){
         binding.rsLevel.isEnabled = false
 
-       val level = prefs.getLevel()
+        sharedViewModel.expProgress.observe(viewLifecycleOwner) {
+            val exp = prefs.getExp()
+            binding.rsLevel.values = listOf(exp.toFloat())
+            binding.tvExp.text = "$exp pts"
 
-        binding.rsLevel.addOnChangeListener { _,value, _ ->
+            val levelObserve = prefs.getLevel()
+            binding.tvLevel.text = "lvl $levelObserve"
 
-            val df = DecimalFormat("#.##")
-            current = df.format(value).toInt()
-            prefs.saveLevel(current)
-            binding.tvLevel.text = "$current pts"
+            if (prefs.updialogFlag()){
+                showDialogLevel()
+                prefs.setDialogFlag(false)
+            }
 
         }
 
-        binding.rsLevel.values = listOf(level.toFloat())
-        binding.tvLevel.text = "$level pts"
+
+    }
+
+    private fun showDialogLevel(){
+        val dialog = Dialog(requireContext())
+        dialog.setContentView(R.layout.item_dialog_level)
+
+        val btnAcceptLevel = dialog.findViewById<Button>(R.id.btnAcceptLevel)
+
+        btnAcceptLevel.setOnClickListener { dialog.hide() }
+
+        dialog.show()
 
     }
 
@@ -123,8 +142,8 @@ class ProfileFragment : Fragment() {
                         age.error = "Este campo es obligatorio"
                         Toast.makeText(requireContext(),"El campo es obligatorio, porfavor Ingrese su edad", Toast.LENGTH_SHORT).show()
                     }
+                }
             }
-        }
         }
         btnBack.setOnClickListener {dialog.hide()}
         dialog.show()

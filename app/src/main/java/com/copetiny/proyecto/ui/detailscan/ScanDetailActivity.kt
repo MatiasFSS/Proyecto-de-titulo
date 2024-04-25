@@ -1,15 +1,20 @@
 package com.copetiny.proyecto.ui.detailscan
 
+import android.app.Dialog
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.util.Log
+import android.widget.Button
+import android.widget.TextView
 import android.widget.Toast
+import androidx.activity.viewModels
 import androidx.cardview.widget.CardView
 import androidx.core.content.ContextCompat
 import androidx.navigation.navArgs
 import com.copetiny.proyecto.ProyectoApp.Companion.prefs
 import com.copetiny.proyecto.R
 import com.copetiny.proyecto.databinding.ActivityScanDetailBinding
+import com.copetiny.proyecto.ui.profile.SharedViewModel
 
 import org.json.JSONObject
 
@@ -20,6 +25,7 @@ import dagger.hilt.android.AndroidEntryPoint
 class ScanDetailActivity : AppCompatActivity(){
     private lateinit var binding:ActivityScanDetailBinding
     val args:ScanDetailActivityArgs by navArgs()
+    private val sharedViewModel:SharedViewModel by viewModels()
 
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -44,8 +50,6 @@ class ScanDetailActivity : AppCompatActivity(){
         Picasso.get().load(imagen).into(binding.ivScan)
         scanQuestion()
 
-
-
     }
     private fun initBack(){
         binding.ivBackScan.setOnClickListener { onBackPressedDispatcher.onBackPressed() }
@@ -57,11 +61,14 @@ class ScanDetailActivity : AppCompatActivity(){
             binding.tvA.setTextColor(ContextCompat.getColor(this, R.color.white))
             binding.tvB.setTextColor(ContextCompat.getColor(this, R.color.white))
             binding.tvC.setTextColor(ContextCompat.getColor(this, R.color.white))
+
+
         } else {
             cardView.setCardBackgroundColor(ContextCompat.getColor(this, R.color.red))
             binding.tvA.setTextColor(ContextCompat.getColor(this, R.color.white))
             binding.tvB.setTextColor(ContextCompat.getColor(this, R.color.white))
             binding.tvC.setTextColor(ContextCompat.getColor(this, R.color.white))
+
         }
     }
     private fun btnEnable(){
@@ -76,14 +83,26 @@ class ScanDetailActivity : AppCompatActivity(){
         binding.scanAlternativeC.isEnabled = false
 
     }
+    private fun dialogPoints(isCorrect: Boolean){
+        val dialog = Dialog(this)
+        dialog.setContentView(R.layout.item_dialog_points)
 
-    private fun points(){
-        val nivel = prefs.getLevel()
-        val newLevel = nivel + 5
-        Log.i("mama", newLevel.toString())
-        prefs.saveLevel(newLevel)
+        val btnAccept = dialog.findViewById<Button>(R.id.btnAccept)
+        val tvAnswer = dialog.findViewById<TextView>(R.id.tvAnswer)
+        val tvPoints = dialog.findViewById<TextView>(R.id.tvPoints)
 
+        if(isCorrect){
+            tvAnswer.text = getString(R.string.tvDialogPointsCorrect)
+            tvPoints.text = getString(R.string.tvDialogPoints)
+
+        }else{
+            tvAnswer.text = getString(R.string.tvDialogPointsIncorrect)
+        }
+
+        btnAccept.setOnClickListener { dialog.hide() }
+        dialog.show()
     }
+
     private fun scanQuestion(){
         val json = JSONObject(args.type)
         val basurero = json.getInt("contenedor")
@@ -94,20 +113,18 @@ class ScanDetailActivity : AppCompatActivity(){
         binding.scanAlternativeA.setOnClickListener {
             val isCorrect = basurero == optionA
             if (isCorrect) {
-                Toast.makeText(this, "Respuesta Correcta, Ganas 5 pts de experiencia", Toast.LENGTH_SHORT).show()
-
                 handleAnswer(binding.scanAlternativeA, true)
                 handleAnswer(binding.scanAlternativeB, false)
                 handleAnswer(binding.scanAlternativeC, false)
-
-                points()
+                sharedViewModel.expProgress(5)
+                dialogPoints(isCorrect)
 
 
             } else {
-                Toast.makeText(this, "Respuesta Incorrecta", Toast.LENGTH_SHORT).show()
                 handleAnswer(binding.scanAlternativeA, false)
                 handleAnswer(binding.scanAlternativeB, basurero == optionB)
                 handleAnswer(binding.scanAlternativeC, basurero == optionC)
+                dialogPoints(isCorrect)
             }
             btnEnable()
         }
@@ -115,20 +132,17 @@ class ScanDetailActivity : AppCompatActivity(){
         binding.scanAlternativeB.setOnClickListener {
             val isCorrect = basurero == optionB
             if (isCorrect) {
-                Toast.makeText(this, "Respuesta Correcta, Ganas 5 pts de experiencia", Toast.LENGTH_SHORT).show()
-
                 handleAnswer(binding.scanAlternativeB, true)
                 handleAnswer(binding.scanAlternativeA, false)
                 handleAnswer(binding.scanAlternativeC, false)
-                points()
-
-
+                sharedViewModel.expProgress(5)
+                dialogPoints(isCorrect)
 
             } else {
-                Toast.makeText(this, "Respuesta Incorrecta", Toast.LENGTH_SHORT).show()
                 handleAnswer(binding.scanAlternativeB, false)
                 handleAnswer(binding.scanAlternativeA, basurero == optionA)
                 handleAnswer(binding.scanAlternativeC, basurero == optionC)
+                dialogPoints(isCorrect)
 
             }
             btnEnable()
@@ -137,20 +151,17 @@ class ScanDetailActivity : AppCompatActivity(){
         binding.scanAlternativeC.setOnClickListener {
             val isCorrect = basurero == optionC
             if (isCorrect) {
-                Toast.makeText(this, "Respuesta Correcta, Ganas 5 pts de experiencia", Toast.LENGTH_SHORT).show()
-
                 handleAnswer(binding.scanAlternativeC, true)
                 handleAnswer(binding.scanAlternativeA, false)
                 handleAnswer(binding.scanAlternativeB, false)
-                points()
-
-
+                sharedViewModel.expProgress(5)
+                dialogPoints(isCorrect)
 
             } else {
-                Toast.makeText(this, "Respuesta Incorrecta", Toast.LENGTH_SHORT).show()
                 handleAnswer(binding.scanAlternativeC, false)
                 handleAnswer(binding.scanAlternativeA, basurero == optionA)
                 handleAnswer(binding.scanAlternativeB, basurero == optionB)
+                dialogPoints(isCorrect)
             }
             btnEnable()
         }

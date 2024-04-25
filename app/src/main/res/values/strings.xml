@@ -16,7 +16,7 @@
     <string name="encyclopedia_Bolsa">Bolsas</string>
     <string name="encyclopedia_Cables">Cables</string>
     <string name="encyclopedia_Vidrio">Vidrio</string>
-    <string name="encyclopedia_Carton">Carton</string>
+    <string name="encyclopedia_Carton">Cartón</string>
     <string name="encyclopedia_Papel">Papel</string>
     <string name="encyclopedia_Lata">Lata</string>
     <string name="encyclopedia_Empaques_AM">Empaques Alimentos Mascotas</string>
@@ -27,36 +27,36 @@
     <string name="encyclopedia_Celulares">Celulares y Accesorios</string>
     <string name="encyclopedia_Pilas">Pilas</string>
     <string name="encyclopedia_Sanitarios">Sanitarios</string>
-    <string name="encyclopedia_Plastico_N7">Plastico No.7</string>
+    <string name="encyclopedia_Plastico_N7">Plástico No.7</string>
     <string name="encyclopedia_Madera">Madera</string>
 
-    <!-- Titulo y descripcion de Vista enciclopedia-->
+    <!-- Titulo y descripción de Vista enciclopedia-->
     <string name="encyclopedia_Title">Materiales</string>
-    <string name="encyclopedia_Description">En este apartado encontraras información de como manejar diversos materiales, se responderan preguntas como, ¿El material se puede reciclar?, ¿Como llevo el material al centro de reciclaje?, entre otras preguntas</string>
+    <string name="encyclopedia_Description">En este apartado encontraras información de cómo manejar diversos materiales, se responden preguntas como, ¿El material se puede reciclar?, ¿Como llevo el material al centro de reciclaje?, entre otras preguntas</string>
 
     <!-- textos tutoriales -->
     <string name="tutorial_1">¿Como reciclar?</string>
     <string name="tutorial_2">Sr. cabeza de pasto</string>
-    <string name="tutorial_3">Titeres con material reciclable</string>
+    <string name="tutorial_3">Títeres con material reciclable</string>
     <string name="tutorial_4">Planta por primera vez</string>
     <string name="tutorial_5">Lapicero de lata</string>
     <string name="tutorial_6">Macetero de material reciclable</string>
-    <!-- Titulo y descripcion de Vista enciclopedia-->
+    <!-- Titulo y descripción de Vista enciclopedia-->
     <string name="tutorials_Title">Tutoriales</string>
-    <string name="tutorials_Description">Aqui encontraras muchos tutoriales para realizar diversas actividades con material reciclable.</string>
+    <string name="tutorials_Description">Aquí encontraras muchos tutoriales para realizar diversas actividades con material reciclable.</string>
     <string name="tutorials_Description2">¡RECUERDA! : "Reutiliza - Reduce - Recicla"</string>
 
     <!--registro-->
     <string name="register_Name">Ingrese su nombre</string>
-    <string name="register_Age">¿Cual es su edad?</string>
+    <string name="register_Age">¿Cuál es su edad?</string>
     <string name="register_bt">Confirmar datos</string>
-    <string name="register_welcome">Bienvenido, antes de comenzar nos gustaria saber más sobre ti, porfavor indica como te gustaria llamarte en la app</string>
+    <string name="register_welcome">Bienvenido, antes de comenzar nos gustaría saber más sobre ti, por favor indica como prefieres llamarte en la aplicación</string>
 
 
     <!--Scan-->
-    <string name="scan_CarView">Vive la experiencia de reciclaje, pulsa el boton reciclar para poder escanear el codigo QR del producto a reciclar, veras la información relevante del producto y podras ver el proceso del reciclaje a traves del brazo robotico.</string>
+    <string name="scan_CarView">Vive la experiencia de reciclaje, pulsa el botón reciclar para poder escanear el Código QR del producto a reciclar, veras la información relevante del producto y podrás ver el proceso del reciclaje a través del brazo robótico.</string>
     <string name="scan_btnReciclar">Escanear</string>
-    <string name="scan_title_reciclaje">¿Que es el reciclaje?</string>
+    <string name="scan_title_reciclaje">¿Que es el reciclaje? </string>
     <string name="scan_description_reciclaje">El reciclaje consiste en reutilizar los materiales con el objetivo de producir productos nuevos para lograr reducir la utilización de materias primas, conservando así los recursos naturales.</string>
     <string name="scan_question">¿En basurero crees que se recicla este material?</string>
     <string name="scan_alternativeA">A) Basurero 1</string>
@@ -65,18 +65,28 @@
 
 
     <!--Perfil-->
-    <string name="profile_Level">Nivel de usuario</string>
+    <string name="profile_Level">Nivel de usuario:</string>
     <string name="profile_BtnEdit">Editar Usuarios</string>
     <string name="profile_WelcomeProfie">Bienvenido</string>
+    <string name="profile_dialog_level">¡FELICIDADES HAS SUBIDO DE NIVEL!</string>
 
     <!--Quiz-->
     <string name="quiz_easy">Trivia nivel principiante</string>
     <string name="quiz_medium">Trivia nivel Intermedio</string>
-    <string name="quiz_pro">Trivia nivel Dificil</string>
-    <string name="quiz_btn_easy">Facil</string>
+    <string name="quiz_pro">Trivia nivel difícil</string>
+    <string name="quiz_btn_easy">Fácil</string>
     <string name="quiz_btn_medium">Medio</string>
-    <string name="quiz_btn_pro">Dificil</string>
+    <string name="quiz_btn_pro">Difícil</string>
     <string name="quiz_card_title">Trivias</string>
-    <string name="quiz_card_description">Aqui podras medir tus conocimientos, contesta una trivia y gana puntos de nivel.</string>
+    <string name="quiz_card_description">Aquí podrás medir tus conocimientos, contesta una trivia y gana puntos de nivel.</string>
+
+    <!--DetailScan-->
+
+    <string name="tvDialogPointsCorrect">Tu respuesta es ¡CORRECTA!</string>
+    <string name="tvDialogPoints">Has ganado 5 pts de exp</string>
+
+    <string name="tvDialogPointsIncorrect">Tu respuesta es ¡INCORRECTA!</string>
+    <string name="tvDialogPoints2">Mejor Suerte para la próxima</string>
+
 
 </resources>

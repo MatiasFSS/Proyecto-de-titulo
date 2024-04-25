@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="350dp"
+    android:layout_height="wrap_content"
+    android:padding="16dp">
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:padding="16dp"
+            android:gravity="center"
+            >
+
+            <TextView
+                android:id="@+id/tvAnswer"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/profile_dialog_level"
+                android:textSize="16sp"
+                android:gravity="center"
+                android:textStyle="bold"
+                android:fontFamily="@font/ubuntu_title"
+                android:justificationMode="inter_word" />
+
+            <Button
+                android:id="@+id/btnAcceptLevel"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Aceptar"
+                android:backgroundTint="@color/color_navBar"
+                android:layout_marginTop="16dp"
+                android:drawableRight="@drawable/confirmar"
+                android:drawableTint="@color/white"
+                android:fontFamily="@font/ubuntu_light" />
+
+        </LinearLayout>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

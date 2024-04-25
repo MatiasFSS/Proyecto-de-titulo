@@ -57,7 +57,7 @@
                     android:textStyle="bold"
                     android:gravity="center"
                     android:textColor="@color/black"
-                    android:textSize="26dp"
+                    android:textSize="26sp"
                     android:padding="10dp"
                     />
 
@@ -91,7 +91,7 @@
                                 android:fontFamily="@font/ubuntu_desciption"
                                 android:textColor="@color/black"
                                 android:layout_gravity="center"
-                                android:textSize="16dp"
+                                android:textSize="16sp"
                                 android:layout_margin="5dp"/>
 
                             <ImageView
@@ -112,7 +112,7 @@
                                 android:fontFamily="@font/ubuntu_desciption"
                                 android:textColor="@color/black"
                                 android:layout_margin="5dp"
-                                android:textSize="16dp"/>
+                                android:textSize="16sp"/>
 
                             <TextView
                                 android:layout_width="match_parent"

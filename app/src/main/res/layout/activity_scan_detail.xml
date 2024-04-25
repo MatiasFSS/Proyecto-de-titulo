@@ -63,7 +63,7 @@
                         android:fontFamily="@font/ubuntu_title"
                         android:layout_gravity="center"
                         android:layout_marginTop="16dp"
-                        android:textSize="26dp"
+                        android:textSize="26sp"
                         android:gravity="center"
                         />
 
@@ -74,7 +74,7 @@
                         android:justificationMode="inter_word"
                         android:fontFamily="@font/ubuntu_desciption"
                         android:gravity="center"
-                        android:textSize="16dp"
+                        android:textSize="16sp"
                         android:layout_marginTop="16dp"
                         />
 
@@ -88,7 +88,7 @@
                         android:fontFamily="@font/ubuntu_title"
                         android:textStyle="bold"
                         android:gravity="center"
-                        android:textSize="20dp"
+                        android:textSize="20sp"
                         />
 
                     <androidx.cardview.widget.CardView

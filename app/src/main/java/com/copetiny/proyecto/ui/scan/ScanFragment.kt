@@ -45,7 +45,7 @@ class ScanFragment : Fragment() {
             Toast.makeText(requireContext(), "Error al Leer el codigo QR", Toast.LENGTH_SHORT).show()
 
         }else{
-            Toast.makeText(requireContext(), "el valor escaneado es: ${result.contents}", Toast.LENGTH_SHORT).show()
+            //Toast.makeText(requireContext(), "el valor escaneado es: ${result.contents}", Toast.LENGTH_SHORT).show()
             val type = result.contents
             findNavController().navigate(
                 ScanFragmentDirections.actionScanFragmentToScanDetailActivity(type)

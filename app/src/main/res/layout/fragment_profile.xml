@@ -37,7 +37,7 @@
                 android:text="@string/profile_WelcomeProfie"
                 android:gravity="center"
                 android:layout_margin="8dp"
-                android:textSize="26dp"
+                android:textSize="26sp"
                 android:textColor="@color/black"
                 android:fontFamily="@font/ubuntu_title"
                 android:paddingHorizontal="26dp"
@@ -64,7 +64,7 @@
                     android:layout_height="wrap_content"
                     android:layout_margin="8dp"
                     android:textColor="@color/text_color"
-                    android:textSize="16dp"
+                    android:textSize="16sp"
                     android:fontFamily="@font/ubuntu_desciption"
 
                     />
@@ -81,7 +81,7 @@
                     android:layout_height="wrap_content"
                     android:layout_margin="8dp"
                     android:textColor="@color/text_color"
-                    android:textSize="16dp"
+                    android:textSize="16sp"
                     android:fontFamily="@font/ubuntu_desciption"
                     />
                 <com.google.android.material.divider.MaterialDivider
@@ -90,35 +90,53 @@
                     android:layout_margin="8dp"
                     >
                 </com.google.android.material.divider.MaterialDivider>
-
-                <TextView
+                <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:text="@string/profile_Level"
-                    android:textColor="@color/text_color"
-                    android:layout_margin="8dp"
-                    android:textSize="16dp"
-                    android:fontFamily="@font/ubuntu_desciption"
-                    />
+                    android:orientation="horizontal"
 
-
-
-                <com.google.android.material.slider.RangeSlider
-                    android:id="@+id/rsLevel"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:valueFrom ="0"
-                    android:stepSize="5"
-                    android:valueTo="100"
                     >
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/profile_Level"
+                        android:textColor="@color/text_color"
+                        android:layout_margin="8dp"
+                        android:textSize="16sp"
+                        android:fontFamily="@font/ubuntu_desciption"
+                        />
 
-                </com.google.android.material.slider.RangeSlider>
+                    <TextView
+                        android:id="@+id/tvLevel"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        tools:text="lvl 100"
+                        android:textColor="@color/text_color"
+                        android:layout_marginVertical="8dp"
+                        android:textStyle="bold"
+                        android:textSize="22sp"
+                        android:fontFamily="@font/ubuntu_title">
+
+                    </TextView>
+                </LinearLayout>
+
+                    <com.google.android.material.slider.RangeSlider
+                        android:id="@+id/rsLevel"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:valueFrom ="0"
+                        android:stepSize="5"
+                        android:valueTo="100"
+
+                        >
+                    </com.google.android.material.slider.RangeSlider>
+
 
                 <TextView
-                    android:id="@+id/tvLevel"
+                    android:id="@+id/tvExp"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:textSize="25sp"
+                    android:textSize="18sp"
                     android:textStyle="bold"
                     android:text="0 pts"
                     android:layout_gravity="center"

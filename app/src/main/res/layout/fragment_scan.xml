@@ -10,7 +10,7 @@
         <androidx.cardview.widget.CardView
             android:id="@+id/cvScan"
             android:layout_width="match_parent"
-            android:layout_height="0dp"
+            android:layout_height="wrap_content"
             android:backgroundTint="@color/color_navBar"
             app:layout_constraintTop_toTopOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
@@ -22,7 +22,7 @@
             >
             <ScrollView
                 android:layout_width="match_parent"
-                android:layout_height="match_parent">
+                android:layout_height="wrap_content">
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
@@ -35,7 +35,7 @@
                         android:gravity="center"
                         android:textColor="@color/white"
                         android:fontFamily="@font/ubuntu_title"
-                        android:textSize="26dp"
+                        android:textSize="26sp"
                         android:padding="8dp"
                         >
                     </TextView>
@@ -47,6 +47,7 @@
                         android:textColor="@color/white"
                         android:fontFamily="@font/ubuntu_desciption"
                         android:padding="8dp"
+                        android:textSize="16sp"
                         >
                     </TextView>
 
@@ -79,6 +80,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:orientation="vertical"
+                    android:layout_gravity="center"
                     android:gravity="center"
                     android:padding="16dp"
                     >
@@ -86,7 +88,7 @@
                             android:layout_width="50dp"
                             android:layout_height="50dp"
                             android:src="@drawable/scan"
-                            android:layout_marginBottom="8dp"
+                            android:layout_marginBottom="16dp"
                             />
                         <TextView
                             android:layout_width="match_parent"
@@ -101,7 +103,7 @@
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:text="@string/scan_btnReciclar"
-                            android:layout_margin="8dp"
+                            android:layout_margin="16dp"
                             android:backgroundTint="@color/color_navBar"
                             android:drawableRight="@drawable/escanear"
                             android:drawableTint="@color/white"

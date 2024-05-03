@@ -9,6 +9,7 @@ import com.copetiny.proyecto.ProyectoApp.Companion.prefs
 
 import com.copetiny.proyecto.databinding.ActivityRegisterBinding
 import com.copetiny.proyecto.ui.home.MainActivity
+import com.google.android.material.snackbar.Snackbar
 
 
 class RegisterActivity : AppCompatActivity() {
@@ -38,7 +39,8 @@ class RegisterActivity : AppCompatActivity() {
                 goToProfile()
             }else{
                 binding.etAge.error = "Solo se aceptan valores numericos o la edad no es valida"
-                Toast.makeText(this,"solo se aceptan valores numericos o la edad no es valida", Toast.LENGTH_SHORT).show()
+                Snackbar.make(binding.root,"solo se aceptan valores numericos o la edad no es valida", Snackbar.LENGTH_SHORT).show()
+                //Toast.makeText(this,"solo se aceptan valores numericos o la edad no es valida", Toast.LENGTH_SHORT).show()
             }
         }else{
             if(binding.etName.text.toString().isEmpty()){
@@ -46,14 +48,17 @@ class RegisterActivity : AppCompatActivity() {
 
                 if(binding.etAge.text.toString().isEmpty()){
                     binding.etAge.error = "Este campo es obligatorio"
-                    Toast.makeText(this,"Los campos son obligatorios, porfavor Ingrese su nombre y edad", Toast.LENGTH_SHORT).show()
+                    Snackbar.make(binding.root,"Los campos son obligatorios, porfavor Ingrese su nombre y edad", Snackbar.LENGTH_SHORT).show()
+                    //Toast.makeText(this,"Los campos son obligatorios, porfavor Ingrese su nombre y edad", Toast.LENGTH_SHORT).show()
                 }else{
-                    Toast.makeText(this,"El campo es obligatorio, porfavor Ingrese su nombre", Toast.LENGTH_SHORT).show()
+                    Snackbar.make(binding.root,"El campo es obligatorio, porfavor Ingrese su nombre", Snackbar.LENGTH_SHORT).show()
+                    //Toast.makeText(this,"El campo es obligatorio, porfavor Ingrese su nombre", Toast.LENGTH_SHORT).show()
                 }
             }else{
                 if(binding.etAge.text.toString().isEmpty()){
                     binding.etAge.error = "Este campo es obligatorio"
-                    Toast.makeText(this,"El campo es obligatorio, porfavor Ingrese su edad", Toast.LENGTH_SHORT).show()
+                    Snackbar.make(binding.root,"El campo es obligatorio, porfavor Ingrese su edad", Snackbar.LENGTH_SHORT).show()
+                    //Toast.makeText(this,"El campo es obligatorio, porfavor Ingrese su edad", Toast.LENGTH_SHORT).show()
                 }
             }
         }

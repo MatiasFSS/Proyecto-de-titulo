@@ -7,7 +7,7 @@
     tools:context=".ui.detailencyclopedia.EncyclopediaDetailActivity"
     android:background="@color/beige">
 
-    <androidx.cardview.widget.CardView
+    <com.google.android.material.card.MaterialCardView
         android:layout_width="match_parent"
         android:layout_height="0dp"
         app:layout_constraintEnd_toEndOf="parent"
@@ -88,7 +88,7 @@
                             android:textSize="16sp"
                             android:layout_margin="5dp"
                             />
-                        <androidx.cardview.widget.CardView
+                        <com.google.android.material.card.MaterialCardView
                             android:layout_width="match_parent"
                             android:layout_height="match_parent"
                             app:cardCornerRadius="16dp"
@@ -127,7 +127,7 @@
                                     />
                             </LinearLayout>
                             </ScrollView>
-                        </androidx.cardview.widget.CardView>
+                        </com.google.android.material.card.MaterialCardView>
                     </LinearLayout>
             </LinearLayout>
         </androidx.constraintlayout.widget.ConstraintLayout>
@@ -143,7 +143,7 @@
             android:indeterminateTint="@color/color_navBar"
             />
 
-    </androidx.cardview.widget.CardView>
+    </com.google.android.material.card.MaterialCardView>
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

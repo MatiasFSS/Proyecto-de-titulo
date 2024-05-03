@@ -37,6 +37,7 @@
         <action
             android:id="@+id/action_quizFragment_to_quizDetailActivity"
             app:destination="@id/quizDetailActivity" />
+
     </fragment>
     <fragment
         android:id="@+id/scanFragment"
@@ -98,6 +99,10 @@
         android:id="@+id/quizDetailActivity"
         android:name="com.copetiny.proyecto.ui.detailquiz.QuizDetailActivity"
         android:label="activity_quiz_detail"
-        tools:layout="@layout/activity_quiz_detail" />
+        tools:layout="@layout/activity_quiz_detail" >
+        <argument
+            android:name="type"
+            app:argType="com.copetiny.proyecto.domain.model.quiz.QuizModel" />
+    </activity>
 
 </navigation>

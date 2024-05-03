@@ -10,6 +10,8 @@ import androidx.navigation.fragment.findNavController
 import com.copetiny.proyecto.R
 import com.copetiny.proyecto.databinding.FragmentProfileBinding
 import com.copetiny.proyecto.databinding.FragmentQuizBinding
+import com.copetiny.proyecto.domain.model.quiz.QuizModel
+import com.google.android.material.snackbar.Snackbar
 import dagger.hilt.android.AndroidEntryPoint
 
 @AndroidEntryPoint
@@ -32,16 +34,27 @@ class QuizFragment : Fragment() {
     }
 
     private fun initUI(){
+        binding.iconButtonQuiz.setOnClickListener {
+            Snackbar.make(it,getString(R.string.quiz_card_description), Snackbar.LENGTH_LONG)
+                .setAction("Aceptar"){
+                    onDestroy()
+                }
+                .setTextMaxLines(100)
+                .show()
+        }
+
         binding.btnEasy.setOnClickListener {
             Toast.makeText(requireContext(), "estoy haciendo click ", Toast.LENGTH_SHORT).show()
-            findNavController().navigate(QuizFragmentDirections.actionQuizFragmentToQuizDetailActivity())
+            val type = QuizModel.facil
+            findNavController().navigate(QuizFragmentDirections.actionQuizFragmentToQuizDetailActivity(type))
         }
         binding.btnMedium.setOnClickListener {
-
-            findNavController().navigate(QuizFragmentDirections.actionQuizFragmentToQuizDetailActivity())
+            val type = QuizModel.intermedio
+            findNavController().navigate(QuizFragmentDirections.actionQuizFragmentToQuizDetailActivity(type))
         }
         binding.btnDifficult.setOnClickListener {
-            findNavController().navigate(QuizFragmentDirections.actionQuizFragmentToQuizDetailActivity())
+            val type = QuizModel.dificil
+            findNavController().navigate(QuizFragmentDirections.actionQuizFragmentToQuizDetailActivity(type))
         }
     }
 

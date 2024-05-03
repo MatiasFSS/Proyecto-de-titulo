@@ -4,179 +4,193 @@
     android:layout_height="match_parent"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     tools:context=".ui.quiz.QuizFragment"
-    android:background="@color/beige"
+
     >
-    <androidx.cardview.widget.CardView
-        android:id="@+id/cvString"
+
+
+    <com.google.android.material.card.MaterialCardView
+        android:id="@+id/cvStringQuiz"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        android:layout_margin="8dp"
-        app:cardCornerRadius="16dp"
         android:backgroundTint="@color/background_card"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
         >
 
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:orientation="vertical"
+            android:orientation="horizontal"
+            android:gravity="center"
+            android:padding="16dp"
             >
+
+
             <TextView
-                android:id="@+id/tvTitleRV"
-                android:layout_width="match_parent"
+                android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                app:layout_constraintTop_toTopOf="parent"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toStartOf="parent"
                 android:text="@string/quiz_card_title"
-                android:gravity="center"
-                android:layout_margin="10dp"
-                android:textColor="@color/text_secundary"
-                android:fontFamily="@font/ubuntu_title"
-                android:textSize="26sp"
-
+                android:textAppearance="?attr/textAppearanceTitleLarge"
+                android:textStyle="bold"
                 />
-
-            <TextView
-                android:id="@+id/tvDescriptionRV"
+            <Button
+                style="?attr/materialIconButtonFilledTonalStyle"
+                android:id="@+id/iconButtonQuiz"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:contentDescription="Ayuda"
+                app:icon="@drawable/help2"
+                android:layout_marginHorizontal="8dp"
+                android:backgroundTint="@color/color_navBar"
+                app:iconTint="@color/white"
+                />
+            <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/tvTitleRV"
-                android:text="@string/quiz_card_description"
-                android:justificationMode="inter_word"
-                android:textColor="@color/text_secundary"
-                android:fontFamily="@font/ubuntu_desciption"
-                android:textSize="16sp"
+                android:orientation="horizontal"
                 android:padding="16dp"
-
-
-                />
-        </LinearLayout>
-    </androidx.cardview.widget.CardView>
-
-    <LinearLayout
-        android:orientation="vertical"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:gravity="center"
-        >
-        <androidx.cardview.widget.CardView
-            android:id="@+id/easyCard"
-            app:cardBackgroundColor="@color/background_card"
-            app:strokeWidth="0dp"
-            android:layout_marginEnd="25dp"
-            android:layout_marginStart="25dp"
-            android:layout_marginTop="25dp"
-            app:cardCornerRadius="25dp"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            >
-            <LinearLayout
                 android:gravity="center"
-                android:orientation="vertical"
-                android:layout_width="match_parent"
-                android:layout_height="100dp">
-                <TextView
-                    android:textStyle="bold"
-                    android:textColor="@color/text_color"
-                    android:textSize="17sp"
-                    android:text="@string/quiz_easy"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:fontFamily="@font/ubuntu_title"
-                    />
-
-                <Button
-                    android:id="@+id/btnEasy"
-                    android:layout_width="120dp"
-                    android:layout_height="40dp"
-                    android:text="@string/quiz_btn_easy"
-                    android:backgroundTint="@color/color_navBar"
-                    android:drawableRight="@drawable/una_estrella"
-                    android:drawableTint="@color/white"
-                    android:fontFamily="@font/ubuntu_desciption"
-                    />
-            </LinearLayout>
-        </androidx.cardview.widget.CardView>
-
-        <androidx.cardview.widget.CardView
-            android:id="@+id/difficultCard"
-            app:cardBackgroundColor="@color/background_card"
-            app:strokeWidth="0dp"
-            android:layout_marginEnd="25dp"
-            android:layout_marginStart="25dp"
-            android:layout_marginTop="25dp"
-            app:cardCornerRadius="25dp"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            >
-            <LinearLayout
-                android:gravity="center"
-                android:orientation="vertical"
-                android:layout_width="match_parent"
-                android:layout_height="100dp">
-                <TextView
-                    android:textStyle="bold"
-                    android:textColor="@color/text_color"
-                    android:textSize="17sp"
-                    android:text="@string/quiz_medium"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:fontFamily="@font/ubuntu_title"
-
-                    />
-                <Button
-                    android:id="@+id/btnMedium"
-                    android:layout_width="120dp"
-                    android:layout_height="40dp"
-                    android:text="@string/quiz_btn_medium"
-                    android:backgroundTint="@color/color_navBar"
-                    android:drawableRight="@drawable/dos_estrellas"
-                    android:drawableTint="@color/white"
-                    android:fontFamily="@font/ubuntu_light"
-                    />
-            </LinearLayout>
-        </androidx.cardview.widget.CardView>
-        <androidx.cardview.widget.CardView
-            android:id="@+id/aboutCard"
-            app:cardBackgroundColor="@color/background_card"
-            app:strokeWidth="0dp"
-            android:layout_marginEnd="25dp"
-            android:layout_marginStart="25dp"
-            android:layout_marginTop="25dp"
-            app:cardCornerRadius="25dp"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-
-            >
-            <LinearLayout
-                android:gravity="center"
-                android:orientation="vertical"
-                android:layout_width="match_parent"
-                android:layout_height="100dp"
                 >
+
                 <TextView
-                    android:textStyle="bold"
-                    android:textColor="@color/text_color"
-                    android:textSize="17sp"
-                    android:text="@string/quiz_pro"
-                    android:layout_width="wrap_content"
+                    android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:fontFamily="@font/ubuntu_title"
-                    />
-                <Button
-                    android:id="@+id/btnDifficult"
-                    android:layout_width="120dp"
-                    android:layout_height="40dp"
-                    android:text="@string/quiz_btn_pro"
-                    android:backgroundTint="@color/color_navBar"
-                    android:fontFamily="@font/ubuntu_light"
-                    />
+                    android:text="@string/quiz_Instruction"
+                    android:padding="8dp"
+                    android:justificationMode="inter_word"
+                    >
+                </TextView>
+
             </LinearLayout>
-        </androidx.cardview.widget.CardView>
-    </LinearLayout>
+        </LinearLayout>
+    </com.google.android.material.card.MaterialCardView>
+
+        <LinearLayout
+            android:id="@+id/content"
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:gravity="center"
+            android:background="@color/beige"
+            app:layout_constraintBottom_toTopOf="@id/cvStringQuiz"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+
+            >
+            <androidx.cardview.widget.CardView
+                android:id="@+id/easyCard"
+                app:cardBackgroundColor="@color/background_card"
+                app:strokeWidth="0dp"
+                android:layout_marginHorizontal="25dp"
+                android:layout_margin="25dp"
+                app:cardCornerRadius="25dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                >
+                <LinearLayout
+                    android:gravity="center"
+                    android:orientation="vertical"
+                    android:layout_width="match_parent"
+                    android:layout_height="100dp">
+                    <TextView
+                        android:textStyle="bold"
+                        android:textColor="@color/text_color"
+                        android:textSize="17sp"
+                        android:text="@string/quiz_easy"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/ubuntu_title"
+                        />
+
+                    <Button
+                        android:id="@+id/btnEasy"
+                        android:layout_width="120dp"
+                        android:layout_height="40dp"
+                        android:text="@string/quiz_btn_easy"
+                        android:backgroundTint="@color/color_navBar"
+                        android:fontFamily="@font/ubuntu_desciption"
+                        style="?attr/materialButtonOutlinedStyle"
+                        android:textColor="@color/white"
+                        />
+                </LinearLayout>
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/difficultCard"
+                app:cardBackgroundColor="@color/background_card"
+                app:strokeWidth="0dp"
+                android:layout_margin="25dp"
+                app:cardCornerRadius="25dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                >
+                <LinearLayout
+                    android:gravity="center"
+                    android:orientation="vertical"
+                    android:layout_width="match_parent"
+                    android:layout_height="100dp">
+                    <TextView
+                        android:textStyle="bold"
+                        android:textColor="@color/text_color"
+                        android:textSize="17sp"
+                        android:text="@string/quiz_medium"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/ubuntu_title"
+
+                        />
+                    <Button
+                        android:id="@+id/btnMedium"
+                        android:layout_width="120dp"
+                        android:layout_height="40dp"
+                        android:text="@string/quiz_btn_medium"
+                        android:backgroundTint="@color/color_navBar"
+                        android:fontFamily="@font/ubuntu_light"
+                        style="?attr/materialButtonOutlinedStyle"
+                        android:textColor="@color/white"
+                        />
+                </LinearLayout>
+            </androidx.cardview.widget.CardView>
+            <androidx.cardview.widget.CardView
+                android:id="@+id/aboutCard"
+                app:cardBackgroundColor="@color/background_card"
+                app:strokeWidth="0dp"
+                android:layout_margin="25dp"
+                app:cardCornerRadius="25dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+
+                >
+                <LinearLayout
+                    android:gravity="center"
+                    android:orientation="vertical"
+                    android:layout_width="match_parent"
+                    android:layout_height="100dp"
+                    >
+                    <TextView
+                        android:textStyle="bold"
+                        android:textColor="@color/text_color"
+                        android:textSize="17sp"
+                        android:text="@string/quiz_pro"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/ubuntu_title"
+                        />
+                    <Button
+                        android:id="@+id/btnDifficult"
+                        android:layout_width="120dp"
+                        android:layout_height="40dp"
+                        android:text="@string/quiz_btn_pro"
+                        android:backgroundTint="@color/color_navBar"
+                        android:fontFamily="@font/ubuntu_light"
+                        style="?attr/materialButtonOutlinedStyle"
+                        android:textColor="@color/white"
+                        />
+                </LinearLayout>
+            </androidx.cardview.widget.CardView>
+        </LinearLayout>
+
+
 </androidx.constraintlayout.widget.ConstraintLayout>

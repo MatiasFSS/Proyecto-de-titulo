@@ -7,8 +7,15 @@ import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 import com.copetiny.proyecto.ProyectoApp
 import com.copetiny.proyecto.ProyectoApp.Companion.prefs
+import com.copetiny.proyecto.data.network.ProyectoApiService
+import com.copetiny.proyecto.data.network.response.encyclopedia.MaterialResponse
 import com.copetiny.proyecto.domain.model.encyclopedia.EncyclopediaInfo
 import dagger.hilt.android.lifecycle.HiltViewModel
+import kotlinx.coroutines.CoroutineScope
+import kotlinx.coroutines.Dispatchers
+import kotlinx.coroutines.launch
+import retrofit2.Response
+import retrofit2.Retrofit
 import javax.inject.Inject
 @HiltViewModel
 class SharedViewModel @Inject constructor (): ViewModel() {
@@ -58,5 +65,6 @@ class SharedViewModel @Inject constructor (): ViewModel() {
     fun upDialogFlag():Boolean{
         return prefs.updialogFlag()
     }
+
 
 }

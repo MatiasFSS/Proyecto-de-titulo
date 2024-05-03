@@ -11,10 +11,12 @@ import androidx.lifecycle.lifecycleScope
 import androidx.lifecycle.repeatOnLifecycle
 import androidx.navigation.fragment.findNavController
 import androidx.recyclerview.widget.GridLayoutManager
+import com.copetiny.proyecto.R
 import com.copetiny.proyecto.databinding.FragmentEncyclopediaBinding
 import com.copetiny.proyecto.domain.model.encyclopedia.EncyclopediaInfo
 import com.copetiny.proyecto.domain.model.encyclopedia.EncyclopediaModel
 import com.copetiny.proyecto.ui.encyclopedia.adapter.EncyclopediaAdapter
+import com.google.android.material.snackbar.Snackbar
 import dagger.hilt.android.AndroidEntryPoint
 import kotlinx.coroutines.launch
 
@@ -37,6 +39,14 @@ class EncyclopediaFragment : Fragment() {
     }
 
     private fun initRecycleView(){
+        binding.iconButtonMaterial.setOnClickListener {
+            Snackbar.make(it,getString(R.string.encyclopedia_Description), Snackbar.LENGTH_LONG)
+                .setAction("Aceptar"){
+                    onDestroy()
+                }
+                .setTextMaxLines(100)
+                .show()
+        }
         encyclopediaAdapter = EncyclopediaAdapter(onItemSelected ={
             val type = when(it){
                 EncyclopediaInfo.Aluminio -> EncyclopediaModel.Aluminio

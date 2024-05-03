@@ -9,56 +9,75 @@
     android:background="@color/beige"
     >
 
-    <androidx.cardview.widget.CardView
+    <com.google.android.material.card.MaterialCardView
         android:id="@+id/cvString"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        android:layout_margin="8dp"
-        app:cardCornerRadius="16dp"
+        app:layout_constraintBottom_toTopOf="@id/rvEncyclopedia"
         android:backgroundTint="@color/background_card"
         >
 
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:orientation="vertical"
-            >
-        <TextView
-            android:id="@+id/tvTitleRV"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            android:text="@string/encyclopedia_Title"
-            android:gravity="center"
-            android:layout_margin="10dp"
-            android:textColor="@color/black"
-            android:fontFamily="@font/ubuntu_title"
-            android:textSize="26sp"
+            android:orientation="vertical">
 
-            />
+            <!-- Media -->
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="140dp"
+                app:srcCompat="@drawable/portadamateriales"
+                android:scaleType="centerCrop"
+                />
 
-        <TextView
-            android:id="@+id/tvDescriptionRV"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/tvTitleRV"
-            android:text="@string/encyclopedia_Description"
-            android:justificationMode="inter_word"
-            android:textColor="@color/text_secundary"
-            android:fontFamily="@font/ubuntu_desciption"
-            android:textSize="16sp"
-            android:padding="16dp"
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:padding="16dp"
+                android:gravity="center"
+                >
 
-            />
+                <!-- Title, secondary and supporting text -->
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/encyclopedia_Title"
+                    android:textAppearance="?attr/textAppearanceTitleLarge"
+                    android:textStyle="bold"
+                    />
+                <Button
+                    style="?attr/materialIconButtonFilledTonalStyle"
+                    android:id="@+id/iconButtonMaterial"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:contentDescription="Ayuda"
+                    app:icon="@drawable/help2"
+                    android:layout_marginHorizontal="8dp"
+                    android:backgroundTint="@color/color_navBar"
+                    app:iconTint="@color/white"
+                    />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="@string/encyclopedia_Instruction"
+                        android:padding="8dp"
+
+                        android:justificationMode="inter_word"
+                        >
+                    </TextView>
+
+
+            </LinearLayout>
+
+
         </LinearLayout>
-    </androidx.cardview.widget.CardView>
+
+    </com.google.android.material.card.MaterialCardView>
 
 
     <androidx.recyclerview.widget.RecyclerView
@@ -70,6 +89,8 @@
         app:layout_constraintTop_toBottomOf="@+id/cvString"
         app:layout_constraintBottom_toBottomOf="parent"
         />
+
+
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

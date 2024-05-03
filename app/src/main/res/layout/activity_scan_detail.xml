@@ -9,7 +9,7 @@
     >
 
 
-        <androidx.cardview.widget.CardView
+        <com.google.android.material.card.MaterialCardView
             android:id="@+id/cvcontainerRegister"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
@@ -20,6 +20,7 @@
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintBottom_toBottomOf="parent"
             android:layout_margin="26dp"
+            android:backgroundTint="@color/background_card"
             >
             <ScrollView
                 android:layout_width="match_parent"
@@ -170,7 +171,7 @@
                         </LinearLayout>
                     </androidx.cardview.widget.CardView>
 
-                    <Button
+                    <com.google.android.material.button.MaterialButton
                         android:id="@+id/btnReciclar"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
@@ -178,15 +179,17 @@
                         android:text="RECICLAR"
                         android:backgroundTint="@color/disabled_btn"
                         android:layout_gravity="center"
-                        android:drawableRight="@drawable/btn_reciclar"
-                        android:drawableTint="@color/white"
+                        app:icon="@drawable/btn_reciclar"
+                        app:iconTint="@color/white"
                         android:enabled="false"
                         android:fontFamily="@font/ubuntu_light"
+                        style="?attr/materialButtonOutlinedStyle"
+                        android:textColor="@color/white"
                         />
 
                 </LinearLayout>
 
             </androidx.constraintlayout.widget.ConstraintLayout>
             </ScrollView>
-        </androidx.cardview.widget.CardView>
+        </com.google.android.material.card.MaterialCardView>
 </androidx.constraintlayout.widget.ConstraintLayout>

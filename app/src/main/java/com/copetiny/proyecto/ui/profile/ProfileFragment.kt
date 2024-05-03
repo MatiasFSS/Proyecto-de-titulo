@@ -1,6 +1,8 @@
 package com.copetiny.proyecto.ui.profile
 
 import android.app.Dialog
+import android.graphics.Color
+import android.graphics.drawable.ColorDrawable
 import android.os.Bundle
 import android.util.Log
 import androidx.fragment.app.Fragment
@@ -11,15 +13,21 @@ import android.widget.Button
 import android.widget.EditText
 import android.widget.ImageView
 import android.widget.Toast
+import androidx.appcompat.widget.SearchView
 import androidx.fragment.app.viewModels
 import androidx.lifecycle.Lifecycle
 import androidx.lifecycle.lifecycleScope
 import androidx.lifecycle.repeatOnLifecycle
 import com.copetiny.proyecto.ProyectoApp.Companion.prefs
 import com.copetiny.proyecto.R
+import com.copetiny.proyecto.data.network.response.encyclopedia.MaterialResponse
 import com.copetiny.proyecto.databinding.FragmentProfileBinding
+import com.google.android.material.snackbar.Snackbar
 import dagger.hilt.android.AndroidEntryPoint
+import kotlinx.coroutines.CoroutineScope
+import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.launch
+import retrofit2.Response
 import java.text.DecimalFormat
 
 
@@ -49,6 +57,14 @@ class ProfileFragment : Fragment() {
     }
 
     private fun initUI(){
+        binding.iconButtonProfile.setOnClickListener {
+            Snackbar.make(it,getString(R.string.profile_description), Snackbar.LENGTH_LONG)
+                .setAction("Aceptar"){
+                    onDestroy()
+                }
+                .setTextMaxLines(100)
+                .show()
+        }
         binding.btEdit.setOnClickListener {
            /* prefs.wipe()
             findNavController().navigate(
@@ -82,12 +98,12 @@ class ProfileFragment : Fragment() {
             }
 
         }
-
-
     }
+
 
     private fun showDialogLevel(){
         val dialog = Dialog(requireContext())
+        dialog.window!!.setBackgroundDrawable(ColorDrawable(Color.TRANSPARENT))
         dialog.setContentView(R.layout.item_dialog_level)
 
         val btnAcceptLevel = dialog.findViewById<Button>(R.id.btnAcceptLevel)
@@ -100,6 +116,7 @@ class ProfileFragment : Fragment() {
 
     private fun showDialog(){
         val dialog = Dialog(requireContext())
+        dialog.window!!.setBackgroundDrawable(ColorDrawable(Color.TRANSPARENT))
         dialog.setContentView(R.layout.item_dialog_edit_user)
 
         val btn = dialog.findViewById<Button>(R.id.btnConfirm)
@@ -132,15 +149,18 @@ class ProfileFragment : Fragment() {
                     name.error ="Este campo es obligatorio"
                     if(age.text.toString().isEmpty()){
                         age.error = "Este campo es obligatorio"
-                        Toast.makeText(requireContext(),"Los campos son obligatorios, porfavor Ingrese su nombre y edad", Toast.LENGTH_SHORT).show()
+                        Snackbar.make(it,"Los campos son obligatorios, porfavor Ingrese su nombre y edad", Snackbar.LENGTH_SHORT).show()
+                        //Toast.makeText(requireContext(),"Los campos son obligatorios, porfavor Ingrese su nombre y edad", Toast.LENGTH_SHORT).show()
 
                     }else{
-                        Toast.makeText(requireContext(),"El campo es obligatorio, porfavor Ingrese su nombre", Toast.LENGTH_SHORT).show()
+                        Snackbar.make(it,"El campo es obligatorio, porfavor Ingrese su nombre", Snackbar.LENGTH_SHORT).show()
+                        //Toast.makeText(requireContext(),"El campo es obligatorio, porfavor Ingrese su nombre", Toast.LENGTH_SHORT).show()
                     }
                 }else{
                     if(age.text.toString().isEmpty()){
                         age.error = "Este campo es obligatorio"
-                        Toast.makeText(requireContext(),"El campo es obligatorio, porfavor Ingrese su edad", Toast.LENGTH_SHORT).show()
+                        //Toast.makeText(requireContext(),"El campo es obligatorio, porfavor Ingrese su edad", Toast.LENGTH_SHORT).show()
+                        Snackbar.make(it,"El campo es obligatorio, porfavor Ingrese su edad", Snackbar.LENGTH_SHORT).show()
                     }
                 }
             }

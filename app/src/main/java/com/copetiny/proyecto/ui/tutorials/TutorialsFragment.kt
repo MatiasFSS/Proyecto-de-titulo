@@ -17,6 +17,7 @@ import com.copetiny.proyecto.databinding.FragmentTutorialsBinding
 import com.copetiny.proyecto.domain.model.tutorials.TutorialsInfo
 import com.copetiny.proyecto.domain.model.tutorials.TutorialsModel
 import com.copetiny.proyecto.ui.tutorials.adapter.TutorialsAdapter
+import com.google.android.material.snackbar.Snackbar
 import dagger.hilt.android.AndroidEntryPoint
 import kotlinx.coroutines.flow.collect
 import kotlinx.coroutines.launch
@@ -40,6 +41,15 @@ class TutorialsFragment : Fragment() {
     }
 
     private fun initRecyclerViewTutorials(){
+        binding.iconButtonTutorial.setOnClickListener {
+            Snackbar.make(it,getString(R.string.tutorials_Description), Snackbar.LENGTH_LONG)
+                .setAction("Aceptar"){
+                    onDestroy()
+                }
+                .setTextMaxLines(100)
+                .show()
+        }
+
         tutorialsAdapter = TutorialsAdapter(onItemSelected = {
             val type = when(it){
                 TutorialsInfo.Tutorial1 -> TutorialsModel.Tutorial1

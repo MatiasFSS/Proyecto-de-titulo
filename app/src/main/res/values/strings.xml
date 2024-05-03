@@ -32,8 +32,8 @@
 
     <!-- Titulo y descripción de Vista enciclopedia-->
     <string name="encyclopedia_Title">Materiales</string>
-    <string name="encyclopedia_Description">En este apartado encontraras información de cómo manejar diversos materiales, se responden preguntas como, ¿El material se puede reciclar?, ¿Como llevo el material al centro de reciclaje?, entre otras preguntas</string>
-
+    <string name="encyclopedia_Description">Aquí encontraras información de diversos materiales para conocer conocer más sobre ellos.</string>
+    <string name="encyclopedia_Instruction">Haz click en unos de los materiales para informarte.</string>
     <!-- textos tutoriales -->
     <string name="tutorial_1">¿Como reciclar?</string>
     <string name="tutorial_2">Sr. cabeza de pasto</string>
@@ -43,8 +43,9 @@
     <string name="tutorial_6">Macetero de material reciclable</string>
     <!-- Titulo y descripción de Vista enciclopedia-->
     <string name="tutorials_Title">Tutoriales</string>
-    <string name="tutorials_Description">Aquí encontraras muchos tutoriales para realizar diversas actividades con material reciclable.</string>
+    <string name="tutorials_Description">Aquí encontraras una lista de tutoriales donde prodrás realizar actividades con materiales reciclables.</string>
     <string name="tutorials_Description2">¡RECUERDA! : "Reutiliza - Reduce - Recicla"</string>
+    <string name="tutorials_Instruction">Haz click en uno de los tutoriales para realizar una actividad.</string>
 
     <!--registro-->
     <string name="register_Name">Ingrese su nombre</string>
@@ -69,6 +70,7 @@
     <string name="profile_BtnEdit">Editar Usuarios</string>
     <string name="profile_WelcomeProfie">Bienvenido</string>
     <string name="profile_dialog_level">¡FELICIDADES HAS SUBIDO DE NIVEL!</string>
+    <string name="profile_description">Este es tu perfil de usuario, donde podrás ver tus datos personales y barra de nivel, ¡edita tus datos cuando quieras!</string>
 
     <!--Quiz-->
     <string name="quiz_easy">Trivia nivel principiante</string>
@@ -79,6 +81,7 @@
     <string name="quiz_btn_pro">Difícil</string>
     <string name="quiz_card_title">Trivias</string>
     <string name="quiz_card_description">Aquí podrás medir tus conocimientos, contesta una trivia y gana puntos de nivel.</string>
+    <string name="quiz_Instruction">Haz click en una de las trivias y mide tus conocimientos.</string>
 
     <!--DetailScan-->
 
@@ -87,6 +90,12 @@
 
     <string name="tvDialogPointsIncorrect">Tu respuesta es ¡INCORRECTA!</string>
     <string name="tvDialogPoints2">Mejor Suerte para la próxima</string>
+
+
+    <!--Alerts-->
+    <string name="AlertDialog">¿Estás seguro de que quieres salir? perderas todos los puntos ganados.</string>
+    <string name="AlertDialogSi">Si</string>
+    <string name="AlertDialogNo">No</string>
 
 
 </resources>

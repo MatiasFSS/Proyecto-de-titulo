@@ -21,20 +21,20 @@
             android:padding="16dp"
             >
 
-                    <ImageView
-                        android:layout_width="150dp"
-                        android:layout_height="150dp"
-                        android:src="@drawable/logosplash"
-                        android:layout_marginBottom="16dp"
-                        >
+            <ImageView
+                android:layout_width="150dp"
+                android:layout_height="150dp"
+                android:src="@drawable/logosplash"
+                android:layout_marginBottom="16dp"
+                >
 
-                    </ImageView>
-            <androidx.cardview.widget.CardView
+            </ImageView>
+            <com.google.android.material.card.MaterialCardView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 app:cardCornerRadius="16dp"
                 android:elevation="8dp"
-                app:cardBackgroundColor="@color/marron_suave"
+                app:cardBackgroundColor="@color/color_navBar"
                 android:layout_margin="16dp"
                 >
 
@@ -45,17 +45,19 @@
                     android:justificationMode="inter_word"
                     android:padding="18dp"
                     android:text="@string/register_welcome"
-                    android:textColor="@color/white" />
-            </androidx.cardview.widget.CardView>
+                    android:textColor="@color/white"
+                    />
+            </com.google.android.material.card.MaterialCardView>
 
 
-                    <androidx.cardview.widget.CardView
+                    <com.google.android.material.card.MaterialCardView
                         android:id="@+id/cvcontainerRegister"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         app:cardCornerRadius="16dp"
                         app:cardElevation="8dp"
                         android:layout_margin="16dp"
+                        android:backgroundTint="@color/background_card"
 
                         >
                         <LinearLayout
@@ -65,40 +67,68 @@
                             android:gravity="center"
                             android:padding="16dp"
                             >
-                        <EditText
-                            android:id="@+id/etName"
+
+                        <com.google.android.material.textfield.TextInputLayout
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
-                            android:hint="@string/register_Name"
-                            android:layout_marginTop="5dp"
-                            android:fontFamily="@font/ubuntu_light"
-                            />
+                            app:boxCornerRadiusTopStart="16dp"
+                            app:boxCornerRadiusBottomStart="16dp"
+                            app:boxCornerRadiusBottomEnd="16dp"
+                            app:boxCornerRadiusTopEnd="16dp"
+                            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                            android:layout_marginVertical="3dp"
+                            >
 
-                        <EditText
+                            <com.google.android.material.textfield.TextInputEditText
+                                android:id="@+id/etName"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:hint="@string/register_Name"
+                                android:layout_marginTop="5dp"
+                                android:fontFamily="@font/ubuntu_light"
+                                android:inputType="textPersonName"
+                                />
+                        </com.google.android.material.textfield.TextInputLayout>
+
+                        <com.google.android.material.textfield.TextInputLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            app:boxCornerRadiusTopStart="16dp"
+                            app:boxCornerRadiusBottomStart="16dp"
+                            app:boxCornerRadiusBottomEnd="16dp"
+                            app:boxCornerRadiusTopEnd="16dp"
+                            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                            android:layout_marginVertical="4dp"
+                            >
+                        <com.google.android.material.textfield.TextInputEditText
                             android:id="@+id/etAge"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:hint="@string/register_Age"
                             android:layout_marginTop="5dp"
                             android:fontFamily="@font/ubuntu_light"
-
+                            android:inputType="number"
                             />
+                        </com.google.android.material.textfield.TextInputLayout>
 
-                        <Button
+                        <com.google.android.material.button.MaterialButton
                             android:id="@+id/btRegister"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_marginTop="16dp"
                             android:text="@string/register_bt"
                             android:backgroundTint="@color/color_navBar"
-                            android:drawableRight="@drawable/confirmar"
-                            android:drawableTint="@color/white"
+                            app:icon="@drawable/confirmar"
+                            app:iconTint="@color/white"
                             android:fontFamily="@font/ubuntu_light"
+                            app:cornerRadius="16dp"
+                            style="?attr/materialButtonOutlinedStyle"
+                            android:textColor="@color/white"
                             />
                         </LinearLayout>
 
 
-                    </androidx.cardview.widget.CardView>
+                    </com.google.android.material.card.MaterialCardView>
 
                 </LinearLayout>
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,6 +1,8 @@
 package com.copetiny.proyecto.ui.detailscan
 
 import android.app.Dialog
+import android.graphics.Color
+import android.graphics.drawable.ColorDrawable
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.util.Log
@@ -85,6 +87,7 @@ class ScanDetailActivity : AppCompatActivity(){
     }
     private fun dialogPoints(isCorrect: Boolean){
         val dialog = Dialog(this)
+        dialog.window!!.setBackgroundDrawable(ColorDrawable(Color.TRANSPARENT))
         dialog.setContentView(R.layout.item_dialog_points)
 
         val btnAccept = dialog.findViewById<Button>(R.id.btnAccept)
@@ -97,6 +100,7 @@ class ScanDetailActivity : AppCompatActivity(){
 
         }else{
             tvAnswer.text = getString(R.string.tvDialogPointsIncorrect)
+            tvPoints.text = getString(R.string.tvDialogPoints2)
         }
 
         btnAccept.setOnClickListener { dialog.hide() }

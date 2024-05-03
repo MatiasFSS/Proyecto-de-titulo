@@ -7,7 +7,7 @@
     tools:context=".ui.scan.ScanFragment"
     android:background="@color/beige"
     >
-        <androidx.cardview.widget.CardView
+        <com.google.android.material.card.MaterialCardView
             android:id="@+id/cvScan"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -59,9 +59,9 @@
                         android:src="@drawable/reciclaje" />
                 </LinearLayout>
             </ScrollView>
-        </androidx.cardview.widget.CardView>
+        </com.google.android.material.card.MaterialCardView>
 
-        <androidx.cardview.widget.CardView
+        <com.google.android.material.card.MaterialCardView
             android:id="@+id/cvScan3"
             android:layout_width="match_parent"
             android:layout_height="0dp"
@@ -105,11 +105,13 @@
                             android:text="@string/scan_btnReciclar"
                             android:layout_margin="16dp"
                             android:backgroundTint="@color/color_navBar"
-                            android:drawableRight="@drawable/escanear"
-                            android:drawableTint="@color/white"
+                            app:icon="@drawable/escanear"
+                            app:iconTint="@color/white"
                             android:fontFamily="@font/ubuntu_light"
+                            style="?attr/materialButtonOutlinedStyle"
+                            android:textColor="@color/white"
                             />
-                    <androidx.cardview.widget.CardView
+                    <com.google.android.material.card.MaterialCardView
                         android:id="@+id/cvScan2"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
@@ -127,10 +129,10 @@
                             android:gravity="center"
                             >
                         </TextView>
-                    </androidx.cardview.widget.CardView>
+                    </com.google.android.material.card.MaterialCardView>
 
                 </LinearLayout>
             </ScrollView>
-        </androidx.cardview.widget.CardView>
+        </com.google.android.material.card.MaterialCardView>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

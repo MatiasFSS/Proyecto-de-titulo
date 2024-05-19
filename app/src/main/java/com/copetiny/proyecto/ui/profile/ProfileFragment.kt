@@ -86,6 +86,7 @@ class ProfileFragment : Fragment() {
 
         sharedViewModel.expProgress.observe(viewLifecycleOwner) {
             val exp = prefs.getExp()
+            Log.i("mama5", exp.toString())
             binding.rsLevel.values = listOf(exp.toFloat())
             binding.tvExp.text = "$exp pts"
 

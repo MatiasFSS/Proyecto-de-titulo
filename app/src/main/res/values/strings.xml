@@ -97,5 +97,10 @@
     <string name="AlertDialogSi">Si</string>
     <string name="AlertDialogNo">No</string>
 
+    <!--Pregunta del dia-->
+
+    <string name="Pregunta_dia">¡PREGUNTA DEL DÍA!</string>
+    <string name="Pregunta_dia_btn">Continuar</string>
+    <string name="AlertDialog_pregunta_dia">¿Estás seguro de que quieres salir?, no ganaras puntos de experiencia</string>
 
 </resources>

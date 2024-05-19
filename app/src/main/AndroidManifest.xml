@@ -21,6 +21,9 @@
         android:usesCleartextTraffic="true"
         tools:targetApi="31">
         <activity
+            android:name=".ui.questionday.QuestionDay"
+            android:exported="false" />
+        <activity
             android:name=".ui.detailquiz.QuizDetailActivity"
             android:exported="false" />
         <activity

@@ -1,5 +1,6 @@
 package com.copetiny.proyecto.ui.detailquiz
 
+import android.annotation.SuppressLint
 import android.app.Dialog
 import android.graphics.Color
 import android.graphics.drawable.ColorDrawable
@@ -71,8 +72,7 @@ class QuizDetailActivity : AppCompatActivity() {
                 .setPositiveButton(R.string.AlertDialogSi) { dialog, id ->
                     super.onBackPressedDispatcher.onBackPressed()
                 }
-                .setNegativeButton(R.string.AlertDialogNo) { dialog, id ->
-                }
+                .setNegativeButton(R.string.AlertDialogNo) { dialog, id ->}
                 .show()
         }
     }
@@ -81,6 +81,7 @@ class QuizDetailActivity : AppCompatActivity() {
         binding.pb.isVisible = true
 
     }
+    @SuppressLint("MissingSuperCall")
     override fun onBackPressed() {
         AlertDialog.Builder(this)
             .setMessage(R.string.AlertDialog)
@@ -111,7 +112,7 @@ class QuizDetailActivity : AppCompatActivity() {
             sharedViewModel.expProgress(contadorPuntos)
             dialogPoints()
         }else{
-            Log.i("mama66", "HAZ PERDIDO TUS PUNTOS")
+            Log.i("mama66", "NO SE HAN RESPONDIDO TODAS LAS PREGUNTAS DEL QUIZ")
         }
     }
     private fun dialogPoints(){

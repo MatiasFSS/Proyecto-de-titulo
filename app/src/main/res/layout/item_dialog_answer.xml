@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="300dp"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:backgroundTint="@color/beige"
+    app:cardCornerRadius="16dp"
+    style="?attr/materialCardViewElevatedStyle">
+
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:padding="16dp"
+        android:gravity="center"
+        >
+
+        <TextView
+            android:id="@+id/tvAnswerQuestionDay"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            tools:text="¡Tu respuesta es CORRECTA!"
+            android:textSize="16sp"
+            android:gravity="center"
+            android:textStyle="bold"
+            android:fontFamily="@font/ubuntu_title"
+            android:justificationMode="inter_word" />
+
+        <Button
+            android:id="@+id/btnAcceptQuestionDay"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Aceptar"
+            android:backgroundTint="@color/color_navBar"
+            android:layout_marginTop="16dp"
+            android:drawableRight="@drawable/confirmar"
+            app:icon="@drawable/confirmar"
+            app:iconTint="@color/white"
+            style="?attr/materialButtonOutlinedStyle"
+            android:textColor="@color/white"
+            />
+
+    </LinearLayout>
+</androidx.cardview.widget.CardView>

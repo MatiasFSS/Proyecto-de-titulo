@@ -21,14 +21,17 @@ import javax.inject.Inject
 class SharedViewModel @Inject constructor (): ViewModel() {
     private val _expProgress = MutableLiveData<Int>()
     val expProgress:LiveData<Int> = _expProgress
+    var current = prefs.getExp()
+
 
    init {
-       val current = prefs.getExp()
+
+       Log.i("mama", current.toString())
 
        if (current in 0..95) {
            _expProgress.value = current
            //prefs.saveLevel(currentLevel)
-
+           Log.i("mama1 ultimo init", current.toString())
        } else {
            _expProgress.value = 0
            prefs.saveExp(_expProgress.value.toString().toInt())
@@ -38,16 +41,21 @@ class SharedViewModel @Inject constructor (): ViewModel() {
     fun expProgress(points:Int) {
         val currentProgress = _expProgress.value ?: 0
         val newProgress = currentProgress + points
+        Log.i("mama2", newProgress.toString())
 
         if(newProgress >= 100 && !upDialogFlag()){
             _expProgress.value = 0
             prefs.saveExp(0)
             levelProgress()
             setDialogFlag(true)
+            current = prefs.getExp()
+            Log.i("mama3", current.toString())
 
         }else{
             _expProgress.value = newProgress
             prefs.saveExp(newProgress)
+            current = prefs.getExp()
+            Log.i("mama4 ultimofuncion", current.toString())
 
         }
     }

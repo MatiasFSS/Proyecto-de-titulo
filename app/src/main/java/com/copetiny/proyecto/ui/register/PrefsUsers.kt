@@ -12,6 +12,8 @@ class PrefsUsers (val context: Context) {
     val BAR_EXP= "exp"
     val LEVEL = "level"
     val FLAG = "flag"
+    val IS_FIRST_RUN ="isFirstRun"
+    val LAST_QUESTION_TIMESTAMP = "lastQuestionTimestamp"
 
     //val USER_IMAGE = "img"
 
@@ -64,6 +66,27 @@ class PrefsUsers (val context: Context) {
 
     fun wipe(){
         storage.edit().clear().apply()
+    }
+
+    fun isFirstRun():Boolean{
+        return storage.getBoolean(IS_FIRST_RUN, true)
+    }
+    fun setFirstRun(isFirstRun:Boolean){
+        with(storage.edit()){
+            putBoolean(IS_FIRST_RUN, isFirstRun)
+            apply()
+        }
+    }
+
+    fun getLastQuestionTimestamp():Long{
+        return storage.getLong(LAST_QUESTION_TIMESTAMP, 0L)
+    }
+
+    fun setLastQuestionTimestamp(timestamp:Long){
+        with(storage.edit()){
+            putLong(LAST_QUESTION_TIMESTAMP, timestamp)
+            apply()
+        }
     }
 
 

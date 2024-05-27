@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="300dp"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:backgroundTint="@color/background_card"
+    app:cardCornerRadius="16dp"
+    app:cardBackgroundColor="@color/black"
+    style="?attr/materialCardViewElevatedStyle"
+
+    >
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="16dp"
+            android:gravity="center"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            >
+            <ImageView
+                android:id="@+id/ivItemBluetooth"
+                android:layout_width="match_parent"
+                android:layout_height="130dp"
+
+                />
+            <TextView
+                android:id="@+id/tvTitleItemBluetooth"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/ubuntu_title"
+                android:layout_gravity="center"
+                android:layout_marginTop="8dp"
+                android:textSize="26sp"
+                android:gravity="center"
+                />
+            <TextView
+                android:id="@+id/tvStateBluetooth"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/ubuntu_title"
+                android:layout_gravity="center"
+                android:layout_marginTop="8dp"
+                android:textSize="26sp"
+                android:gravity="center"
+                />
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btnConfirmBT"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Confirmar"
+                android:backgroundTint="@color/color_navBar"
+                android:layout_marginVertical="8dp"
+                app:icon="@drawable/confirmar"
+                app:iconTint="@color/white"
+                android:fontFamily="@font/ubuntu_light"
+                app:cornerRadius="16dp"
+                style="?attr/materialButtonOutlinedStyle"
+                android:textColor="@color/white"
+                />
+
+
+
+        </LinearLayout>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.cardview.widget.CardView>

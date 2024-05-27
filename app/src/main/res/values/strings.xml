@@ -103,4 +103,23 @@
     <string name="Pregunta_dia_btn">Continuar</string>
     <string name="AlertDialog_pregunta_dia">¿Estás seguro de que quieres salir?, no ganaras puntos de experiencia</string>
 
+    <!--Bluetooth-->
+    <string name="Bluetooth_back">¿Estás seguro de que quieres salir?, No realizarás el proceso de reciclaje</string>
+    <string name="Bluetooth_permissions">PERMISOS CONCEDIDOS</string>
+    <string name="Bluetooth_noPermissions">POR FAVOR CONCEDA LOS PERMISOS PARA UTILIZAR ESTA FUNCIONALIDAD</string>
+    <string name="Bluetooth_BTnodisponible">Bluetooth no esta disponible en este dispositivo</string>
+    <string name="Bluetooth_cargando">Cargando</string>
+    <string name="Bluetooth_BtnActualizar">Presiona el boton actualizar y selecciona el brazo robotico</string>
+    <string name="Bluetooth_Activar">Por favor active el bluetooth</string>
+    <string name="Bluetooth_Activado">Bluetooth ya se encuentra activado</string>
+    <string name="Bluetooth_vicular">Primero vincule un dispositivo Bluetooth</string>
+    <string name="Bluetooth_conexionExito">Conexión exitosa</string>
+    <string name="Bluetooth_conexionNoExito">Error de conexión</string>
+    <string name="Bluetooth_Reciclando">Reciclando</string>
+    <string name="Bluetooth_NoReciclando">No se ha podido reciclar, inténtalo nuevamente</string>
+    <string name="Bluetooth_ExitoRecilaje">SE HA RECICLADO CORRECTAMENTE</string>
+    <string name="Bluetooth_NoExitoRecilaje">ERROR AL RECICLAR EL MATERIAL</string>
+    <string name="Bluetooth_sendComand">Comienza el proceso de reciclaje</string>
+
+
 </resources>

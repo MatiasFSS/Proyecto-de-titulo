@@ -80,4 +80,9 @@ dependencies {
 
     implementation("com.squareup.picasso:picasso:2.8")
 
+    //Bluetooth
+    //implementation("com.github.josejacin:bluejhrlibrary:1.0.7")
+    //implementation ("com.github.jose-jhr:blueJhrLibrary:0.1.0")
+    //implementation("com.github.pires:android-bluetooth-library:1.2.0")
+    //implementation ("com.github.bbeaird:Bluetooth-Serial-Adapter:1.0.0")
 }

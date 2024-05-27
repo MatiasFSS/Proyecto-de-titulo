@@ -50,6 +50,7 @@ class ScanFragment : Fragment() {
             findNavController().navigate(
                 ScanFragmentDirections.actionScanFragmentToScanDetailActivity(type)
             )
+            //ScanFragmentDirections.actionScanFragmentToBluetoothActivity(type)
         }
     }
 

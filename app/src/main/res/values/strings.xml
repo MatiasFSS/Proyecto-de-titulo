@@ -104,7 +104,7 @@
     <string name="AlertDialog_pregunta_dia">¿Estás seguro de que quieres salir?, no ganaras puntos de experiencia</string>
 
     <!--Bluetooth-->
-    <string name="Bluetooth_back">¿Estás seguro de que quieres salir?, No realizarás el proceso de reciclaje</string>
+    <string name="Bluetooth_back">¿Estás seguro de que quieres salir?, No realizarás el proceso de reciclaje y perderas todos los puntos ganados</string>
     <string name="Bluetooth_permissions">PERMISOS CONCEDIDOS</string>
     <string name="Bluetooth_noPermissions">POR FAVOR CONCEDA LOS PERMISOS PARA UTILIZAR ESTA FUNCIONALIDAD</string>
     <string name="Bluetooth_BTnodisponible">Bluetooth no esta disponible en este dispositivo</string>

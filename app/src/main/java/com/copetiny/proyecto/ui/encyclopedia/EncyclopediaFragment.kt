@@ -13,6 +13,7 @@ import androidx.navigation.fragment.findNavController
 import androidx.recyclerview.widget.GridLayoutManager
 import com.copetiny.proyecto.R
 import com.copetiny.proyecto.databinding.FragmentEncyclopediaBinding
+import com.copetiny.proyecto.domain.model.encyclopedia.Category
 import com.copetiny.proyecto.domain.model.encyclopedia.EncyclopediaInfo
 import com.copetiny.proyecto.domain.model.encyclopedia.EncyclopediaModel
 import com.copetiny.proyecto.ui.encyclopedia.adapter.EncyclopediaAdapter
@@ -36,6 +37,7 @@ class EncyclopediaFragment : Fragment() {
     private fun initUI(){
         initRecycleView()
         initUIstate()
+        setupCategoryButtons()
     }
 
     private fun initRecycleView(){
@@ -87,6 +89,20 @@ class EncyclopediaFragment : Fragment() {
         }
     }
 
+    private fun setupCategoryButtons() {
+        binding.toggleButton.addOnButtonCheckedListener { group, checkedId, isChecked ->
+            if (isChecked) {
+                when (checkedId) {
+                    R.id.Reciclables -> encyclopediaViewModel.filterEncyclopediaByCategory(Category.RECICLABLES)
+                    R.id.Especiales -> encyclopediaViewModel.filterEncyclopediaByCategory(Category.ESPECIALES)
+                    R.id.NoReciclables -> encyclopediaViewModel.filterEncyclopediaByCategory(Category.NO_RECICLABLES)
+                }
+            } else if (group.checkedButtonId == View.NO_ID) {
+                encyclopediaViewModel.resetEncyclopedia()
+            }
+        }
+    }
+
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
@@ -94,6 +110,11 @@ class EncyclopediaFragment : Fragment() {
 
         _binding = FragmentEncyclopediaBinding.inflate(layoutInflater,container,false)
         return binding.root
+    }
+
+    override fun onDestroyView() {
+        super.onDestroyView()
+        _binding = null
     }
 
 

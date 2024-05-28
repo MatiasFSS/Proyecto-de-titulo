@@ -232,12 +232,12 @@ class BluetoothActivity : AppCompatActivity() {
                     binding.tvStateBluetooth.text = getString(R.string.Bluetooth_Reciclando)
                     binding.pbBluetooth.isVisible = true
                     sendRecycleCommand()
-                    finish()
                 } catch (e: IOException) {
                     e.printStackTrace()
                     Toast.makeText(this, getString(R.string.Bluetooth_conexionNoExito), Toast.LENGTH_LONG).show()
                     binding.tvStateBluetooth.text = getString(R.string.Bluetooth_NoReciclando)
                     binding.pbBluetooth.isVisible = false
+                    finish()
                 }
             }
         }
@@ -316,7 +316,7 @@ class BluetoothActivity : AppCompatActivity() {
     @SuppressLint("MissingSuperCall")
     override fun onBackPressed() {
         AlertDialog.Builder(this)
-            .setMessage(R.string.AlertDialog)
+            .setMessage(R.string.Bluetooth_back)
             .setCancelable(false)
             .setPositiveButton(R.string.AlertDialogSi) { dialog, id ->
                 super.onBackPressedDispatcher.onBackPressed()
@@ -329,7 +329,7 @@ class BluetoothActivity : AppCompatActivity() {
     private fun ivBackBT() {
         binding.ivBackBT.setOnClickListener {
             AlertDialog.Builder(this)
-                .setMessage(R.string.AlertDialog)
+                .setMessage(R.string.Bluetooth_back)
                 .setCancelable(false)
                 .setPositiveButton(R.string.AlertDialogSi) { dialog, id ->
                     super.onBackPressedDispatcher.onBackPressed()

@@ -4,18 +4,11 @@
         xmlns:app="http://schemas.android.com/apk/res-auto"
         android:background="@color/beige"
         xmlns:android="http://schemas.android.com/apk/res/android"
-
-
-
-        >
+    >
         <ScrollView
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:layout_gravity="center"
-            app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintBottom_toBottomOf="parent"
+            android:fillViewport="true"
             >
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
@@ -23,9 +16,9 @@
         >
         <com.google.android.material.card.MaterialCardView
             android:id="@+id/cvScan"
-            android:layout_width="match_parent"
+            android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:layout_margin="8dp"
+            android:layout_marginHorizontal="8dp"
             android:backgroundTint="@color/color_navBar"
             android:elevation="8dp"
             app:cardCornerRadius="16dp"
@@ -33,7 +26,6 @@
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintBottom_toTopOf="@id/cvScan3"
-
             >
 
             <LinearLayout
@@ -78,9 +70,9 @@
 
         <com.google.android.material.card.MaterialCardView
             android:id="@+id/cvScan3"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:layout_margin="8dp"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="8dp"
             android:backgroundTint="@color/background_card"
             android:elevation="8dp"
             app:cardCornerRadius="16dp"
@@ -93,60 +85,54 @@
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:orientation="vertical"
                 android:gravity="center"
-                android:padding="16dp"
-                >
+                android:orientation="vertical"
+                android:padding="16dp">
 
                 <ImageView
                     android:id="@+id/imageQR"
                     android:layout_width="50dp"
                     android:layout_height="50dp"
-                    android:src="@drawable/scan"
                     android:layout_marginBottom="16dp"
-                    />
+                    android:src="@drawable/scan" />
 
                 <TextView
                     android:id="@+id/scanProduct"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:text="Escanea el Producto"
-                    android:gravity="center"
                     android:fontFamily="@font/ubuntu_desciption"
-                    />
+                    android:gravity="center"
+                    android:text="Escanea el Producto" />
 
                 <Button
                     android:id="@+id/btnScan"
+                    style="?attr/materialButtonOutlinedStyle"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="@string/scan_btnReciclar"
                     android:layout_margin="16dp"
                     android:backgroundTint="@color/color_navBar"
-                    app:icon="@drawable/escanear"
-                    app:iconTint="@color/white"
                     android:fontFamily="@font/ubuntu_light"
-                    style="?attr/materialButtonOutlinedStyle"
+                    android:text="@string/scan_btnReciclar"
                     android:textColor="@color/white"
-                    />
+                    app:icon="@drawable/escanear"
+                    app:iconTint="@color/white" />
 
                 <com.google.android.material.card.MaterialCardView
                     android:id="@+id/cvScan2"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    app:cardCornerRadius="16dp"
                     android:backgroundTint="@color/background"
-                    >
+                    app:cardCornerRadius="16dp">
 
                     <TextView
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:text="@string/scan_CarView"
-                        android:justificationMode="inter_word"
-                        android:textColor="@color/text_color"
                         android:fontFamily="@font/ubuntu_desciption"
-                        android:padding="8dp"
                         android:gravity="center"
-                        />
+                        android:justificationMode="inter_word"
+                        android:padding="8dp"
+                        android:text="@string/scan_CarView"
+                        android:textColor="@color/text_color" />
 
                 </com.google.android.material.card.MaterialCardView>
 

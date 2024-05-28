@@ -8,7 +8,14 @@
     android:background="@color/beige"
     >
 
-
+<ScrollView
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    app:layout_constraintTop_toTopOf="parent"
+    app:layout_constraintEnd_toEndOf="parent"
+    app:layout_constraintStart_toStartOf="parent"
+    app:layout_constraintBottom_toBottomOf="parent"
+    >
     <LinearLayout
         android:id="@+id/containerLinear"
         android:layout_width="match_parent"
@@ -20,7 +27,6 @@
         app:layout_constraintTop_toTopOf="parent"
         android:gravity="center"
         >
-
 
         <com.google.android.material.card.MaterialCardView
             android:id="@+id/cvProfile"
@@ -143,6 +149,9 @@
                         android:valueFrom ="0"
                         android:stepSize="5"
                         android:valueTo="100"
+                        app:thumbColor="@color/color_navBar"
+                        app:thumbStrokeColor="@color/color_navBar"
+
                         >
                     </com.google.android.material.slider.RangeSlider>
 
@@ -179,5 +188,5 @@
             />
 
     </LinearLayout>
-
+</ScrollView>
 </androidx.constraintlayout.widget.ConstraintLayout>

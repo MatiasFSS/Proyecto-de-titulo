@@ -3,6 +3,7 @@ package com.copetiny.proyecto.ui.profile
 import android.app.Dialog
 import android.graphics.Color
 import android.graphics.drawable.ColorDrawable
+import android.graphics.drawable.LayerDrawable
 import android.os.Bundle
 import android.util.Log
 import androidx.fragment.app.Fragment
@@ -14,6 +15,7 @@ import android.widget.EditText
 import android.widget.ImageView
 import android.widget.Toast
 import androidx.appcompat.widget.SearchView
+import androidx.core.content.ContextCompat
 import androidx.fragment.app.viewModels
 import androidx.lifecycle.Lifecycle
 import androidx.lifecycle.lifecycleScope
@@ -22,6 +24,7 @@ import com.copetiny.proyecto.ProyectoApp.Companion.prefs
 import com.copetiny.proyecto.R
 import com.copetiny.proyecto.data.network.response.encyclopedia.MaterialResponse
 import com.copetiny.proyecto.databinding.FragmentProfileBinding
+import com.copetiny.proyecto.domain.model.encyclopedia.Category
 import com.google.android.material.snackbar.Snackbar
 import dagger.hilt.android.AndroidEntryPoint
 import kotlinx.coroutines.CoroutineScope
@@ -56,29 +59,27 @@ class ProfileFragment : Fragment() {
 
     }
 
-    private fun initUI(){
+    private fun initUI() {
         binding.iconButtonProfile.setOnClickListener {
-            Snackbar.make(it,getString(R.string.profile_description), Snackbar.LENGTH_LONG)
-                .setAction("Aceptar"){
+            Snackbar.make(it, getString(R.string.profile_description), Snackbar.LENGTH_LONG)
+                .setAction("Aceptar") {
                     onDestroy()
                 }
                 .setTextMaxLines(100)
                 .show()
         }
         binding.btEdit.setOnClickListener {
-           /* prefs.wipe()
+            /* prefs.wipe()
             findNavController().navigate(
                 ProfileFragmentDirections.actionProfileFragmentToRegisterActivity()
             )*/
             showDialog()
         }
-        val userName= prefs.getName()
+        val userName = prefs.getName()
         val age = prefs.getAge()
         binding.tvName.text = "Nombre: $userName"
         binding.tvAge.text = "Edad: $age"
         levelBar()
-
-
     }
 
     private fun levelBar(){

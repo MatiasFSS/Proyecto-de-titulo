@@ -44,7 +44,6 @@ class QuizFragment : Fragment() {
         }
 
         binding.btnEasy.setOnClickListener {
-            Toast.makeText(requireContext(), "estoy haciendo click ", Toast.LENGTH_SHORT).show()
             val type = QuizModel.facil
             findNavController().navigate(QuizFragmentDirections.actionQuizFragmentToQuizDetailActivity(type))
         }

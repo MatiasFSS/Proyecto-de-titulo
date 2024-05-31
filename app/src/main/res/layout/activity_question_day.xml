@@ -18,7 +18,7 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintBottom_toBottomOf="parent"
-        android:layout_margin="16dp"
+        android:layout_margin="8dp"
         android:backgroundTint="@color/background_card">
 
 
@@ -38,28 +38,26 @@
                 android:padding="24dp"
                 app:tint="@color/color_navBar"
                 />
-
             <ScrollView
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:fillViewport="true"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintHorizontal_bias="1.0"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@id/ivQuestionDayClose"
-                app:layout_constraintVertical_bias="0.502">
+                app:layout_constraintTop_toBottomOf="@id/ivQuestionDayClose">
+
 
                 <LinearLayout
                     android:layout_width="match_parent"
-                    android:layout_height="match_parent"
+                    android:layout_height="wrap_content"
                     android:gravity="center"
                     android:orientation="vertical"
-                    android:padding="16dp"
-                    app:layout_constraintBottom_toBottomOf="parent"
+                    android:layout_gravity="center"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toBottomOf="@id/ivQuestionDayClose"
-
+                    app:layout_constraintBottom_toBottomOf="parent"
                     >
 
                     <TextView
@@ -70,11 +68,15 @@
                         android:text="@string/Pregunta_dia"
                         android:textSize="26sp"
                         android:textStyle="bold"
-                        app:layout_constraintEnd_toEndOf="parent"
-                        app:layout_constraintStart_toStartOf="parent"
-                        app:layout_constraintTop_toBottomOf="@id/ivQuestionDayClose"
-
+                        android:layout_marginBottom="8dp"
+                        android:fontFamily="sans-serif-black"
                         ></TextView>
+                    <ImageView
+                        android:id="@+id/ivStateAnswer"
+                        android:layout_width="40dp"
+                        android:layout_height="40dp"
+                        android:src="@drawable/estrella"
+                        app:tint="@color/color_navBar" />
 
                     <ProgressBar
                         android:id="@+id/pbQuestionDay"
@@ -82,14 +84,12 @@
                         android:layout_height="wrap_content"
                         android:layout_gravity="center"
                         android:indeterminateTint="@color/color_navBar"
-                        app:layout_constraintBottom_toBottomOf="parent"
-                        app:layout_constraintEnd_toEndOf="parent"
-                        app:layout_constraintStart_toStartOf="parent"
-                        app:layout_constraintTop_toTopOf="parent" />
+
+                       />
 
                     <TextView
                         android:id="@+id/tvQuestionDay"
-                        android:layout_width="match_parent"
+                        android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_marginTop="16dp"
                         android:fontFamily="@font/ubuntu_title"
@@ -97,6 +97,8 @@
                         android:justificationMode="inter_word"
                         android:textSize="20sp"
                         android:textStyle="bold"
+                        android:layout_marginHorizontal="16dp"
+
                         tools:text="@string/scan_question" />
 
                     <androidx.cardview.widget.CardView

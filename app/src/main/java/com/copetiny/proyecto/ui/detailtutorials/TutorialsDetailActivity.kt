@@ -21,6 +21,8 @@ class TutorialsDetailActivity : AppCompatActivity() {
     private lateinit var binding: ActivityTutorialsDetailBinding
     private val tutorialsDetailViewModel by viewModels<TutorialsDetailViewModel>()
     private val args: TutorialsDetailActivityArgs by navArgs()
+    private var isVideoFullScreen = false
+
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -118,6 +120,6 @@ class TutorialsDetailActivity : AppCompatActivity() {
 
         webView.settings.javaScriptEnabled = true
 
-        webView.webChromeClient = WebChromeClient()
+        webView.webChromeClient = CustomWebChromeClient(this)
     }
 }

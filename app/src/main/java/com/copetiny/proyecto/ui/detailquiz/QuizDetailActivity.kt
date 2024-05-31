@@ -7,6 +7,7 @@ import android.graphics.drawable.ColorDrawable
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.util.Log
+import android.view.View
 import android.widget.Button
 import android.widget.TextView
 import android.widget.Toast
@@ -132,6 +133,7 @@ class QuizDetailActivity : AppCompatActivity() {
         dialog.show()
     }
 
+
     private fun btnEnable(){
         binding.btnQuizNext.isEnabled = true
         binding.btnQuizNext.setBackgroundColor(getColor(R.color.color_navBar))
@@ -153,6 +155,8 @@ class QuizDetailActivity : AppCompatActivity() {
         binding.tvQuizAlternativeB.setTextColor(ContextCompat.getColor(this, R.color.black))
         binding.tvQuizAlternativeC.setTextColor(ContextCompat.getColor(this, R.color.black))
         binding.tvQuizAlternativeD.setTextColor(ContextCompat.getColor(this, R.color.black))
+        binding.stateAnswer.text = null
+        binding.ivStateAnswer?.visibility = View.GONE
     }
 
     private fun handleAnswer(cardView: CardView, isCorrect: Boolean) {
@@ -163,13 +167,17 @@ class QuizDetailActivity : AppCompatActivity() {
             binding.tvQuizAlternativeC.setTextColor(ContextCompat.getColor(this, R.color.white))
             binding.tvQuizAlternativeD.setTextColor(ContextCompat.getColor(this,R.color.white))
 
+
         } else {
             cardView.setCardBackgroundColor(ContextCompat.getColor(this, R.color.red))
             binding.tvQuizAlternativeA.setTextColor(ContextCompat.getColor(this, R.color.white))
             binding.tvQuizAlternativeB.setTextColor(ContextCompat.getColor(this, R.color.white))
             binding.tvQuizAlternativeC.setTextColor(ContextCompat.getColor(this, R.color.white))
             binding.tvQuizAlternativeD.setTextColor(ContextCompat.getColor(this,R.color.white))
+
+
         }
+        //dialogAnswer(isCorrect)
     }
 
     private fun Quiz(state:QuizDetailState.Success){
@@ -186,6 +194,10 @@ class QuizDetailActivity : AppCompatActivity() {
                 handleAnswer(binding.cvQuizAlternativeC, false)
                 handleAnswer(binding.cvQuizAlternativeD, false)
                 contadorPreguntas+=1
+                binding.stateAnswer.text = "¡RESPUESTA CORRECTA!"
+                binding.ivStateAnswer.visibility = View.VISIBLE
+                binding.ivStateAnswer.setImageResource(R.drawable.correcto)
+
                 if(state.dificultad == QuizModel.facil.name){
                     contadorPuntos += 5
                 }else{
@@ -203,8 +215,14 @@ class QuizDetailActivity : AppCompatActivity() {
                 handleAnswer(binding.cvQuizAlternativeB, state.respuesta == optionB)
                 handleAnswer(binding.cvQuizAlternativeC, state.respuesta == optionC)
                 handleAnswer(binding.cvQuizAlternativeD, state.respuesta == optionD)
+
                 contadorPreguntas+=1
+                binding.stateAnswer.text = "¡RESPUESTA INCORRECTA!"
+                binding.ivStateAnswer.visibility = View.VISIBLE
+                binding.ivStateAnswer.setImageResource(R.drawable.incorrecto)
+
             }
+            //dialogAnswer(isCorrect)
             btnEnable()
         }
 
@@ -216,6 +234,9 @@ class QuizDetailActivity : AppCompatActivity() {
                 handleAnswer(binding.cvQuizAlternativeC, false)
                 handleAnswer(binding.cvQuizAlternativeD, false)
                 contadorPreguntas+=1
+                binding.stateAnswer.text = "¡RESPUESTA CORRECTA!"
+                binding.ivStateAnswer.visibility = View.VISIBLE
+                binding.ivStateAnswer.setImageResource(R.drawable.correcto)
                 if(state.dificultad == QuizModel.facil.name){
                     contadorPuntos += 5
                 }else{
@@ -234,7 +255,11 @@ class QuizDetailActivity : AppCompatActivity() {
                 handleAnswer(binding.cvQuizAlternativeC, state.respuesta == optionC)
                 handleAnswer(binding.cvQuizAlternativeD, state.respuesta == optionD)
                 contadorPreguntas+=1
+                binding.stateAnswer.text = "¡RESPUESTA INCORRECTA!"
+                binding.ivStateAnswer.visibility = View.VISIBLE
+                binding.ivStateAnswer.setImageResource(R.drawable.incorrecto)
             }
+            //dialogAnswer(isCorrect)
             btnEnable()
         }
 
@@ -246,6 +271,9 @@ class QuizDetailActivity : AppCompatActivity() {
                 handleAnswer(binding.cvQuizAlternativeB, false)
                 handleAnswer(binding.cvQuizAlternativeD, false)
                 contadorPreguntas+=1
+                binding.stateAnswer.text = "¡RESPUESTA CORRECTA!"
+                binding.ivStateAnswer.visibility = View.VISIBLE
+                binding.ivStateAnswer.setImageResource(R.drawable.correcto)
                 if(state.dificultad == QuizModel.facil.name){
                     contadorPuntos += 5
                 }else{
@@ -264,7 +292,12 @@ class QuizDetailActivity : AppCompatActivity() {
                 handleAnswer(binding.cvQuizAlternativeB, state.respuesta == optionB)
                 handleAnswer(binding.cvQuizAlternativeD, state.respuesta == optionD)
                 contadorPreguntas+=1
+                binding.stateAnswer.text = "¡RESPUESTA INCORRECTA!"
+                binding.ivStateAnswer.visibility = View.VISIBLE
+                binding.ivStateAnswer.setImageResource(R.drawable.incorrecto)
+
             }
+            //dialogAnswer(isCorrect)
             btnEnable()
         }
 
@@ -276,6 +309,9 @@ class QuizDetailActivity : AppCompatActivity() {
                 handleAnswer(binding.cvQuizAlternativeB, false)
                 handleAnswer(binding.cvQuizAlternativeC, false)
                 contadorPreguntas+=1
+                binding.stateAnswer.text = "¡RESPUESTA CORRECTA!"
+                binding.ivStateAnswer.visibility = View.VISIBLE
+                binding.ivStateAnswer.setImageResource(R.drawable.correcto)
                 if(state.dificultad == QuizModel.facil.name){
                     contadorPuntos += 5
                 }else{
@@ -294,8 +330,12 @@ class QuizDetailActivity : AppCompatActivity() {
                 handleAnswer(binding.cvQuizAlternativeB, state.respuesta == optionB)
                 handleAnswer(binding.cvQuizAlternativeC, state.respuesta == optionC)
                 contadorPreguntas+=1
+                binding.stateAnswer.text = "¡RESPUESTA INCORRECTA!"
+                binding.ivStateAnswer.visibility = View.VISIBLE
+                binding.ivStateAnswer.setImageResource(R.drawable.incorrecto)
             }
             btnEnable()
+            //dialogAnswer(isCorrect)
         }
     }
 

@@ -15,7 +15,7 @@
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintBottom_toBottomOf="parent"
         app:cardCornerRadius="16dp"
-        android:layout_margin="16dp"
+        android:layout_margin="8dp"
         android:backgroundTint="@color/background_card">
 
             <androidx.constraintlayout.widget.ConstraintLayout
@@ -124,11 +124,13 @@
                                 android:layout_margin="5dp"
                                 android:gravity="center"/>
 
-                            <WebView
-                                android:id="@+id/video"
-                                android:layout_width="match_parent"
-                                android:layout_height="200dp">
-                            </WebView>
+                                <WebView
+                                    android:id="@+id/video"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="200dp"
+                                    tools:ignore="WebViewLayout">
+                                </WebView>
+
 
                         </LinearLayout>
                     </ScrollView>

@@ -1,0 +1,177 @@
+<androidx.constraintlayout.widget.ConstraintLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@color/beige"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    >
+
+
+            <com.google.android.material.card.MaterialCardView
+                android:id="@+id/cvScan"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+               android:layout_margin="8dp"
+                android:backgroundTint="@color/color_navBar"
+                android:elevation="8dp"
+                app:cardCornerRadius="16dp"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintBottom_toTopOf="@id/cvScan3"
+
+                >
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:layout_gravity="center"
+
+                    >
+
+                    <TextView
+                        android:id="@+id/tvTitleReciclaje"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="@string/scan_title_reciclaje"
+                        android:justificationMode="inter_word"
+                        android:gravity="center"
+                        android:textColor="@color/white"
+                        android:fontFamily="@font/ubuntu_title"
+                        android:textSize="26sp"
+                        android:layout_marginTop="24dp"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:layout_constraintBottom_toTopOf="@id/tvDescripcionReciclaje"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        />
+
+                    <TextView
+                        android:id="@+id/tvDescripcionReciclaje"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="@string/scan_description_reciclaje"
+                        android:justificationMode="inter_word"
+                        android:textColor="@color/white"
+                        android:fontFamily="@font/ubuntu_desciption"
+                        android:padding="8dp"
+                        android:textSize="16sp"
+                        app:layout_constraintTop_toBottomOf="@id/tvTitleReciclaje"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintBottom_toTopOf="@id/ivScan"
+                        />
+
+                    <ImageView
+                        android:id="@+id/ivScan"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:adjustViewBounds="true"
+                        android:scaleType="fitXY"
+                        android:src="@drawable/reciclaje"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintTop_toBottomOf="@id/tvDescripcionReciclaje"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+
+                        />
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+            </com.google.android.material.card.MaterialCardView>
+
+    <com.google.android.material.card.MaterialCardView
+        android:id="@+id/cvScan3"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_margin="8dp"
+        android:backgroundTint="@color/background_card"
+        android:elevation="8dp"
+        app:cardCornerRadius="16dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/cvScan"
+        app:layout_constraintBottom_toBottomOf="parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="16dp"
+            android:layout_gravity="center"
+            >
+
+            <ImageView
+                android:id="@+id/imageQR"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:layout_marginBottom="16dp"
+                android:src="@drawable/scan"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintBottom_toTopOf="@id/scanProduct"
+                app:layout_constraintDimensionRatio="1:1"
+                app:layout_constraintWidth_percent="0.15"
+                />
+
+            <TextView
+                android:id="@+id/scanProduct"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/ubuntu_desciption"
+                android:gravity="center"
+                android:text="Escanea el Producto"
+                app:layout_constraintTop_toBottomOf="@id/imageQR"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintBottom_toTopOf="@id/btnScan"
+                />
+
+            <Button
+                android:id="@+id/btnScan"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:backgroundTint="@color/color_navBar"
+                android:fontFamily="@font/ubuntu_light"
+                android:text="@string/scan_btnReciclar"
+                android:textColor="@color/white"
+                app:icon="@drawable/escanear"
+                app:iconTint="@color/white"
+                app:layout_constraintTop_toBottomOf="@id/scanProduct"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintBottom_toTopOf="@id/cvScan2"
+                android:layout_marginTop="4dp"
+                />
+
+            <com.google.android.material.card.MaterialCardView
+                android:id="@+id/cvScan2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="4dp"
+                android:backgroundTint="@color/background"
+                app:cardCornerRadius="16dp"
+                app:layout_constraintTop_toBottomOf="@id/btnScan"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent"
+                >
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/ubuntu_desciption"
+                    android:gravity="center"
+                    android:justificationMode="inter_word"
+                    android:padding="8dp"
+                    android:text="@string/scan_CarView"
+                    android:textColor="@color/text_color"
+                    android:textSize="14sp"
+                    />
+            </com.google.android.material.card.MaterialCardView>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </com.google.android.material.card.MaterialCardView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

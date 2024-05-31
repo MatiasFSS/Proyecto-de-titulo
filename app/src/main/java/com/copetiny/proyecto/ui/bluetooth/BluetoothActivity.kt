@@ -298,7 +298,7 @@ class BluetoothActivity : AppCompatActivity() {
                 if (flag) {
                     sharedViewModel.expProgress(5)
                 } else {
-                    Log.i("BluetoothActivity", "No HAZ GANADO PUNTOS DE EXPERIENCIA")
+                    Log.i("BluetoothActivity", "NO HAZ GANADO PUNTOS DE EXPERIENCIA")
                 }
                 flagDialog = true
                 showDialogLevel(flagDialog)

@@ -44,6 +44,7 @@
                    android:gravity="center"
                    android:textStyle="bold"
                    android:fontFamily="@font/ubuntu_title"
+                   android:textColor="@color/text_color"
                    />
                <com.google.android.material.textfield.TextInputLayout
                    android:layout_width="match_parent"
@@ -95,7 +96,7 @@
                    app:iconTint="@color/white"
                    android:fontFamily="@font/ubuntu_light"
                    app:cornerRadius="16dp"
-                   style="?attr/materialButtonOutlinedStyle"
+                   style="@style/btnColor"
                    android:textColor="@color/white"
                    />
 

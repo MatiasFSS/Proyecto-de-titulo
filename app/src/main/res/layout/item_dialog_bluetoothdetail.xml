@@ -39,6 +39,7 @@
                 android:layout_marginTop="8dp"
                 android:textSize="26sp"
                 android:gravity="center"
+                android:textColor="@color/text_color"
                 />
             <TextView
                 android:id="@+id/tvStateBluetooth"
@@ -49,6 +50,7 @@
                 android:layout_marginTop="8dp"
                 android:textSize="26sp"
                 android:gravity="center"
+                android:textColor="@color/text_color"
                 />
 
             <com.google.android.material.button.MaterialButton
@@ -62,7 +64,7 @@
                 app:iconTint="@color/white"
                 android:fontFamily="@font/ubuntu_light"
                 app:cornerRadius="16dp"
-                style="?attr/materialButtonOutlinedStyle"
+                style="@style/btnColor"
                 android:textColor="@color/white"
                 />
 

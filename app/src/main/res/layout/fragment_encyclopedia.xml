@@ -68,7 +68,7 @@
                         android:layout_height="wrap_content"
                         android:text="@string/encyclopedia_Instruction"
                         android:padding="8dp"
-
+                        android:textColor="@color/text_color"
                         android:justificationMode="inter_word"
                         >
                     </TextView>

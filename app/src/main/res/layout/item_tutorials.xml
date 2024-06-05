@@ -36,6 +36,7 @@
                 android:fontFamily="@font/ubuntu_light"
                 android:padding="8dp"
                 android:textStyle="bold"
+                android:textColor="@color/text_color"
                 />
 
     </androidx.constraintlayout.widget.ConstraintLayout>

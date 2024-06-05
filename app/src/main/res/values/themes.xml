@@ -13,4 +13,42 @@
         <item name="android:windowBackground">@drawable/splash_image</item>
     </style>
 
+    <style name="BackgroundContainer">
+        <item name="android:background">@color/beige</item>
+    </style>
+
+    <style name="BarNavigation">
+        <item name="android:background">@color/verde_natural_oscuro</item>
+    </style>
+
+    <style name="BackgroundCard1">
+        <item name="android:backgroundTint">@color/color_navBar</item>
+    </style>
+
+    <style name="BackgroundCard2">
+        <item name="android:backgroundTint">@color/background_card</item>
+    </style>
+
+    <style name="BackgroundCard3">
+        <item name="android:backgroundTint">@color/background</item>
+    </style>
+
+    <style name="ivQR">
+        <item name="android:tint">@color/black</item>
+    </style>
+
+    <style name="textColor">
+        <item name="android:textColor">@color/white</item>
+    </style>
+
+    <style name="btnColor">
+        <item name="android:backgroundTint">@color/color_navBar</item>
+        <item name="android:textColor">@color/white</item>
+    </style>
+
+    <style name="textColor2">
+        <item name="android:textColor">@color/text_color</item>
+    </style>
+
+
 </resources>

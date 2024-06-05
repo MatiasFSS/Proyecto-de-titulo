@@ -5,7 +5,7 @@
     android:layout_height="match_parent"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     tools:context=".ui.profile.ProfileFragment"
-    android:background="@color/beige"
+    style="@style/BackgroundContainer"
     >
 
 <ScrollView
@@ -34,7 +34,7 @@
             android:layout_height="wrap_content"
             android:layout_margin="16dp"
             app:cardCornerRadius="16dp"
-            android:backgroundTint="@color/background_card"
+            style="@style/BackgroundCard2"
             >
             <LinearLayout
                 android:layout_width="match_parent"
@@ -61,8 +61,8 @@
                         android:gravity="center"
                         android:layout_marginVertical="8dp"
                         android:textSize="26sp"
-                        android:textColor="@color/black"
                         android:fontFamily="@font/ubuntu_title"
+                        style="@style/textColor2"
 
                         />
 
@@ -74,7 +74,6 @@
                     android:contentDescription="Ayuda"
                     app:icon="@drawable/help2"
                     android:layout_marginHorizontal="3dp"
-
                     android:backgroundTint="@color/color_navBar"
                     app:iconTint="@color/white"
                     />
@@ -85,9 +84,9 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_margin="8dp"
-                    android:textColor="@color/text_color"
                     android:textSize="16sp"
                     android:fontFamily="@font/ubuntu_desciption"
+                    style="@style/textColor2"
 
                     />
                 <com.google.android.material.divider.MaterialDivider
@@ -102,7 +101,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_margin="8dp"
-                    android:textColor="@color/text_color"
+                    style="@style/textColor2"
                     android:textSize="16sp"
                     android:fontFamily="@font/ubuntu_desciption"
                     />
@@ -122,7 +121,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="@string/profile_Level"
-                        android:textColor="@color/text_color"
+                        style="@style/textColor2"
                         android:layout_margin="8dp"
                         android:textSize="16sp"
                         android:fontFamily="@font/ubuntu_desciption"
@@ -133,7 +132,7 @@
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         tools:text="lvl 100"
-                        android:textColor="@color/text_color"
+                        style="@style/textColor2"
                         android:layout_marginVertical="8dp"
                         android:textStyle="bold"
                         android:textSize="22sp"
@@ -165,6 +164,7 @@
                     android:text="0 pts"
                     android:layout_gravity="center"
                     android:fontFamily="@font/ubuntu_title"
+                    style="@style/textColor2"
                     />
 
             </LinearLayout>
@@ -181,9 +181,7 @@
             app:iconTint="@color/white"
             android:text="@string/profile_BtnEdit"
             app:tint="@color/white"
-            android:backgroundTint="@color/color_navBar"
-            style="?attr/materialButtonOutlinedStyle"
-            android:textColor="@color/white"
+            style="@style/btnColor"
             android:layout_marginVertical="16dp"
             />
 

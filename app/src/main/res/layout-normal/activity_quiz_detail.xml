@@ -55,6 +55,7 @@
                         android:layout_marginBottom="8dp"
                         android:textSize="20sp"
                         android:fontFamily="sans-serif-black"
+                        android:textColor="@color/text_color"
                         />
                     <ImageView
                         android:id="@+id/ivStateAnswer"
@@ -80,11 +81,13 @@
                         android:fontFamily="@font/ubuntu_title"
                         android:textStyle="bold"
                         android:gravity="center"
-                        android:textSize="20sp" />
+                        android:textSize="20sp"
+                        android:textColor="@color/text_color"
+                        />
 
                     <androidx.cardview.widget.CardView
                         android:id="@+id/cvQuizAlternativeA"
-                        app:cardBackgroundColor="@color/background_card"
+                        app:cardBackgroundColor="@color/background"
                         app:strokeWidth="0dp"
                         android:layout_width="280dp"
                         android:layout_height="wrap_content"
@@ -113,7 +116,7 @@
 
                     <androidx.cardview.widget.CardView
                         android:id="@+id/cvQuizAlternativeB"
-                        app:cardBackgroundColor="@color/background_card"
+                        app:cardBackgroundColor="@color/background"
                         app:strokeWidth="0dp"
                         android:layout_width="280dp"
                         android:layout_height="wrap_content"
@@ -142,7 +145,7 @@
 
                     <androidx.cardview.widget.CardView
                         android:id="@+id/cvQuizAlternativeC"
-                        app:cardBackgroundColor="@color/background_card"
+                        app:cardBackgroundColor="@color/background"
                         app:strokeWidth="0dp"
                         android:layout_width="280dp"
                         android:layout_height="wrap_content"
@@ -171,7 +174,7 @@
 
                     <androidx.cardview.widget.CardView
                         android:id="@+id/cvQuizAlternativeD"
-                        app:cardBackgroundColor="@color/background_card"
+                        app:cardBackgroundColor="@color/background"
                         app:strokeWidth="0dp"
                         android:layout_width="280dp"
                         android:layout_height="wrap_content"
@@ -210,7 +213,7 @@
                         app:iconTint="@color/white"
                         android:enabled="false"
                         android:fontFamily="@font/ubuntu_light"
-                        style="?attr/materialButtonOutlinedStyle"
+                        style="@style/btnColor"
                         android:textColor="@color/white" />
                 </LinearLayout>
             </ScrollView>

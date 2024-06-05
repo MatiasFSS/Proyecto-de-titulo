@@ -11,7 +11,7 @@
     <color name="yellow">#FFEB3B</color>
 
     <!--Color navBar -->
-    <color name="color_navBar">#66c30b</color>
+    <color name="color_navBar">#035730</color>
     <!--Color CardView-->
     <color name="color_cardView">#AFAFAF</color>
 
@@ -22,9 +22,9 @@
     <color name="color_4">#f68e2c</color>
     <color name="color_5">#e45a3f</color>
     <color name="color_6">#7fc7b3</color>
-    <color name="background">#f2f0f4</color>
-    <color name="background_card">#ffff</color>
-    <color name="text_color">#1b1b1b</color>
+    <color name="background">#0E0C0C</color>
+    <color name="background_card">#333333</color>
+    <color name="text_color">#B0BEC5</color>
     <color name="text_secundary">#44464e</color>
     <color name="disabled_btn">#C0C0C0</color>
     <color name="wsp">#009929</color>
@@ -32,7 +32,7 @@
     <color name="verde_natural_oscuro">#009929</color>
     <color name="azul_claro">#4FC3F7</color>
     <color name="marron_suave">#A1887F</color>
-    <color name="beige">#ECEFF1</color>
+    <color name="beige">#121212</color>
     <color name="gris_claro">#E0E0E0</color>
     <color name="amarillo_suave">#FFEB3B</color>
     <color name="naranja">#FFA726</color>
@@ -188,11 +188,4 @@
     <color name="textDarkMode">#B0BEC5</color>
     <color name="btnDarkMode">#035730</color>
     <color name="text2DarkMode">#293C33</color>
-
-
-
-
-
-
-
 </resources>

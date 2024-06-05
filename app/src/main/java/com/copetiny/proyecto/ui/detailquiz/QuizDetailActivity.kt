@@ -197,6 +197,7 @@ class QuizDetailActivity : AppCompatActivity() {
                 binding.stateAnswer.text = "¡RESPUESTA CORRECTA!"
                 binding.ivStateAnswer.visibility = View.VISIBLE
                 binding.ivStateAnswer.setImageResource(R.drawable.correcto)
+                binding.ivStateAnswer.setColorFilter(ContextCompat.getColor(this, R.color.color_navBar))
 
                 if(state.dificultad == QuizModel.facil.name){
                     contadorPuntos += 5
@@ -220,6 +221,7 @@ class QuizDetailActivity : AppCompatActivity() {
                 binding.stateAnswer.text = "¡RESPUESTA INCORRECTA!"
                 binding.ivStateAnswer.visibility = View.VISIBLE
                 binding.ivStateAnswer.setImageResource(R.drawable.incorrecto)
+                binding.ivStateAnswer.setColorFilter(ContextCompat.getColor(this, R.color.red))
 
             }
             //dialogAnswer(isCorrect)
@@ -237,6 +239,7 @@ class QuizDetailActivity : AppCompatActivity() {
                 binding.stateAnswer.text = "¡RESPUESTA CORRECTA!"
                 binding.ivStateAnswer.visibility = View.VISIBLE
                 binding.ivStateAnswer.setImageResource(R.drawable.correcto)
+                binding.ivStateAnswer.setColorFilter(ContextCompat.getColor(this, R.color.color_navBar))
                 if(state.dificultad == QuizModel.facil.name){
                     contadorPuntos += 5
                 }else{
@@ -258,6 +261,7 @@ class QuizDetailActivity : AppCompatActivity() {
                 binding.stateAnswer.text = "¡RESPUESTA INCORRECTA!"
                 binding.ivStateAnswer.visibility = View.VISIBLE
                 binding.ivStateAnswer.setImageResource(R.drawable.incorrecto)
+                binding.ivStateAnswer.setColorFilter(ContextCompat.getColor(this, R.color.red))
             }
             //dialogAnswer(isCorrect)
             btnEnable()
@@ -274,6 +278,7 @@ class QuizDetailActivity : AppCompatActivity() {
                 binding.stateAnswer.text = "¡RESPUESTA CORRECTA!"
                 binding.ivStateAnswer.visibility = View.VISIBLE
                 binding.ivStateAnswer.setImageResource(R.drawable.correcto)
+                binding.ivStateAnswer.setColorFilter(ContextCompat.getColor(this, R.color.color_navBar))
                 if(state.dificultad == QuizModel.facil.name){
                     contadorPuntos += 5
                 }else{
@@ -295,6 +300,7 @@ class QuizDetailActivity : AppCompatActivity() {
                 binding.stateAnswer.text = "¡RESPUESTA INCORRECTA!"
                 binding.ivStateAnswer.visibility = View.VISIBLE
                 binding.ivStateAnswer.setImageResource(R.drawable.incorrecto)
+                binding.ivStateAnswer.setColorFilter(ContextCompat.getColor(this, R.color.red))
 
             }
             //dialogAnswer(isCorrect)
@@ -312,6 +318,7 @@ class QuizDetailActivity : AppCompatActivity() {
                 binding.stateAnswer.text = "¡RESPUESTA CORRECTA!"
                 binding.ivStateAnswer.visibility = View.VISIBLE
                 binding.ivStateAnswer.setImageResource(R.drawable.correcto)
+                binding.ivStateAnswer.setColorFilter(ContextCompat.getColor(this, R.color.color_navBar))
                 if(state.dificultad == QuizModel.facil.name){
                     contadorPuntos += 5
                 }else{
@@ -333,6 +340,7 @@ class QuizDetailActivity : AppCompatActivity() {
                 binding.stateAnswer.text = "¡RESPUESTA INCORRECTA!"
                 binding.ivStateAnswer.visibility = View.VISIBLE
                 binding.ivStateAnswer.setImageResource(R.drawable.incorrecto)
+                binding.ivStateAnswer.setColorFilter(ContextCompat.getColor(this, R.color.red))
             }
             btnEnable()
             //dialogAnswer(isCorrect)

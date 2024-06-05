@@ -4,6 +4,49 @@
         <!-- Customize your dark theme here. -->
         <!-- <item name="colorPrimary">@color/my_dark_primary</item> -->
         <item name="android:navigationBarColor">@color/black</item>
-        <item name="android:statusBarColor">@color/black</item>
+         <item name="android:statusBarColor">@color/black</item>
     </style>
+
+    <style name="splashScreen" parent="Base.Theme.Proyecto">
+        <item name="android:windowBackground">@drawable/splash_image</item>
+    </style>
+
+    <style name="BackgroundContainer">
+        <item name="android:background">@color/BackgroundDarkMode</item>
+
+    </style>
+
+    <style name="BarNavigation">
+        <item name="android:background">@color/BarDarkMode</item>
+    </style>
+
+    <style name="BackgroundCard1">
+        <item name="android:backgroundTint">@color/btnDarkMode</item>
+    </style>
+
+    <style name="BackgroundCard2">
+        <item name="android:backgroundTint">@color/BackgroundCardDarkMode</item>
+    </style>
+
+    <style name="BackgroundCard3">
+        <item name="android:backgroundTint">@color/BackgroundCardDarkMode</item>
+    </style>
+
+    <style name="ivQR">
+        <item name="android:tint">@color/textDarkMode</item>
+    </style>
+
+    <style name="textColor">
+        <item name="android:textColor">@color/textDarkMode</item>
+    </style>
+
+    <style name="btnColor">
+        <item name="android:backgroundTint">@color/btnDarkMode</item>
+        <item name="android:textColor">@color/textDarkMode</item>
+    </style>
+
+    <style name="textColor2">
+        <item name="android:textColor">@color/textDarkMode</item>
+    </style>
+
 </resources>

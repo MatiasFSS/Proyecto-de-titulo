@@ -27,7 +27,9 @@
             android:gravity="center"
             android:textStyle="bold"
             android:fontFamily="@font/ubuntu_title"
-            android:justificationMode="inter_word" />
+            android:justificationMode="inter_word"
+            android:textColor="@color/text_color"
+            />
 
         <Button
             android:id="@+id/btnAcceptQuestionDay"
@@ -39,7 +41,7 @@
             android:drawableRight="@drawable/confirmar"
             app:icon="@drawable/confirmar"
             app:iconTint="@color/white"
-            style="?attr/materialButtonOutlinedStyle"
+            style="@style/btnColor"
             android:textColor="@color/white"
             />
 

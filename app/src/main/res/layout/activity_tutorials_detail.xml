@@ -56,9 +56,10 @@
                     android:fontFamily="@font/ubuntu_title"
                     android:textStyle="bold"
                     android:gravity="center"
-                    android:textColor="@color/black"
+                    android:textColor="@color/text_color"
                     android:textSize="26sp"
                     android:padding="10dp"
+
                     />
 
                 <LinearLayout
@@ -89,7 +90,7 @@
                                 app:layout_constraintBottom_toTopOf="@+id/tvDetailTutorialsInformation"
                                 android:justificationMode="inter_word"
                                 android:fontFamily="@font/ubuntu_desciption"
-                                android:textColor="@color/black"
+                                android:textColor="@color/text_color"
                                 android:layout_gravity="center"
                                 android:textSize="16sp"
                                 android:layout_margin="5dp"/>
@@ -110,7 +111,7 @@
                                 app:layout_constraintTop_toBottomOf="@id/tvDescriptionTutorials"
                                 android:justificationMode="inter_word"
                                 android:fontFamily="@font/ubuntu_desciption"
-                                android:textColor="@color/black"
+                                android:textColor="@color/text_color"
                                 android:layout_margin="5dp"
                                 android:textSize="16sp"/>
 
@@ -120,7 +121,7 @@
                                 android:text="Aqui puedes ver un video de como realizar este tutorial."
                                 android:justificationMode="inter_word"
                                 android:fontFamily="@font/ubuntu_desciption"
-                                android:textColor="@color/black"
+                                android:textColor="@color/text_color"
                                 android:layout_margin="5dp"
                                 android:gravity="center"/>
 
@@ -128,7 +129,8 @@
                                     android:id="@+id/video"
                                     android:layout_width="match_parent"
                                     android:layout_height="200dp"
-                                    tools:ignore="WebViewLayout">
+                                    tools:ignore="WebViewLayout"
+                                    >
                                 </WebView>
 
 

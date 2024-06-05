@@ -59,6 +59,7 @@
                     android:text="@string/quiz_Instruction"
                     android:padding="8dp"
                     android:justificationMode="inter_word"
+                    android:textColor="@color/text_color"
                     >
                 </TextView>
 
@@ -110,10 +111,8 @@
                         android:layout_width="120dp"
                         android:layout_height="40dp"
                         android:text="@string/quiz_btn_easy"
-                        android:backgroundTint="@color/color_navBar"
                         android:fontFamily="@font/ubuntu_desciption"
-                        style="?attr/materialButtonOutlinedStyle"
-                        android:textColor="@color/white"
+                        style="@style/btnColor"
                         />
                 </LinearLayout>
             </androidx.cardview.widget.CardView>
@@ -148,10 +147,8 @@
                         android:layout_width="120dp"
                         android:layout_height="40dp"
                         android:text="@string/quiz_btn_medium"
-                        android:backgroundTint="@color/color_navBar"
                         android:fontFamily="@font/ubuntu_light"
-                        style="?attr/materialButtonOutlinedStyle"
-                        android:textColor="@color/white"
+                        style="@style/btnColor"
                         />
                 </LinearLayout>
             </androidx.cardview.widget.CardView>
@@ -186,10 +183,8 @@
                         android:layout_width="120dp"
                         android:layout_height="40dp"
                         android:text="@string/quiz_btn_pro"
-                        android:backgroundTint="@color/color_navBar"
                         android:fontFamily="@font/ubuntu_light"
-                        style="?attr/materialButtonOutlinedStyle"
-                        android:textColor="@color/white"
+                        style="@style/btnColor"
                         />
                 </LinearLayout>
             </androidx.cardview.widget.CardView>

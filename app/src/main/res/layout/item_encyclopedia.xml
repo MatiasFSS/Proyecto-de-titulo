@@ -35,6 +35,7 @@
             android:textStyle="bold"
             android:background="@color/background_card"
             android:fontFamily="@font/ubuntu_light"
+            android:textColor="@color/text_color"
 
 
             />

@@ -70,6 +70,7 @@
                         android:textStyle="bold"
                         android:layout_marginBottom="8dp"
                         android:fontFamily="sans-serif-black"
+                        android:textColor="@color/text_color"
                         ></TextView>
                     <ImageView
                         android:id="@+id/ivStateAnswer"
@@ -98,7 +99,7 @@
                         android:textSize="20sp"
                         android:textStyle="bold"
                         android:layout_marginHorizontal="16dp"
-
+                        android:textColor="@color/text_color"
                         tools:text="@string/scan_question" />
 
                     <androidx.cardview.widget.CardView
@@ -106,7 +107,7 @@
                         android:layout_width="320dp"
                         android:layout_height="wrap_content"
                         android:layout_marginTop="16dp"
-                        app:cardBackgroundColor="@color/background_card"
+                        app:cardBackgroundColor="@color/background"
                         app:cardCornerRadius="16dp"
                         app:strokeWidth="0dp">
 
@@ -135,7 +136,7 @@
                         android:layout_width="320dp"
                         android:layout_height="wrap_content"
                         android:layout_marginTop="16dp"
-                        app:cardBackgroundColor="@color/background_card"
+                        app:cardBackgroundColor="@color/background"
                         app:cardCornerRadius="16dp"
                         app:strokeWidth="0dp">
 
@@ -164,7 +165,7 @@
                         android:layout_width="320dp"
                         android:layout_height="wrap_content"
                         android:layout_marginTop="16dp"
-                        app:cardBackgroundColor="@color/background_card"
+                        app:cardBackgroundColor="@color/background"
                         app:cardCornerRadius="16dp"
                         app:strokeWidth="0dp">
 
@@ -193,7 +194,7 @@
                         android:layout_width="320dp"
                         android:layout_height="wrap_content"
                         android:layout_marginTop="16dp"
-                        app:cardBackgroundColor="@color/background_card"
+                        app:cardBackgroundColor="@color/background"
                         app:cardCornerRadius="16dp"
                         app:strokeWidth="0dp">
 

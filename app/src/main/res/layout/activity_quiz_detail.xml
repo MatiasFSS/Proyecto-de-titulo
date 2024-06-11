@@ -89,7 +89,6 @@
                         android:layout_height="wrap_content"
                         tools:text="@string/scan_question"
                         android:layout_marginTop="16dp"
-                        android:justificationMode="inter_word"
                         android:fontFamily="@font/ubuntu_title"
                         android:textStyle="bold"
                         android:gravity="center"

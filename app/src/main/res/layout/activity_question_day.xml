@@ -95,7 +95,6 @@
                         android:layout_marginTop="16dp"
                         android:fontFamily="@font/ubuntu_title"
                         android:gravity="center"
-                        android:justificationMode="inter_word"
                         android:textSize="20sp"
                         android:textStyle="bold"
                         android:layout_marginHorizontal="16dp"

@@ -8,7 +8,9 @@ import android.graphics.drawable.ColorDrawable
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.util.Log
+import android.view.View
 import android.widget.Button
+import android.widget.ImageView
 import android.widget.TextView
 import android.widget.Toast
 import androidx.activity.viewModels
@@ -115,11 +117,17 @@ class QuestionDay : AppCompatActivity() {
 
         val btnAccept = dialog.findViewById<Button>(R.id.btnAcceptQuestionDay)
         val tvAnswer = dialog.findViewById<TextView>(R.id.tvAnswerQuestionDay)
+        val ivContenedorRespuesta = dialog.findViewById<ImageView>(R.id.ivContenedorReciclaje)
 
         if(isCorrect){
+
             tvAnswer.text = getString(R.string.tvDialogPointsCorrect)
+            ivContenedorRespuesta.visibility = View.VISIBLE
+            ivContenedorRespuesta.setImageResource(R.drawable.respuestacorrectacontenedor)
         }else{
             tvAnswer.text = getString(R.string.tvDialogPointsIncorrect)
+            ivContenedorRespuesta.visibility = View.VISIBLE
+            ivContenedorRespuesta.setImageResource(R.drawable.respuestaincorrectacontenedor)
         }
 
         btnAccept.setOnClickListener {

@@ -14,6 +14,7 @@ class PrefsUsers (val context: Context) {
     val FLAG = "flag"
     val IS_FIRST_RUN ="isFirstRun"
     val LAST_QUESTION_TIMESTAMP = "lastQuestionTimestamp"
+    val FLAGQUESTION = "flagquestion"
 
     //val USER_IMAGE = "img"
 
@@ -40,6 +41,10 @@ class PrefsUsers (val context: Context) {
         storage.edit().putBoolean(FLAG,flag).apply()
     }
 
+    fun setQuestionFlag(flag:Boolean){
+        storage.edit().putBoolean(FLAGQUESTION,flag).apply()
+    }
+
     /*fun saveImg(img:String){
         storage.edit().putString(USER_IMAGE, img).commit()
     }*/
@@ -62,6 +67,10 @@ class PrefsUsers (val context: Context) {
 
     fun updialogFlag():Boolean{
         return storage.getBoolean(FLAG, false)
+    }
+
+    fun upQuestionFlag():Boolean{
+        return storage.getBoolean(FLAGQUESTION, false)
     }
 
     fun wipe(){

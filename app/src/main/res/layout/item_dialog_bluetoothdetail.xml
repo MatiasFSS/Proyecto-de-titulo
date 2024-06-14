@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="300dp"
     android:layout_height="wrap_content"
     xmlns:app="http://schemas.android.com/apk/res-auto"
@@ -48,10 +49,16 @@
                 android:fontFamily="@font/ubuntu_title"
                 android:layout_gravity="center"
                 android:layout_marginTop="8dp"
-                android:textSize="26sp"
+                android:textSize="16sp"
                 android:gravity="center"
                 android:textColor="@color/text_color"
                 />
+            <ImageView
+                android:id="@+id/ivStateSendInfo"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                tools:src="@drawable/incorrecto"
+                app:tint="@color/color_navBar" />
 
             <com.google.android.material.button.MaterialButton
                 android:id="@+id/btnConfirmBT"

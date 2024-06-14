@@ -32,7 +32,7 @@
 
     <!-- Titulo y descripción de Vista enciclopedia-->
     <string name="encyclopedia_Title">Materiales</string>
-    <string name="encyclopedia_Description">Aquí encontraras información de diversos materiales para conocer conocer más sobre ellos.</string>
+    <string name="encyclopedia_Description">Aquí encontraras información de diversos materiales para conocer más sobre ellos.</string>
     <string name="encyclopedia_Instruction">Haz click en unos de los materiales para informarte.</string>
     <!-- textos tutoriales -->
     <string name="tutorial_1">¿Como reciclar?</string>
@@ -43,7 +43,7 @@
     <string name="tutorial_6">Macetero de material reciclable</string>
     <!-- Titulo y descripción de Vista enciclopedia-->
     <string name="tutorials_Title">Tutoriales</string>
-    <string name="tutorials_Description">Aquí encontraras una lista de tutoriales donde prodrás realizar actividades con materiales reciclables.</string>
+    <string name="tutorials_Description">Aquí encontraras una lista de tutoriales donde podrás realizar actividades con materiales reciclables.</string>
     <string name="tutorials_Description2">¡RECUERDA! : "Reutiliza - Reduce - Recicla"</string>
     <string name="tutorials_Instruction">Haz click en uno de los tutoriales para realizar una actividad.</string>
 
@@ -51,15 +51,15 @@
     <string name="register_Name">Ingrese su nombre</string>
     <string name="register_Age">¿Cuál es su edad?</string>
     <string name="register_bt">Confirmar datos</string>
-    <string name="register_welcome">Bienvenido, antes de comenzar nos gustaría saber más sobre ti, por favor indica como prefieres llamarte en la aplicación</string>
+    <string name="register_welcome">Bienvenido, antes de comenzar nos gustaría saber más sobre ti, por favor indica como prefieres llamarte en la aplicación.</string>
 
 
     <!--Scan-->
-    <string name="scan_CarView">Vive la experiencia de reciclaje, pulsa el botón reciclar para poder escanear el Código QR del producto a reciclar, veras la información relevante del producto y podrás ver el proceso del reciclaje a través del brazo robótico.</string>
+    <string name="scan_CarView">Vive la experiencia del reciclaje. Pulsa el botón "Escanear" para escanear el código QR del producto a reciclar. Verás la información relevante del producto y podrás observar el proceso de reciclaje a través del brazo robótico</string>
     <string name="scan_btnReciclar">Escanear</string>
-    <string name="scan_title_reciclaje">¿Que es el reciclaje? </string>
-    <string name="scan_description_reciclaje">El reciclaje consiste en reutilizar los materiales con el objetivo de producir productos nuevos para lograr reducir la utilización de materias primas, conservando así los recursos naturales.</string>
-    <string name="scan_question">¿En contenedor crees que se recicla este material?</string>
+    <string name="scan_title_reciclaje">¿Qué es el reciclaje?</string>
+    <string name="scan_description_reciclaje">El reciclaje consiste en reutilizar materiales con el objetivo de producir nuevos productos, reduciendo así la necesidad de utilizar materias primas y conservando los recursos naturales.</string>
+    <string name="scan_question">¿En que contenedor crees que se recicla este material?</string>
     <string name="scan_alternativeA">A) Verde</string>
     <string name="scan_alternativeB">B) Azul </string>
     <string name="scan_alternativeC">C) Gris </string>
@@ -93,7 +93,7 @@
 
 
     <!--Alerts-->
-    <string name="AlertDialog">¿Estás seguro de que quieres salir? perderas todos los puntos ganados.</string>
+    <string name="AlertDialog">¿Estás seguro de que quieres salir?, perderas todos los puntos ganados.</string>
     <string name="AlertDialogSi">Si</string>
     <string name="AlertDialogNo">No</string>
 
@@ -104,12 +104,12 @@
     <string name="AlertDialog_pregunta_dia">¿Estás seguro de que quieres salir?, no ganaras puntos de experiencia</string>
 
     <!--Bluetooth-->
-    <string name="Bluetooth_back">¿Estás seguro de que quieres salir?, No realizarás el proceso de reciclaje y perderas todos los puntos ganados</string>
+    <string name="Bluetooth_back">¿Estás seguro de que quieres salir?, no realizarás el proceso de reciclaje y perderás todos los puntos ganados</string>
     <string name="Bluetooth_permissions">PERMISOS CONCEDIDOS</string>
     <string name="Bluetooth_noPermissions">POR FAVOR CONCEDA LOS PERMISOS PARA UTILIZAR ESTA FUNCIONALIDAD</string>
     <string name="Bluetooth_BTnodisponible">Bluetooth no esta disponible en este dispositivo</string>
     <string name="Bluetooth_cargando">Cargando</string>
-    <string name="Bluetooth_BtnActualizar">Presiona el boton actualizar y selecciona el brazo robotico</string>
+    <string name="Bluetooth_BtnActualizar">Presiona el botón actualizar y selecciona el brazo robótico</string>
     <string name="Bluetooth_Activar">Por favor active el bluetooth</string>
     <string name="Bluetooth_Activado">Bluetooth ya se encuentra activado</string>
     <string name="Bluetooth_vicular">Primero vincule un dispositivo Bluetooth</string>

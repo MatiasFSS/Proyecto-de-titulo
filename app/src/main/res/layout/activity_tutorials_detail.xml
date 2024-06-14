@@ -118,7 +118,7 @@
                             <TextView
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
-                                android:text="Aqui puedes ver un video de como realizar este tutorial."
+                                android:text="Aquí puedes ver un video de cómo realizar este tutorial"
                                 android:justificationMode="inter_word"
                                 android:fontFamily="@font/ubuntu_desciption"
                                 android:textColor="@color/text_color"

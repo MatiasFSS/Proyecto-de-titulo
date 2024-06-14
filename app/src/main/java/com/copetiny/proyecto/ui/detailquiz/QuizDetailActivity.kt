@@ -97,6 +97,7 @@ class QuizDetailActivity : AppCompatActivity() {
 
     private fun Success(state:QuizDetailState.Success){
         binding.pb.isVisible = false
+        binding.pb.visibility = View.GONE
         binding.tvQuizQuestion.text = state.pregunta
         binding.tvQuizAlternativeA.text = state.alternativaA
         binding.tvQuizAlternativeB.text = state.alternativaB
@@ -155,8 +156,9 @@ class QuizDetailActivity : AppCompatActivity() {
         binding.tvQuizAlternativeB.setTextColor(ContextCompat.getColor(this, R.color.black))
         binding.tvQuizAlternativeC.setTextColor(ContextCompat.getColor(this, R.color.black))
         binding.tvQuizAlternativeD.setTextColor(ContextCompat.getColor(this, R.color.black))
-        binding.stateAnswer.text = null
+        binding.stateAnswer.visibility = View.GONE
         binding.ivStateAnswer?.visibility = View.GONE
+        binding.ivContenedorReciclaje?.visibility = View.GONE
     }
 
     private fun handleAnswer(cardView: CardView, isCorrect: Boolean) {
@@ -194,9 +196,12 @@ class QuizDetailActivity : AppCompatActivity() {
                 handleAnswer(binding.cvQuizAlternativeC, false)
                 handleAnswer(binding.cvQuizAlternativeD, false)
                 contadorPreguntas+=1
+                binding.stateAnswer.visibility = View.VISIBLE
                 binding.stateAnswer.text = "¡RESPUESTA CORRECTA!"
                 binding.ivStateAnswer.visibility = View.VISIBLE
                 binding.ivStateAnswer.setImageResource(R.drawable.correcto)
+                binding.ivContenedorReciclaje?.setImageResource(R.drawable.respuestacorrectacontenedor)
+                binding.ivContenedorReciclaje?.visibility = View.VISIBLE
                 binding.ivStateAnswer.setColorFilter(ContextCompat.getColor(this, R.color.color_navBar))
 
                 if(state.dificultad == QuizModel.facil.name){
@@ -218,9 +223,12 @@ class QuizDetailActivity : AppCompatActivity() {
                 handleAnswer(binding.cvQuizAlternativeD, state.respuesta == optionD)
 
                 contadorPreguntas+=1
+                binding.stateAnswer.visibility = View.VISIBLE
                 binding.stateAnswer.text = "¡RESPUESTA INCORRECTA!"
                 binding.ivStateAnswer.visibility = View.VISIBLE
                 binding.ivStateAnswer.setImageResource(R.drawable.incorrecto)
+                binding.ivContenedorReciclaje?.visibility = View.VISIBLE
+                binding.ivContenedorReciclaje?.setImageResource(R.drawable.respuestaincorrectacontenedor)
                 binding.ivStateAnswer.setColorFilter(ContextCompat.getColor(this, R.color.red))
 
             }
@@ -236,9 +244,12 @@ class QuizDetailActivity : AppCompatActivity() {
                 handleAnswer(binding.cvQuizAlternativeC, false)
                 handleAnswer(binding.cvQuizAlternativeD, false)
                 contadorPreguntas+=1
+                binding.stateAnswer.visibility = View.VISIBLE
                 binding.stateAnswer.text = "¡RESPUESTA CORRECTA!"
                 binding.ivStateAnswer.visibility = View.VISIBLE
                 binding.ivStateAnswer.setImageResource(R.drawable.correcto)
+                binding.ivContenedorReciclaje?.visibility = View.VISIBLE
+                binding.ivContenedorReciclaje?.setImageResource(R.drawable.respuestacorrectacontenedor)
                 binding.ivStateAnswer.setColorFilter(ContextCompat.getColor(this, R.color.color_navBar))
                 if(state.dificultad == QuizModel.facil.name){
                     contadorPuntos += 5
@@ -258,9 +269,12 @@ class QuizDetailActivity : AppCompatActivity() {
                 handleAnswer(binding.cvQuizAlternativeC, state.respuesta == optionC)
                 handleAnswer(binding.cvQuizAlternativeD, state.respuesta == optionD)
                 contadorPreguntas+=1
+                binding.stateAnswer.visibility = View.VISIBLE
                 binding.stateAnswer.text = "¡RESPUESTA INCORRECTA!"
                 binding.ivStateAnswer.visibility = View.VISIBLE
                 binding.ivStateAnswer.setImageResource(R.drawable.incorrecto)
+                binding.ivContenedorReciclaje?.visibility = View.VISIBLE
+                binding.ivContenedorReciclaje?.setImageResource(R.drawable.respuestaincorrectacontenedor)
                 binding.ivStateAnswer.setColorFilter(ContextCompat.getColor(this, R.color.red))
             }
             //dialogAnswer(isCorrect)
@@ -275,9 +289,12 @@ class QuizDetailActivity : AppCompatActivity() {
                 handleAnswer(binding.cvQuizAlternativeB, false)
                 handleAnswer(binding.cvQuizAlternativeD, false)
                 contadorPreguntas+=1
+                binding.stateAnswer.visibility = View.VISIBLE
                 binding.stateAnswer.text = "¡RESPUESTA CORRECTA!"
                 binding.ivStateAnswer.visibility = View.VISIBLE
                 binding.ivStateAnswer.setImageResource(R.drawable.correcto)
+                binding.ivContenedorReciclaje?.visibility = View.VISIBLE
+                binding.ivContenedorReciclaje?.setImageResource(R.drawable.respuestacorrectacontenedor)
                 binding.ivStateAnswer.setColorFilter(ContextCompat.getColor(this, R.color.color_navBar))
                 if(state.dificultad == QuizModel.facil.name){
                     contadorPuntos += 5
@@ -297,9 +314,12 @@ class QuizDetailActivity : AppCompatActivity() {
                 handleAnswer(binding.cvQuizAlternativeB, state.respuesta == optionB)
                 handleAnswer(binding.cvQuizAlternativeD, state.respuesta == optionD)
                 contadorPreguntas+=1
+                binding.stateAnswer.visibility = View.VISIBLE
                 binding.stateAnswer.text = "¡RESPUESTA INCORRECTA!"
                 binding.ivStateAnswer.visibility = View.VISIBLE
                 binding.ivStateAnswer.setImageResource(R.drawable.incorrecto)
+                binding.ivContenedorReciclaje?.visibility = View.VISIBLE
+                binding.ivContenedorReciclaje?.setImageResource(R.drawable.respuestaincorrectacontenedor)
                 binding.ivStateAnswer.setColorFilter(ContextCompat.getColor(this, R.color.red))
 
             }
@@ -315,9 +335,12 @@ class QuizDetailActivity : AppCompatActivity() {
                 handleAnswer(binding.cvQuizAlternativeB, false)
                 handleAnswer(binding.cvQuizAlternativeC, false)
                 contadorPreguntas+=1
+                binding.stateAnswer.visibility = View.VISIBLE
                 binding.stateAnswer.text = "¡RESPUESTA CORRECTA!"
                 binding.ivStateAnswer.visibility = View.VISIBLE
                 binding.ivStateAnswer.setImageResource(R.drawable.correcto)
+                binding.ivContenedorReciclaje?.visibility = View.VISIBLE
+                binding.ivContenedorReciclaje?.setImageResource(R.drawable.respuestacorrectacontenedor)
                 binding.ivStateAnswer.setColorFilter(ContextCompat.getColor(this, R.color.color_navBar))
                 if(state.dificultad == QuizModel.facil.name){
                     contadorPuntos += 5
@@ -337,9 +360,12 @@ class QuizDetailActivity : AppCompatActivity() {
                 handleAnswer(binding.cvQuizAlternativeB, state.respuesta == optionB)
                 handleAnswer(binding.cvQuizAlternativeC, state.respuesta == optionC)
                 contadorPreguntas+=1
+                binding.stateAnswer.visibility = View.VISIBLE
                 binding.stateAnswer.text = "¡RESPUESTA INCORRECTA!"
                 binding.ivStateAnswer.visibility = View.VISIBLE
                 binding.ivStateAnswer.setImageResource(R.drawable.incorrecto)
+                binding.ivContenedorReciclaje?.visibility = View.VISIBLE
+                binding.ivContenedorReciclaje?.setImageResource(R.drawable.respuestaincorrectacontenedor)
                 binding.ivStateAnswer.setColorFilter(ContextCompat.getColor(this, R.color.red))
             }
             btnEnable()

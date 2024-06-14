@@ -17,6 +17,15 @@
         android:padding="16dp"
         android:gravity="center"
         >
+        <ImageView
+            android:id="@+id/ivContenedorReciclaje"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:visibility="gone"
+            android:layout_gravity="center"
+            >
+        </ImageView>
+
 
         <TextView
             android:id="@+id/tvAnswerQuestionDay"

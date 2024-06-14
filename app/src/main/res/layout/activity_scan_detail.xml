@@ -98,94 +98,109 @@
                         android:textSize="20sp"
                         />
 
-                    <androidx.cardview.widget.CardView
-                        android:id="@+id/scanAlternativeA"
-                        app:cardBackgroundColor="@color/background_card"
-                        app:strokeWidth="0dp"
-                        android:layout_width="280dp"
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:id="@+id/containerAlternatives"
+                        android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:layout_marginTop="16dp"
-                        app:cardCornerRadius="16dp"
+                        app:layout_constraintTop_toBottomOf="@id/tvQuestionQR"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintBottom_toTopOf="@id/btnReciclar"
+                        android:padding="8dp"
                         >
-                        <LinearLayout
-                            android:gravity="center"
-                            android:orientation="vertical"
-                            android:layout_width="match_parent"
-                            android:layout_height="50dp"
-                            android:paddingHorizontal="16dp"
-                            >
-                            <TextView
-                                android:id="@+id/tvA"
-                                android:textStyle="bold"
-                                android:textColor="@color/text_color"
-                                android:textSize="17sp"
-                                android:text="@string/scan_alternativeA"
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
-                                android:fontFamily="@font/ubuntu_light"
-                                android:gravity="center"
-                                />
-                        </LinearLayout>
-                    </androidx.cardview.widget.CardView>
-                    <androidx.cardview.widget.CardView
-                        android:id="@+id/scanAlternativeB"
-                        app:cardBackgroundColor="@color/background_card"
-                        app:strokeWidth="0dp"
-                        android:layout_width="280dp"
-                        android:layout_height="wrap_content"
-                        android:layout_marginTop="16dp"
-                        app:cardCornerRadius="16dp"
-                        >
-                        <LinearLayout
-                            android:gravity="center"
-                            android:orientation="vertical"
-                            android:layout_width="match_parent"
-                            android:layout_height="50dp"
-                            android:paddingHorizontal="16dp">
-                            <TextView
-                                android:id="@+id/tvB"
-                                android:textStyle="bold"
-                                android:textColor="@color/text_color"
-                                android:textSize="17sp"
-                                android:text="@string/scan_alternativeB"
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
-                                android:fontFamily="@font/ubuntu_light"
-                                android:gravity="center"
-                                android:layout_marginEnd="8dp"
-                                />
-                        </LinearLayout>
-                    </androidx.cardview.widget.CardView>
-                    <androidx.cardview.widget.CardView
-                        android:id="@+id/scanAlternativeC"
-                        app:cardBackgroundColor="@color/background_card"
-                        app:strokeWidth="0dp"
-                        android:layout_width="280dp"
-                        android:layout_height="wrap_content"
-                        android:layout_marginTop="16dp"
-                        app:cardCornerRadius="16dp"
-                        >
-                        <LinearLayout
-                            android:gravity="center"
-                            android:orientation="vertical"
-                            android:layout_width="match_parent"
-                            android:layout_height="50dp"
-                            android:paddingHorizontal="16dp">
-                            <TextView
-                                android:id="@+id/tvC"
-                                android:textStyle="bold"
-                                android:textColor="@color/text_color"
-                                android:textSize="17sp"
-                                android:text="@string/scan_alternativeC"
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
-                                android:fontFamily="@font/ubuntu_light"
-                                android:gravity="center"
-                                android:layout_marginEnd="8dp"
-                                />
-                        </LinearLayout>
-                    </androidx.cardview.widget.CardView>
+                        <androidx.cardview.widget.CardView
+                            android:id="@+id/scanAlternativeA"
+                            app:cardBackgroundColor="@color/background_card"
+                            app:strokeWidth="0dp"
+                            android:layout_width="110dp"
+                            android:layout_height="150dp"
+                            app:cardCornerRadius="16dp"
+                            app:layout_constraintTop_toTopOf="parent"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintEnd_toStartOf="@+id/scanAlternativeB"
+                            app:layout_constraintBottom_toTopOf="@+id/scanAlternativeC"
+                            android:layout_margin="4dp"
 
+
+                            >
+                            <androidx.constraintlayout.widget.ConstraintLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                >
+                                <ImageView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    app:layout_constraintTop_toTopOf="parent"
+                                    app:layout_constraintStart_toStartOf="parent"
+                                    app:layout_constraintEnd_toEndOf="parent"
+                                    app:layout_constraintBottom_toBottomOf="parent"
+                                    android:scaleType="fitCenter"
+                                    android:src="@drawable/contenedorverde"
+                                    />
+                            </androidx.constraintlayout.widget.ConstraintLayout>
+                        </androidx.cardview.widget.CardView>
+                        <androidx.cardview.widget.CardView
+                            android:id="@+id/scanAlternativeB"
+                            app:cardBackgroundColor="@color/background_card"
+                            app:strokeWidth="0dp"
+                            android:layout_width="110dp"
+                            android:layout_height="150dp"
+                            app:cardCornerRadius="16dp"
+                            app:layout_constraintTop_toTopOf="parent"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintStart_toEndOf="@+id/scanAlternativeA"
+                            app:layout_constraintBottom_toTopOf="@id/scanAlternativeC"
+                            android:layout_margin="4dp"
+
+                            >
+                            <androidx.constraintlayout.widget.ConstraintLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                >
+                                <ImageView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    app:layout_constraintTop_toTopOf="parent"
+                                    app:layout_constraintStart_toStartOf="parent"
+                                    app:layout_constraintEnd_toEndOf="parent"
+                                    app:layout_constraintBottom_toBottomOf="parent"
+                                    android:scaleType="fitCenter"
+                                    android:src="@drawable/contenedorazul"
+                                    />
+                            </androidx.constraintlayout.widget.ConstraintLayout>
+                        </androidx.cardview.widget.CardView>
+                        <androidx.cardview.widget.CardView
+                            android:id="@+id/scanAlternativeC"
+                            app:cardBackgroundColor="@color/background_card"
+                            app:strokeWidth="0dp"
+                            android:layout_width="110dp"
+                            android:layout_height="150dp"
+                            app:cardCornerRadius="16dp"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintTop_toBottomOf="@+id/scanAlternativeB"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            android:layout_margin="4dp"
+
+                            >
+                            <androidx.constraintlayout.widget.ConstraintLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                >
+                                <ImageView
+                                    android:id="@+id/ivEncyclopedia"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    app:layout_constraintTop_toTopOf="parent"
+                                    app:layout_constraintStart_toStartOf="parent"
+                                    app:layout_constraintEnd_toEndOf="parent"
+                                    app:layout_constraintBottom_toBottomOf="parent"
+                                    android:scaleType="fitCenter"
+                                    android:src="@drawable/contenedorgris"
+                                    />
+                            </androidx.constraintlayout.widget.ConstraintLayout>
+                        </androidx.cardview.widget.CardView>
+                    </androidx.constraintlayout.widget.ConstraintLayout>
                     <com.google.android.material.button.MaterialButton
                         android:id="@+id/btnReciclar"
                         android:layout_width="wrap_content"
@@ -198,7 +213,7 @@
                         app:iconTint="@color/white"
                         android:enabled="false"
                         android:fontFamily="@font/ubuntu_light"
-                        style="?attr/materialButtonOutlinedStyle"
+                        style="@style/btnColor"
                         android:textColor="@color/white"
                         />
 

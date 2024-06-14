@@ -35,6 +35,23 @@
                 android:justificationMode="inter_word"
                 android:textColor="@color/text_color"
                 />
+            <ImageView
+                android:id="@+id/ivScanImage"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+            </ImageView>
+            <TextView
+                android:id="@+id/tvRespuestaScan"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textSize="16sp"
+                android:gravity="center"
+                android:fontFamily="@font/ubuntu_title"
+                android:textColor="@color/text_color"
+                android:layout_marginVertical="8dp"
+                >
+
+            </TextView>
 
             <TextView
                 android:id="@+id/tvPoints"

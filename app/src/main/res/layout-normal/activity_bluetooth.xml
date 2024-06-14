@@ -142,7 +142,7 @@
             android:gravity="center"
             android:textSize="16sp"
             android:layout_marginTop="8dp"
-            android:text="Seleccione el brazo robotico en la lista bluetooth"
+            android:text="Seleccione el brazo robótico en la lista bluetooth"
             android:layout_marginBottom="8dp"
             style="@style/textColor2"
             >
@@ -205,7 +205,7 @@
             android:gravity="center"
             android:textSize="16sp"
             android:layout_marginTop="8dp"
-            android:text="Seleccione el boton 'Actualizar' para ver la lista de dispositivos disponibles, elija el brazo robotico y presione el boton conectar."
+            android:text="Seleccione el botón 'Actualizar' para ver la lista de dispositivos disponibles, elija el brazo robótico y presione el botón 'Conectar'."
             style="@style/textColor2"
             >
 

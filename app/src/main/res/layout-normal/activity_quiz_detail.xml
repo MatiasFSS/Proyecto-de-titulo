@@ -48,28 +48,56 @@
                     android:orientation="vertical"
                     android:padding="16dp"
                     android:gravity="center">
-                    <TextView
-                        android:id="@+id/stateAnswer"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_marginBottom="8dp"
-                        android:textSize="20sp"
-                        android:fontFamily="sans-serif-black"
-                        android:textColor="@color/text_color"
-                        />
                     <ImageView
-                        android:id="@+id/ivStateAnswer"
-                        android:layout_width="50dp"
-                        android:layout_height="50dp"
-                        tools:src="@drawable/incorrecto"
-                        app:tint="@color/color_navBar" />
+                        android:id="@+id/ivContenedorReciclaje"
+                        android:layout_width="100dp"
+                        android:layout_height="100dp"
+                        android:visibility="gone"
+                        android:layout_gravity="center"
+                        >
+                    </ImageView>
+                    <androidx.appcompat.widget.LinearLayoutCompat
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:gravity="center_horizontal"
+                        >
+
+                        <TextView
+                            android:id="@+id/stateAnswer"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textSize="20sp"
+                            android:fontFamily="sans-serif-black"
+                            android:textColor="@color/text_color"
+                            android:gravity="center"
+                            android:visibility="gone"
+
+                            />
+                        <ImageView
+                            android:id="@+id/ivStateAnswer"
+                            android:layout_width="30dp"
+                            android:layout_height="30dp"
+                            tools:src="@drawable/incorrecto"
+                            app:tint="@color/color_navBar"
+                            android:visibility="gone"
+                            android:layout_gravity="center"
+                            />
+
+
+
+                    </androidx.appcompat.widget.LinearLayoutCompat>
+
+
 
                     <ProgressBar
                         android:id="@+id/pb"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:indeterminateTint="@color/color_navBar"
-                        android:layout_gravity="center" />
+                        android:layout_gravity="center"
+                        android:visibility="gone"
+                        />
 
                     <TextView
                         android:id="@+id/tvQuizQuestion"

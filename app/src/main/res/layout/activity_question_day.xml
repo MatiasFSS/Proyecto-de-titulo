@@ -54,30 +54,34 @@
                     android:gravity="center"
                     android:orientation="vertical"
                     android:layout_gravity="center"
-                    app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toBottomOf="@id/ivQuestionDayClose"
-                    app:layout_constraintBottom_toBottomOf="parent"
                     >
 
-                    <TextView
-                        android:id="@+id/tvPreguntadelDia"
-                        android:layout_width="wrap_content"
+                    <LinearLayout
+                        android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:gravity="center"
-                        android:text="@string/Pregunta_dia"
-                        android:textSize="26sp"
-                        android:textStyle="bold"
-                        android:layout_marginBottom="8dp"
-                        android:fontFamily="sans-serif-black"
-                        android:textColor="@color/text_color"
-                        ></TextView>
-                    <ImageView
-                        android:id="@+id/ivStateAnswer"
-                        android:layout_width="40dp"
-                        android:layout_height="40dp"
-                        android:src="@drawable/estrella"
-                        app:tint="@color/color_navBar" />
+                        android:orientation="horizontal"
+                        android:gravity="center_horizontal"
+                        >
+                        <TextView
+                            android:id="@+id/tvPreguntadelDia"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:gravity="center"
+                            android:text="@string/Pregunta_dia"
+                            android:textSize="26sp"
+                            android:textStyle="bold"
+                            android:fontFamily="sans-serif-black"
+                            android:textColor="@color/text_color"
+                            ></TextView>
+                        <ImageView
+                            android:id="@+id/ivStateAnswer"
+                            android:layout_width="30dp"
+                            android:layout_height="30dp"
+                            android:src="@drawable/estrella"
+                            app:tint="@color/color_navBar"
+                            android:layout_gravity="center"/>
+                    </LinearLayout>
+
 
                     <ProgressBar
                         android:id="@+id/pbQuestionDay"

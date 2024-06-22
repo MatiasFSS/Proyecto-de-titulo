@@ -170,6 +170,8 @@ class BluetoothActivity : AppCompatActivity() {
         binding.tvTitleScanBluetooth.text = title
         binding.tvDesciptionScanBluetooth.text = description
         Picasso.get().load(imagen).into(binding.ivScanBluetooth)
+        binding.btnConectarBT.isEnabled = false
+        binding.btnConectarBT.setBackgroundColor(getColor(R.color.disabled_btn))
 
         mAddressDevice = ArrayAdapter(this, android.R.layout.simple_list_item_1)
         mNameDevices = ArrayAdapter(this, android.R.layout.simple_list_item_1)
@@ -198,6 +200,8 @@ class BluetoothActivity : AppCompatActivity() {
                 }
 
                 binding.spListaBluetooth.adapter = mNameDevices
+                binding.btnConectarBT.isEnabled = true
+                binding.btnConectarBT.setBackgroundColor(getColor(R.color.color_navBar))
                 //mBtAdapter.startDiscovery()
             } else {
                 val noDevices = "Ningún dispositivo pudo ser emparejado"
@@ -207,39 +211,52 @@ class BluetoothActivity : AppCompatActivity() {
             }
         }
 
+        // Verificar si ya hay un dispositivo conectado y actualizar el spinner
+        if (isBluetoothConnected()) {
+            val connectedDeviceName = m_bluetoothSocket!!.remoteDevice.name
+            val connectedDeviceAddress = m_bluetoothSocket!!.remoteDevice.address
+            mNameDevices!!.add(connectedDeviceName)
+            mAddressDevice!!.add(connectedDeviceAddress)
+            binding.spListaBluetooth.adapter = mNameDevices
+            binding.spListaBluetooth.setSelection(0)
+            binding.btnConectarBT.isEnabled= true
+            binding.btnConectarBT.setBackgroundColor(getColor(R.color.color_navBar))
+        }
+
         binding.btnConectarBT.setOnClickListener {
             if (mBtAdapter.isEnabled && binding.spListaBluetooth.selectedItemPosition != AdapterView.INVALID_POSITION) {
-                val intValSpin = binding.spListaBluetooth.selectedItemPosition
-                m_address = mAddressDevice!!.getItem(intValSpin).toString()
-                Log.i("BluetoothActivity1", "Enviando comando de reciclaje al dispositivo: $m_address")
+                if (isBluetoothConnected()) {
+                    // Ya está conectado, solo enviar el comando de reciclaje
+                    sendRecycleCommand()
+                } else {
+                    val intValSpin = binding.spListaBluetooth.selectedItemPosition
+                    m_address = mAddressDevice!!.getItem(intValSpin).toString()
+                    Log.i("BluetoothActivity1", "Enviando comando de reciclaje al dispositivo: $m_address")
 
-                try {
-                    val pairedDevices: Set<BluetoothDevice>? = mBtAdapter.bondedDevices
-                    val device: BluetoothDevice? = pairedDevices?.find {
-                        Log.i("BluetoothActivity2", it.address)
-                        it.address == m_address
+                    try {
+                        val pairedDevices: Set<BluetoothDevice>? = mBtAdapter.bondedDevices
+                        val device: BluetoothDevice? = pairedDevices?.find {
+                            Log.i("BluetoothActivity2", it.address)
+                            it.address == m_address
+                        }
+
+                        if (device != null) {
+                            m_bluetoothSocket = device.createInsecureRfcommSocketToServiceRecord(device.uuids[0].uuid)
+                            m_bluetoothSocket!!.connect()
+                            Toast.makeText(this, "Conexión: ${m_bluetoothSocket!!.remoteDevice.address}", Toast.LENGTH_LONG).show()
+                            binding.tvStateBluetooth.text = getString(R.string.Bluetooth_Reciclando)
+                            binding.pbBluetooth.isVisible = true
+                            sendRecycleCommand()
+                        } else {
+                            throw IOException("Device not found")
+                        }
+                    } catch (e: IOException) {
+                        e.printStackTrace()
+                        Toast.makeText(this, getString(R.string.Bluetooth_conexionNoExito), Toast.LENGTH_LONG).show()
+                        binding.tvStateBluetooth.text = getString(R.string.Bluetooth_NoReciclando)
+                        binding.pbBluetooth.isVisible = false
+                        finish()
                     }
-
-                    if (device != null) {
-                        m_bluetoothSocket = device.createInsecureRfcommSocketToServiceRecord(device.uuids[0].uuid)
-                        m_bluetoothSocket!!.connect()
-                        //Log.i("BluetoothActivity4", m_bluetoothSocket!!.connect().toString())
-                        //Toast.makeText(this, getString(R.string.Bluetooth_conexionExito), Toast.LENGTH_LONG).show()
-                        Toast.makeText(this, "Conexión: ${m_bluetoothSocket!!.remoteDevice.address}", Toast.LENGTH_LONG).show()
-                        binding.tvStateBluetooth.text = getString(R.string.Bluetooth_Reciclando)
-                        binding.pbBluetooth.isVisible = true
-                        sendRecycleCommand()
-
-                    } else {
-                        throw IOException("Device not found")
-                    }
-                } catch (e: IOException) {
-                    e.printStackTrace()
-                    Toast.makeText(this, getString(R.string.Bluetooth_conexionNoExito), Toast.LENGTH_LONG).show()
-                    binding.tvStateBluetooth.text = getString(R.string.Bluetooth_NoReciclando)
-                    binding.pbBluetooth.isVisible = false
-                    finish()
-
                 }
             }
         }
@@ -289,7 +306,7 @@ class BluetoothActivity : AppCompatActivity() {
         dialog.show()
     }
 
-    private fun sendRecycleCommand():Boolean {
+    private fun sendRecycleCommand(): Boolean {
         val type = intent.getStringExtra("type")
         val json = JSONObject(type)
         val contenedor = json.getInt("contenedor")
@@ -310,14 +327,12 @@ class BluetoothActivity : AppCompatActivity() {
                 }
                 flagDialog = true
                 showDialogLevel(flagDialog)
-
             } catch (e: IOException) {
                 Log.e("BluetoothActivity", "Error al enviar comando: ${e.message}")
                 e.printStackTrace()
                 Toast.makeText(this, "Error al enviar comando", Toast.LENGTH_SHORT).show()
                 flagDialog = false
                 showDialogLevel(flagDialog)
-
             }
         }
         return flagDialog
@@ -346,6 +361,10 @@ class BluetoothActivity : AppCompatActivity() {
                 .setNegativeButton(R.string.AlertDialogNo) { dialog, id -> }
                 .show()
         }
+    }
+
+    private fun isBluetoothConnected(): Boolean {
+        return m_bluetoothSocket != null && m_bluetoothSocket!!.isConnected
     }
 
     private val receiver = object : BroadcastReceiver() {
